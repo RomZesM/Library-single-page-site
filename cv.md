@@ -40,3 +40,7 @@ function positiveSum(arr) {
     return summ
 }
 ```
+## Languages:
+
+* [English level: intermediate -> B2 - С1](https://www.efset.org/cert/9PwkQk)
+* Russan: native
