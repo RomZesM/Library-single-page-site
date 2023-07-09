@@ -11,7 +11,66 @@
 *{
 	box-sizing: border-box;
 }
+html{
+	scroll-behavior: smooth;
+}
 
 body {
 	font-family: 'Roboto';
+	min-height: 100vh;
+	margin: 0px;
+	padding: 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.header{
+	border: 1px solid black;
+}
+
+.main{
+	border: 1px solid red;
+}
+
+.footer{
+	border: 1px solid yellow;
+}
+
+.container{
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+.nav-list{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.nav-list{
+	list-style: none;	
+}
+
+.nav-link{	
+	padding: 0 20px;
+	line-height: 50px;
+	text-decoration: none;
+	color: brown;
+	font-size: 14pt;
+	transition: .3s;
+	
+}
+.nav-link:active{
+	color: rgb(255, 153, 0);
+}
+
+.nav-link:hover{
+	color: rgb(214, 112, 16);
+}
+
+a:visited {
+	color: rgb(184, 123, 133);
+	background-color: transparent;
+	text-decoration: none;
 }
