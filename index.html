@@ -23,8 +23,10 @@
     </div>
     </header>
     <main class="main">
-        <div class="container">
-            <section class="section" id="profile"><h1 class="section-title">Raman Martsulevich</h1> </section>
+        <div class="main-container container">
+            <section class="section" id="profile"><h1 class="section-title">Raman Martsulevich</h1> 
+            <p><img class="avatar" src="assets/avatar.jpg" alt="User foto or avatar"></p>
+            </section>
             <section class="section" id="contacts"><h2 class="section-title">Contacts</h2>
             <p>Telegram: @RomZesMR </p>
             <p>e-mail: dwarf.md@gmail.com</p>
@@ -51,17 +53,18 @@
             <section class="section" id="code"><h2 class="section-title">Code Example</h2>
             <pre>
                 <code class="code-example">
-                //You get an array of numbers, return the sum of all of the positives ones.
+//You get an array of numbers, return 
+the sum of all of the positives ones.
 
-                function positiveSum(arr) {
-                    let summ = 0;
+    function positiveSum(arr) {
+        let summ = 0;
                 
-                    for(let i = 0; i < arr.length; i++){
-                        if((parseInt(arr[i]) >= 0))
-                            summ += parseInt(arr[i])
-                    }
-                    return summ
-                }
+        for(let i = 0; i < arr.length; i++){
+            if((parseInt(arr[i]) >= 0))
+                summ += parseInt(arr[i])
+        }
+            return summ
+    }
             </code>
             <pre>
             </section>
@@ -78,7 +81,9 @@
         </div>
      </main>
     <footer class="footer">Smthing in footer
-        <div class="container"></div>
+        <div class="container">
+            <img class="rs-avatar" src="assets/rs_avatar.png" alt="rolling scopes school avatar">
+        </div>
     </footer>
 </body>
 </html>
