@@ -5,8 +5,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/favico.ico">
 </head>
 <body>
+    <header class="header">
+    <div class="container">
+        <nav class="navigation">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
+                <li class="nav-item"><a href="#summary" class="nav-link">Summary statement</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills and Proficency</a></li>
+                <li class="nav-item"><a href="#code" class="nav-link">Code Example</a></li>
+                <li class="nav-item"><a href="#language" class="nav-link">Languages</a></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+    <main class="main">
+        <div class="main-container container">
+            <section class="section" id="profile"><h1 class="section-title">Raman Martsulevich</h1> 
+            <p><img class="avatar" src="assets/avatar.jpg" alt="User foto or avatar"></p>
+            </section>
+            <section class="section" id="contacts"><h2 class="section-title">Contacts</h2>
+            <p>Telegram: @RomZesMR </p>
+            <p>e-mail: dwarf.md@gmail.com</p>
+            </section>
+            <section class="section" id="summary"><h2 class="section-title">Summary statement</h2>
+              <p>For a long time I worked as a doctor. It was boring, and one day I 
+                made an application based on Microsoft Acces to speed up the work with the current documentation. 
+                And I liked it. I started studying Computer Science, C, then Java, and now I realized that the program should
+                 not only work stably, but also look beautiful. I need something more than just html. So - I'm here.</p>
+            </section>
+            <section class="section" id="skills"><h2 class="section-title">Skills and proficency</h2>
+            <ul class="skills-list">
+                <li class="skill-item">HTML5</li>
+                <li class="skill-item">JavaScript base</li>
+                <li class="skill-item">C</li>
+                <li class="skill-item">Java</li>
+                <li class="skill-item">SQL</li>
+                <li class="skill-item">Git</li>
+                <li class="skill-item">Unix</li>
+                <li class="skill-item">VS Code</li>
+                <li class="skill-item">Intelli IDEA</li>
+            </ul>
+            </section>
+            <section class="section" id="code"><h2 class="section-title">Code Example</h2>
+            <pre>
+                <code class="code-example">
+//You get an array of numbers, return 
+the sum of all of the positives ones.
 
+    function positiveSum(arr) {
+        let summ = 0;
+                
+        for(let i = 0; i < arr.length; i++){
+            if((parseInt(arr[i]) >= 0))
+                summ += parseInt(arr[i])
+        }
+            return summ
+    }
+            </code>
+            <pre>
+            </section>
+            <section class="section" id="language"><h2 class="section-title">Languages</h2>
+            <ul class="lang-list">
+                <li class="lang-item"><a href="https://www.efset.org/cert/9PwkQk" target="_blank" class="lang-item-link">English level: intermediate -> B2 - С1</a></li>
+                <li class="lang-item">Russan: native</li>
+                <li class="lang-item">Belorusian: native</li>
+                <li class="lang-item">Polish: beginner (A2)</li>
+            </ul>
+            
+            </section>
+
+        </div>
+     </main>
+    <footer class="footer">
+        <div class="container">
+           
+           <a href="https://rs.school/js/"><img class="rs-avatar" src="assets/rs_avatar.png" alt="rolling scopes school avatar"></a> 
+           <span>2023</span>
+           <a href="https://github.com/RomZesM/rsschool-cv">GitHub</a>
+        </div>
+    </footer>
 </body>
 </html>
