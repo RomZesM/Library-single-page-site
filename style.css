@@ -74,3 +74,15 @@ a:visited {
 	background-color: transparent;
 	text-decoration: none;
 }
+
+.code-example{	
+	background-color: #eee;
+	border: 1px solid #999;
+	display: block;
+	padding: 10px;
+	font-size: 15pt;
+}
+
+.lang-item-link{
+	text-decoration: none;
+}
