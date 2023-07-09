@@ -15,7 +15,9 @@
             <ul class="nav-list">
                 <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
                 <li class="nav-item"><a href="#summary" class="nav-link">Summary statement</a></li>
+                <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
                 <li class="nav-item"><a href="#skills" class="nav-link">Skills and Proficency</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Training projects</a></li>
                 <li class="nav-item"><a href="#code" class="nav-link">Code Example</a></li>
                 <li class="nav-item"><a href="#language" class="nav-link">Languages</a></li>
             </ul>
@@ -28,8 +30,10 @@
             <p><img class="avatar" src="assets/avatar.jpg" alt="User foto or avatar"></p>
             </section>
             <section class="section" id="contacts"><h2 class="section-title">Contacts</h2>
-            <p>Telegram: @RomZesMR </p>
-            <p>e-mail: dwarf.md@gmail.com</p>
+            <ul class="contacts-list">
+               <li>Telegram: @RomZesMR</li>
+               <li>e-mail: dwarf.md@gmail.com</li>
+            </ul>    
             </section>
             <section class="section" id="summary"><h2 class="section-title">Summary statement</h2>
               <p>For a long time I worked as a doctor. It was boring, and one day I 
@@ -37,6 +41,11 @@
                 And I liked it. I started studying Computer Science, C, then Java, and now I realized that the program should
                  not only work stably, but also look beautiful. I need something more than just html. So - I'm here.</p>
             </section>
+            <section class="section" id="education">
+                <h2 class="section-title">Education</h2>
+                <p>Grodno State Medical University, Belarus, 2010</p>
+            </section>
+
             <section class="section" id="skills"><h2 class="section-title">Skills and proficency</h2>
             <ul class="skills-list">
                 <li class="skill-item">HTML5</li>
@@ -50,24 +59,28 @@
                 <li class="skill-item">Intelli IDEA</li>
             </ul>
             </section>
+            <section class="section" id="projects"><h2 class="section-title">Training projects</h2>
+                <p><a href="https://github.com/RomZesM/FDF/tree/master">Training project written in C language</a></p>
+            </section>
             <section class="section" id="code"><h2 class="section-title">Code Example</h2>
-            <pre>
+            </section>
+               <pre>
                 <code class="code-example">
+                
 //You get an array of numbers, return 
 the sum of all of the positives ones.
 
     function positiveSum(arr) {
         let summ = 0;
                 
-        for(let i = 0; i < arr.length; i++){
+        for(let i = 0; i &lt; arr.length; i++){
             if((parseInt(arr[i]) >= 0))
                 summ += parseInt(arr[i])
         }
             return summ
     }
             </code>
-            <pre>
-            </section>
+            </pre>
             <section class="section" id="language"><h2 class="section-title">Languages</h2>
             <ul class="lang-list">
                 <li class="lang-item"><a href="https://www.efset.org/cert/9PwkQk" target="_blank" class="lang-item-link">English level: intermediate -> B2 - С1</a></li>
