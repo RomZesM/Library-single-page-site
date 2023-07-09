@@ -25,15 +25,19 @@ body {
 	justify-content: space-between;
 }
 
+
+
 .header{
-	border: 1px solid black;
+	background-color: antiquewhite;
 }
 
 .main{
-	border: 1px solid red;
+	background-color: bisque;
 }
 
-
+footer{
+	background-color: antiquewhite;
+}
 .container{
 	max-width: 1440px;
 	margin: 0 auto;
@@ -57,11 +61,6 @@ body {
 .section-title{
 	font-family: 'Lato', sans-serif;
 }
-
-.footer{
-	border: 1px solid yellow;
-}
-
 
 
 .nav-list{
