@@ -1,4 +1,10 @@
+//@import "normalize/import-now"; - for version from site
+
+@import "base/normalize";
+//abstract
 @import "abstract/constants";
+@import "abstract/placeholders";
+
 
 @import "layouts/wrapper";
 
