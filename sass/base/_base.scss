@@ -1,12 +1,13 @@
 /*base style for html body*/
 
 html {
-	font-size: 10;
+	font-size: 10px;
 }
 
 body {
-	font-size: 1.7rem;
-}
+	font-size: 1.6rem;
+	width: $content-width;
+}	
 
 h1 {
 	font-family: 'Forum', Verdana, sans-serif;
@@ -59,4 +60,9 @@ p {
 	line-height: 40px; /* 266.667% */
 	letter-spacing: 2px;
 	text-transform: capitalize;
+}
+
+a:link, a:visited, a:active{
+	background-color: transparent;
+	text-decoration: none;  //remove underline from all links
 }

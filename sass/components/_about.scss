@@ -1,0 +1,17 @@
+.about__wrapper{
+	width: $content-width;
+}
+
+.about__images{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.about__images li{
+	list-style: none;
+}
+
+.about__title{
+	padding: 20px 0px;
+}

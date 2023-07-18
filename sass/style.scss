@@ -1,2 +1,14 @@
-@import "base/base";
 @import "abstract/constants";
+
+@import "layouts/wrapper";
+
+
+//base
+@import "base/base";
+@import "base/buttons";
+
+//Components
+@import "components/header";
+@import "components/welcome";
+@import "components/_about.scss";
+

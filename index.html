@@ -12,20 +12,18 @@
 <body>
 	<header>
 		<div class="wrapper header__wrapper">
-			<div class="header__content">
-				<h1 class="header__title">Brooklyn Public Library</h1>	
-				<nav class="hesder__navigation">
-					<ul class="navigation">
-						<li class="navigation__list-item"><a href="#">About</a></li>
-						<li class="navigation__list-item"><a href="#">Favorites</a></li>
-						<li class="navigation__list-item"><a href="#">Coffe shop</a></li>
-						<li class="navigation__list-item"><a href="#">Contacts</a></li>
-						<li class="navigation__list-item"><a href="#">Library Card</a></li>
-					</ul>
-				</nav>
-				<div class="header__icon-profile">
-					<a href="#" class="ico ico-profile"></a>
-				</div>
+			<h1 class="header__title">Brooklyn Public Library</h1>	
+			<nav class="header__navigation">
+				<ul class="navigation">
+					<li class="navigation__item"><a class="navigation__link" href="#">About</a></li>
+					<li class="navigation__item"><a class="navigation__link" href="#">Favorites</a></li>
+					<li class="navigation__item"><a class="navigation__link" href="#">Coffe shop</a></li>
+					<li class="navigation__item"><a class="navigation__link" href="#">Contacts</a></li>
+					<li class="navigation__item"><a class="navigation__link" href="#">Library Card</a></li>
+				</ul>
+			</nav>
+			<div class="header__icon-profile-hamburger">
+				<a href="#"><img class="ico ico-profile" src="assets/ico/icon_profile.svg" alt="Profile icon"></a>
 			</div>
 		</div>
 		
@@ -35,11 +33,9 @@
 	<main>
 		<section class="welcome">
 			<div class="wrapper welcome__wrapper">
+				<div class="welcome__overlay"><img src="assets/overlay.png" alt="overlay"></div>
 				<div class="welcome__title">
-					<h2>Welcome to the brooklyn library</h2>
-				</div>
-				<div class="welcome__background">
-					<img src="assets/img/Welcome.png" alt="Welcome_background_image">
+					<p class="welcome__text">Welcome to the brooklyn library</p>
 				</div>
 			</div>
 		</section>
