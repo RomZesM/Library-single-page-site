@@ -11,26 +11,25 @@ body {
 
 h1 {
 	font-family: 'Forum', Verdana, sans-serif;
-	color: #d92121;
+	color: $color-text-additional;
 	text-align: center;
 	font-family: Forum;
 	font-size: 40px;
 	font-style: normal;
 	font-weight: 400;
 	line-height: 50px; /* 125% */
-	letter-spacing: 3px;
-	text-transform: uppercase;
+	letter-spacing: 0.6px;
+	
 }
 
 h2{
 	font-family: 'Forum', Verdana, sans-serif;
-	font-size: 40px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 40px; /* 100% */
+	
 	letter-spacing: 2px;
 	text-transform: capitalize;
 
+	@include font(41px, 400, 40px); //using mixins
+	
 }
 h3 {
 	text-align: center;

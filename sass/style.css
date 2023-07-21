@@ -418,25 +418,24 @@ body {
 
 h1 {
   font-family: "Forum", Verdana, sans-serif;
-  color: #d92121;
+  color: #FFFFFF;
   text-align: center;
   font-family: Forum;
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
   line-height: 50px; /* 125% */
-  letter-spacing: 3px;
-  text-transform: uppercase;
+  letter-spacing: 0.6px;
 }
 
 h2 {
   font-family: "Forum", Verdana, sans-serif;
-  font-size: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  font-size: 41px;
   font-style: normal;
   font-weight: 400;
   line-height: 40px; /* 100% */
-  letter-spacing: 2px;
-  text-transform: capitalize;
 }
 
 h3 {
@@ -482,13 +481,17 @@ a:link, a:visited, a:active {
 
 header {
   background-color: #0C0C0E;
-  padding: 20px 0 20px 0;
 }
 
 .header__wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.header__title {
+  margin: 0;
+  padding: 0 0 0 20px;
 }
 
 .navigation {
@@ -510,8 +513,17 @@ header {
   color: #FFFFFF;
 }
 
+.header__icon-profile-hamburger {
+  padding: 31px 20px 31px 0;
+}
+
 .welcome__wrapper {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  background: linear-gradient(180deg, #0C0C0E 0%, #0C0C0E 0.01%, rgba(18, 18, 21, 0.1) 100%);
   background-image: url(../assets/img/welcome.png);
   width: 1440px;
   height: 600px;
@@ -521,10 +533,7 @@ header {
   display: flex;
   width: 600px;
   height: 220px;
-  padding: 35px 40px;
-  justify-content: center;
   align-items: center;
-  flex-shrink: 0;
   background-color: #0C0C0E;
 }
 
@@ -538,6 +547,7 @@ header {
   font-weight: 400;
   line-height: 50px; /* 125% */
   letter-spacing: 3px;
+  padding: 35px 40px;
 }
 
 .about__wrapper {

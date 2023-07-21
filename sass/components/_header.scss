@@ -1,13 +1,18 @@
 header {
 	background-color: $color-headers;
-	padding: 20px 0 20px 0;
-	
+		
 }
 
 .header__wrapper{
 	display: flex; //place 3 div-block in row
 	align-items: center; //выравниваем по центру
 	justify-content: space-between;
+}
+
+.header__title{
+	margin: 0;
+	padding: 0 0 0 20px;
+		
 }
 
 .navigation{	
@@ -29,4 +34,7 @@ header {
 
 .navigation__link{
 	color: $color-text-additional;
+}
+.header__icon-profile-hamburger{
+	padding: 31px 20px 31px 0;
 }
