@@ -1,0 +1,37 @@
+.contacts-wrapper{
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.info-header-one, .info-header-two, .info-dir-name{
+	color: #000;
+	text-align: left;
+	font-family: Inter;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 40px; /* 200% */
+	letter-spacing: 2px;
+	text-transform: capitalize;
+}
+
+.info-header-one{
+	margin-bottom: 40px;
+}
+
+.info-header-two{
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+.info-txt{
+	color: #000;
+	text-align: left;
+	font-family: Inter;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 40px; /* 200% */
+	letter-spacing: 2px;
+	text-transform: capitalize;
+}
