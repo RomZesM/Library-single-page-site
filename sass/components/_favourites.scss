@@ -1,4 +1,146 @@
-.favourites__title{
-	text-align: center;
-	margin: auto;
+.picker_label{
+	color: #000;
+	font-family: Inter;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
 }
+
+.season__pick-radio-list{
+	display: flex;
+	width: 700px;
+	justify-content: space-between;
+	margin-bottom: 40px;
+
+}
+
+.season__pick-radio-list{
+	color: #000;
+	font-family: Inter;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.book-card{
+	border: solid black 1px;
+	width: 550px;
+	height: 555px;
+	margin-bottom: 40px;
+	margin-right: 40px;
+	flex-shrink: 0;
+	position: relative;
+}
+
+.book-cards-wrapper{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	
+}
+
+.book-card_name{
+	margin: 15px 0 0 20px;
+}
+
+.book_title{
+	color: #000;
+	font-family: Inter;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 40px; /* 266.667% */
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	margin: 15px 0 0 20px;
+}
+
+.book_author{
+	color: #000;
+	font-family: Inter;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 40px;
+	letter-spacing: 2px;
+	text-transform: capitalize;
+	margin: 0px 0 0 20px;
+}
+.book_annotation{
+	width: 376px;
+	height: 320px;
+	margin: 0 0 23px 20px;
+}
+
+.book_annotation p{
+	color: #000;
+	font-family: Inter;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 40px; /* 266.667% */
+	letter-spacing: 2px;
+	text-transform: capitalize;
+	
+}
+
+.book_cover{
+	position: absolute; //для выравнивания img parent должен быть relative
+	left: 390px;
+	top: 254.2px;
+}
+
+
+
+
+
+
+
+
+// input[type="radio"] {
+// 	 /* Add if not using autoprefixer */
+// 	 -webkit-appearance: none;
+// 	 /* Remove most all native input styles */
+// 	 appearance: none;
+// 	 /* For iOS < 15 */
+// 	 background-color: var(--form-background);
+// 	 /* Not removed via appearance */
+// 	background-color: #fff;
+// 	margin: 0;
+// 	//font: inherit;
+// 	color: currentColor;
+// 	width: 1.15em;
+// 	height: 1.15em;
+// 	border: 0.15em solid currentColor;
+// 	border-radius: 50%;
+// 	display: grid;
+//   	place-content: center;
+//   }
+
+//   input[type="radio"]::before {
+// 	content: "";
+// 	width: 0.65em;
+// 	height: 0.65em;
+// 	border-radius: 50%;
+// 	transform: scale(0);
+// 	transition: 120ms transform ease-in-out;
+// 	box-shadow: inset 1em 1em var(--form-control-color);
+// 	/* Windows High Contrast Mode */
+// 	background-color: CanvasText;
+	
+//   }
+
+//   input[type="radio"]:checked::before {
+// 	transform: scale(0.7);
+//   }
+
+  
+
+  
+ // input[type="radio"]:focus {
+	//outline: max(2px, 0.15em) solid currentColor;
+	//outline-offset: max(2px, 0.15em);
+	
+ // }

@@ -42,7 +42,7 @@
 		
 		<section class="about">
 			<div class="wrapper about__wrapper">
-				<h2 class="about__title">About</h2>
+				<h2 class="section-title about__title">About</h2>
 				<div class="line"></div>
 				<p class="about__text">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside</p>
 				<ul class="about__images">
@@ -60,65 +60,111 @@
 
 		<section class="favourites">
 			<div class="wrapper favourite__wrapper">
-				<h2 class="favourites__title">Favorites</h2>
+				<h2 class="section-title favourites__title">Favorites</h2>
+				<div class="line"></div>
 				<div class="favourites__season-pick">
+					<p class="picker_label">Pick favorite of season</p>
 					<form action class="season-pick__form">
-						<label for=""></label>
-						<ul class="season__pick-radio-list">
-							<li><input type="radio" value="winter">Winter</li>
-							<li><input type="radio" value="spring">Spring</li>
-							<li><input type="radio" value="summer">Summer</li>
-							<li><input type="radio" value="autumn">Autumn</li>
-						</ul>
+							<div class="season__pick-radio-list">
+								<label>
+									<input type="radio" name="season" value="winter" checked>
+									<span>Winter</span>
+								</label>
+								<label>
+									<input type="radio" name="season" value="spring">
+									<span>Spring</span>
+								</label>
+								<label>
+									<input type="radio" name="season" value="summer">
+									<span>Summer</span>
+								</label>
+								<label>
+									<input type="radio" name="season" value="autumn">
+									<span>Autumn</span>
+								</label>						
+							</div>	
+												
 					</form>
 				</div>
 				<div class="layout-two-columns book-cards-wrapper">
-					<div class="book-cards">
+					<div class="book-card">
 						<h4 class="book-card_name">Staff Picks</h4>
+						<div class="line-color"></div>
 						<div class="book_info">
 							<p class="book_title">The book eaters</p>
 							<p class="book_author">By Sunyl Dean</p>
 						</div>
-						<p class="book_annotation">An unusual sci-fi story about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.</p>
-						<img src="assets/book_covers/book_eater.jpg" alt="Book eater cover image">
-						<button class="button_bordered buy_button">Buy</button>
+						<div class="book_annotation">
+							<p>An unusual sci-fi story about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.</p>
+						</div>
+						<div class="buttons">
+							<button class="button_bordered button_black">Buy</button>
+						</div>
+						<div class="book_cover">
+							<img src="assets/book_covers/book_eater.jpg" alt="Book eater cover image">
+						</div>
 					</div>
 					<div class="book-card">
 						<h4 class="book-card_name">Staff Picks</h4>
+						<div class="line-color"></div>
 						<div class="book_info">
 							<p class="book_title">Cackle</p>
 							<p class="book_author">By Rachel Harrison</p>
 						</div>
-						<p class="book_annotation">Are your Halloween movies of choice The Witches of Eastwick and Practical Magic? Look no further than here - where a woman recovering from a breakup moves to a quaint town in upstate New York and befriends a beautiful witch.</p>
-						<img src="assets/book_covers/cackle.jpg" alt="Cackle cover image">
-						<button class="button_bordered buy_button">Buy</button>
+						<div class="book_annotation">
+							<p>Are your Halloween movies of choice The Witches of Eastwick and Practical Magic? Look no further than here - where a woman recovering from a breakup moves to a quaint town in upstate New York and befriends a beautiful witch.</p>
+						</div>
+						<div class="buttons">
+							<button class="button_bordered button_black">Buy</button>
+						</div>
+						<div class="book_cover">
+							<img src="assets/book_covers/cackle.jpg" alt="Cackle cover image">	
+						</div>
 					</div>
 					<div class="book-card">
 						<h4 class="book-card_name">Staff Picks</h4>
+						<div class="line-color"></div>
 						<div class="book_info">
 							<p class="book_title">Dante: Poet of the Secular World</p>
 							<p class="book_author">By Erich Auerbach</p>
 						</div>
-						<p class="book_annotation">Auerbach's engaging book places the 'Comedy' within the tradition of epic, tragedy, and philosophy in general, arguing for Dante's uniqueness as one who raised the individual and his drama of soul into something of divine significance—an inspired introduction to Dante's main themes.</p>
-						<img src="assets/book_covers/dante.jpg" alt="Dante: Poet of the Secular World cover image">
-						<button class="button_bordered buy_button">Buy</button>
+						<div class="book_annotation">
+							<p>Auerbach's engaging book places the 'Comedy' within the tradition of epic, tragedy, and philosophy in general, arguing for Dante's uniqueness as one who raised the individual and his drama of soul into something of divine significance—an inspired introduction to Dante's main themes.</p>
+						</div>	
+						<div class="buttons">
+							<button class="button_bordered button_black">Buy</button>
+						</div>
+						<div class="book_cover">
+							<img src="assets/book_covers/dante.jpg" alt="Dante: Poet of the Secular World cover image">
+						</div>
+					
 					</div>
 					<div class="book-card">
 						<h4 class="book-card_name">Staff Picks</h4>
+						<div class="line-color"></div>
 						<div class="book_info">
 							<p class="book_title">The Last Queen</p>
 							<p class="book_author">By Clive Irving</p>
 						</div>
-						<p class="book_annotation">A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the Windsors have evolved and thrived as the modern world has changed around them.</p>
-						<img src="assets/book_covers/last queen.jpg" alt="The Last Queen cover image">
-						<button class="button_bordered own_button">Own</button>
+						<div class="book_annotation">
+							<p>A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the Windsors have evolved and thrived as the modern world has changed around them.</p>
+						</div>
+						
+						
+						<div class="buttons">
+							<button class="button_bordered button_colored">Own</button>
+						</div>
+						<div class="book_cover">
+							<img src="assets/book_covers/last queen.jpg" alt="The Last Queen cover image">
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 		<section class="coffeshop">
 			<div class="wrapper wrapper-coffeshop">
-				<h2 class="coffeshop__title"> Coffe shop</h2>
+				<h2 class="section-title coffeshop__title"> Coffe shop</h2>
+				<div class="line"></div>
 				<p class="coffeshop__description">In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and friendly conversation. you can get a favorite book and read in coffee shop. Our barista to cook you best coffee, and also you can try desserts from bakery.</p>
 				<div class="layout-two-columns wrapper__coffeshop-menu">
 					<div class="cafe-menu">
@@ -151,7 +197,8 @@
 						</ul>
 					</div>
 					<div class="cafe-menu">
-						<h2 class="menu-page-title">Dessert & Cakes</h2>
+						<h2 class="section-title menu-page-title">Dessert & Cakes</h2>
+						<div class="line"></div>
 						<ul class="menu-page-list">
 							<li class="menu-page-list-items">
 								<span class="menu-page-list-item-name">Forest Gateau</span>
@@ -187,7 +234,8 @@
 			<div class="wrapper contacts-wrapper">
 				<div class="layout-two-columns contacts-wrapper">
 					<div class="contact__info">
-						<h2 class="contact__title">Our Contacts</h2>
+						<h2 class="section-title contact__title">Our Contacts</h2>
+						<div class="line"></div>
 						<div class="contacts__information"></div>
 						<p class="info-header">For all Library inquiries:</p>
 						<p class="info-txt">Please call (617) 730-2370</p>
@@ -204,7 +252,8 @@
 		</section>
 		<section class="digital-library-cards">
 			<div class="wrapper">
-				<h2 class="digital-library-cards-title">Digital Library Cards</h2>
+				<h2 class="section-title digital-library-cards-title">Digital Library Cards</h2>
+				<div class="line"></div>
 				<div class="layout-two-columns digital-library-cards-container">
 					<div class="card-form-container">
 						<p class="card-form-titile">Find your Library card</p>

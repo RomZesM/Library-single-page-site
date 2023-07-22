@@ -402,7 +402,7 @@ ul {
 }
 
 .wrapper {
-  width: 1440px;
+  width: 1400px;
   margin: auto;
 }
 
@@ -467,6 +467,82 @@ a:link, a:visited, a:active {
   width: 28px;
   height: 28px;
   flex-shrink: 0;
+}
+
+.buttons {
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+}
+
+.button_bordered {
+  width: 75px;
+  height: 30px;
+  flex-shrink: 0;
+  margin: 0 0 15px 20px;
+  background: none;
+  border-radius: 2px;
+}
+
+.button_black {
+  border: 1px solid #0C0C0E;
+  color: #0C0C0E;
+}
+
+.button_colored {
+  border: 1px solid #BB945F;
+  color: #BB945F;
+}
+
+.line {
+  margin: auto;
+  width: 50px;
+  height: 1px;
+  background: black;
+  flex-shrink: 0;
+}
+
+.line-color {
+  margin-left: 20px;
+  width: 60px;
+  height: 1px;
+  background: #BB945F;
+  flex-shrink: 0;
+}
+
+.section-title {
+  margin: 20px 0;
+  text-align: center;
+}
+
+label > input[type=radio] {
+  display: none;
+}
+
+label > input[type=radio] + *::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 20px;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-color: gray;
+}
+
+label > input[type=radio]:checked + *::before {
+  background: radial-gradient(black 10%, black 50%, transparent 50%, transparent);
+  border-color: black;
+}
+
+label > input[type=radio]:checked + * {
+  color: black;
+  font-weight: 700;
 }
 
 header {
@@ -541,20 +617,7 @@ header {
 }
 
 .about__wrapper {
-  width: 1440px;
-}
-
-.about__title {
-  margin: 20px 0;
-  text-align: center;
-}
-
-.line {
-  margin: auto;
-  width: 50px;
-  height: 1px;
-  background: black;
-  flex-shrink: 0;
+  width: 1400px;
 }
 
 .about__text {
@@ -584,9 +647,96 @@ header {
   margin: 0 0 20px 0;
 }
 
-.favourites__title {
-  text-align: center;
-  margin: auto;
+.picker_label {
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.season__pick-radio-list {
+  display: flex;
+  width: 700px;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.season__pick-radio-list {
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.book-card {
+  border: solid black 1px;
+  width: 550px;
+  height: 555px;
+  margin-bottom: 40px;
+  margin-right: 40px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.book-cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.book-card_name {
+  margin: 15px 0 0 20px;
+}
+
+.book_title {
+  color: #000;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px; /* 266.667% */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 15px 0 0 20px;
+}
+
+.book_author {
+  color: #000;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin: 0px 0 0 20px;
+}
+
+.book_annotation {
+  width: 376px;
+  height: 320px;
+  margin: 0 0 23px 20px;
+}
+
+.book_annotation p {
+  color: #000;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 266.667% */
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.book_cover {
+  position: absolute;
+  left: 390px;
+  top: 254.2px;
 }
 
 /*# sourceMappingURL=style.css.map */

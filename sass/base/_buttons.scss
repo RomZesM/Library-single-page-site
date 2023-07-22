@@ -3,3 +3,33 @@
 	height: 28px;
 	flex-shrink: 0;
 }
+
+.buttons{
+	
+	//text-align: center;
+	font-family: Inter;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	letter-spacing: 1px;
+}
+
+.button_bordered{
+	width: 75px;
+	height: 30px;
+	flex-shrink: 0;
+	margin: 0 0 15px 20px;
+	background: none;
+	border-radius: 2px;
+	
+}
+
+.button_black{
+	border: 1px solid $color-headers;
+	color: $color-headers;
+}
+.button_colored{
+	border: 1px solid $color-main;
+	color: $color-main;
+}
