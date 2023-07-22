@@ -414,6 +414,7 @@ html {
 body {
   font-size: 1.6rem;
   width: 1440px;
+  border: 1px solid black;
 }
 
 h1 {
@@ -737,6 +738,98 @@ header {
   position: absolute;
   left: 390px;
   top: 254.2px;
+}
+
+.wrapper-coffeshop {
+  margin-bottom: 40px;
+}
+
+.coffeshop__description {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 200% */
+  letter-spacing: 2px;
+}
+
+.layout-two-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-page-title-left {
+  color: #BB945F;
+  font-family: Forum;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 100% */
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin-bottom: 40px;
+}
+
+.menu-page-title-right {
+  color: #BB945F;
+  font-family: Forum;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 100% */
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin-bottom: 40px;
+  text-align: right;
+}
+
+.menu-page-list-item-left {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.menu-page-list-item-left > :first-child {
+  flex-grow: 3;
+}
+
+.menu-page-list-item-right {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 40px;
+}
+
+.menu-page-list-item-name {
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 200% */
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.menu-page-list-item-cost {
+  color: #000;
+  font-family: Forum;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 200% */
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.menu-page-line {
+  width: 100px;
+  height: 1px;
+  background: #BB945F;
+  flex-shrink: 0;
+  align-self: center;
+  margin: 0 60px;
 }
 
 /*# sourceMappingURL=style.css.map */
