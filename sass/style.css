@@ -414,13 +414,18 @@ ul {
 /*base style for html body*/
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
+  background-color: #8E8E8E;
 }
 
 body {
   font-size: 1.6rem;
   width: 1440px;
-  border: 1px solid black;
   margin: auto;
+}
+
+main {
+  background-color: #FFFFFF;
 }
 
 h1 {

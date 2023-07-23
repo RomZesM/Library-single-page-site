@@ -2,16 +2,20 @@
 
 html {
 	font-size: 10px;
+	scroll-behavior: smooth;
+	background-color: $color-text-light-grey;
 }
 
 body {
 	font-size: 1.6rem;
 	width: 1440px;
-	//del
-	border: 1px solid black;
-	
 	margin: auto; //make all content in center while zooming
 }	
+
+main{
+	background-color: $color-text-additional;
+
+}
 
 h1 {
 	font-family: 'Forum', Verdana, sans-serif;
