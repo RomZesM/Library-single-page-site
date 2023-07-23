@@ -12,19 +12,27 @@
 <body>
 	<header>
 		<div class="wrapper header__wrapper">
-			<h1 class="header__title">Brooklyn Public Library</h1>	
-			<nav class="header__navigation">
-				<ul class="navigation">
-					<li class="navigation__item"><a class="navigation__link" href="#">About</a></li>
-					<li class="navigation__item"><a class="navigation__link" href="#">Favorites</a></li>
-					<li class="navigation__item"><a class="navigation__link" href="#">Coffe shop</a></li>
-					<li class="navigation__item"><a class="navigation__link" href="#">Contacts</a></li>
-					<li class="navigation__item"><a class="navigation__link" href="#">Library Card</a></li>
-				</ul>
-			</nav>
-			<div class="header__icon-profile-hamburger">
-				<a href="#"><img class="ico ico-profile" src="assets/ico/icon_profile.svg" alt="Profile icon"></a>
+			<div class="layout-two-columns">
+				<div class="title_container_left">
+					<h1 class="header__title">Brooklyn Public Library</h1>	
+				</div>
+				<div class="nav_icon_container_right">
+					<nav class="header__navigation">
+						<ul class="navigation">
+							<li class="navigation__item"><a class="navigation__link" href="#about">About</a></li>
+							<li class="navigation__item"><a class="navigation__link" href="#favourities">Favorites</a></li>
+							<li class="navigation__item"><a class="navigation__link" href="#coffe-shop">Coffe shop</a></li>
+							<li class="navigation__item"><a class="navigation__link" href="#contacts">Contacts</a></li>
+							<li class="navigation__item"><a class="navigation__link" href="#lib-cards">Library Card</a></li>
+						</ul>
+					</nav>
+					<div class="header__icon-profile-hamburger">
+						<a href="#"><img class="ico ico-profile" src="assets/ico/icon_profile.svg" alt="Profile icon"></a>
+					</div>
+				</div>
 			</div>
+			
+			
 		</div>
 		
 		
@@ -40,7 +48,7 @@
 			</div>
 		</section>
 		
-		<section class="about">
+		<section class="about" id="about">
 			<div class="wrapper about__wrapper">
 				<h2 class="sec-title about__title">About</h2>
 				<div class="line"></div>
@@ -58,7 +66,7 @@
 			</div>
 		</section>
 
-		<section class="favourites">
+		<section class="favourites" id="favourities">
 			<div class="wrapper favourite__wrapper">
 				<h2 class="sec-title favourites__title">Favorites</h2>
 				<div class="line"></div>
@@ -161,7 +169,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="coffeshop">
+		<section class="coffeshop" id="coffe-shop">
 			<div class="wrapper wrapper-coffeshop">
 				<h2 class="sec-title coffeshop__title"> Coffe shop</h2>
 				<div class="line"></div>
@@ -241,7 +249,7 @@
 
 			</div>
 		</section>
-		<section class="contacts">
+		<section class="contacts" id="contacts">
 			<div class="wrapper">
 				<h2 class="sec-title contact__title">Our Contacts</h2>
 				<div class="line"></div>
@@ -268,7 +276,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="digital-library-cards">
+		<section class="digital-library-cards" id="lib-cards">
 			<div class="wrapper">
 				<h2 class="sec-title digital-library-cards-title">Digital Library Cards</h2>
 				<div class="line"></div>

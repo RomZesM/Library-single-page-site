@@ -3,16 +3,19 @@ header {
 		
 }
 
-.header__wrapper{
-	display: flex; //place 3 div-block in row
-	align-items: center; //выравниваем по центру
-	justify-content: space-between;
+// .header__wrapper{
+// 	display: flex; //place 3 div-block in row
+// 	align-items: center; //выравниваем по центру
+// 	justify-content: space-between;
+// }
+
+.nav_icon_container_right{
+	display: flex;
+	gap: 40px;
 }
 
 .header__title{
-	margin: 0;
-	padding: 0 0 0 20px;
-		
+	margin: 20px 0 20px 0;
 }
 
 .navigation{	
@@ -34,7 +37,15 @@ header {
 
 .navigation__link{
 	color: $color-text-additional;
+	
 }
+
+.navigation__link:hover{
+	@extend %transition;
+	text-decoration: underline;
+	
+}
+
 .header__icon-profile-hamburger{
-	padding: 31px 20px 31px 0;
+	padding: 27px 0 0 0;
 }

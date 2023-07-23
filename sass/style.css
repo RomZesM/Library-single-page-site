@@ -401,6 +401,10 @@ ul {
   box-sizing: border-box;
 }
 
+.navigation__link:hover {
+  transition: all 0.7s ease-out;
+}
+
 .wrapper {
   width: 1400px;
   margin: auto;
@@ -560,15 +564,13 @@ header {
   background-color: #0C0C0E;
 }
 
-.header__wrapper {
+.nav_icon_container_right {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  gap: 40px;
 }
 
 .header__title {
-  margin: 0;
-  padding: 0 0 0 20px;
+  margin: 20px 0 20px 0;
 }
 
 .navigation {
@@ -590,8 +592,12 @@ header {
   color: #FFFFFF;
 }
 
+.navigation__link:hover {
+  text-decoration: underline;
+}
+
 .header__icon-profile-hamburger {
-  padding: 31px 20px 31px 0;
+  padding: 27px 0 0 0;
 }
 
 .welcome__wrapper {
