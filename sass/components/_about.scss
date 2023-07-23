@@ -24,3 +24,27 @@
 	text-align: center;
 	margin: 0 0 20px 0;
 }
+
+.pagination_button{
+	background-color: transparent;
+	background-image: url(assets/ico/pagination/gold_circle_pagination.svg);
+
+	width: 26px;
+	height: 26px;
+	cursor: pointer;
+	outline: none;
+	//del
+	border: solid 1px black;
+}
+
+.svg-icon{
+	cursor: pointer;
+	//fill: aqua !important;
+}
+
+.pgg{
+	background-image: url(assets/ico/pagination/carousel_pagination.svg);
+	display:inline-flex;
+	height: 46px;
+	width: 46px;
+}

@@ -660,6 +660,27 @@ header {
   margin: 0 0 20px 0;
 }
 
+.pagination_button {
+  background-color: transparent;
+  background-image: url(assets/ico/pagination/gold_circle_pagination.svg);
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  outline: none;
+  border: solid 1px black;
+}
+
+.svg-icon {
+  cursor: pointer;
+}
+
+.pgg {
+  background-image: url(assets/ico/pagination/carousel_pagination.svg);
+  display: inline-flex;
+  height: 46px;
+  width: 46px;
+}
+
 .picker_label {
   color: #000;
   font-family: Inter;
@@ -936,6 +957,7 @@ header {
   border-color: #BB945F;
   background: #FFFFFF;
   padding: 6px 20px 6px 20px;
+  outline: none;
 }
 
 .form-button {

@@ -64,7 +64,7 @@
 	border-color: $color-main;
 	background: $color-text-additional;
 	padding: 6px 20px 6px 20px;
-
+	outline: none; //remove black outline it text field
 }
 
 .form-button{
