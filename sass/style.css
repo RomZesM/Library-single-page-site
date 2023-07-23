@@ -406,6 +406,11 @@ ul {
   margin: auto;
 }
 
+.layout-two-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
 /*base style for html body*/
 html {
   font-size: 10px;
@@ -415,6 +420,7 @@ body {
   font-size: 1.6rem;
   width: 1440px;
   border: 1px solid black;
+  margin: auto;
 }
 
 h1 {
@@ -755,11 +761,6 @@ header {
   letter-spacing: 2px;
 }
 
-.layout-two-columns {
-  display: flex;
-  justify-content: space-between;
-}
-
 .menu-page-title-left {
   color: #BB945F;
   font-family: Forum;
@@ -976,6 +977,50 @@ header {
 .register_buttons_container {
   display: flex;
   justify-content: flex-end;
+}
+
+footer {
+  background-color: #0C0C0E;
+  color: #FFFFFF;
+}
+
+.social-list {
+  display: flex;
+  gap: 15px;
+}
+
+.footer__worktime {
+  color: #FFF;
+  text-align: right;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 133.333% */
+}
+
+.footer-line {
+  width: 1400px;
+  height: 1px;
+  background: #FFFFFF;
+  margin-top: 10px;
+}
+
+.footer__date_logo_username {
+  display: flex;
+  justify-content: space-between;
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 200% */
+  letter-spacing: 2px;
+}
+
+.footer__date_logo_username > div {
+  margin: 40px 0 40px 0;
 }
 
 /*# sourceMappingURL=style.css.map */

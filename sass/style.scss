@@ -7,9 +7,9 @@
 @import "abstract/placeholders";
 @import "abstract/mixins";
 
-
+//layouts
 @import "layouts/wrapper";
-
+@import "layouts/layouts";
 
 //base
 @import "base/base";
@@ -25,3 +25,4 @@
 @import "components/coffe-shop";
 @import "components/contacts";
 @import "components/digital-cards";
+@import "components/footer";
