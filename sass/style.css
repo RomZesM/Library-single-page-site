@@ -414,7 +414,6 @@ ul {
 /*base style for html body*/
 html {
   font-size: 10px;
-  scroll-behavior: smooth;
   background-color: #8E8E8E;
 }
 
@@ -525,7 +524,7 @@ a:link, a:visited, a:active {
   flex-shrink: 0;
 }
 
-.section-title {
+.sec-title {
   margin: 20px 0;
   text-align: center;
 }
@@ -648,10 +647,6 @@ header {
   justify-content: space-around;
   align-items: center;
   margin: 0 0 40px 0;
-}
-
-.about__images li {
-  list-style: none;
 }
 
 .about__carousel {
