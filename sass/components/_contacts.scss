@@ -4,7 +4,7 @@
 }
 
 .info-header-one, .info-header-two, .info-dir-name{
-	color: #000;
+	color: $color-text;
 	text-align: left;
 	font-family: Inter;
 	font-size: 20px;
@@ -34,4 +34,14 @@
 	line-height: 40px; /* 200% */
 	letter-spacing: 2px;
 	text-transform: capitalize;
+}
+//remove color and link colors from tel number links
+.tel_href:link, .tel_href:visited, .tel_href:active {
+	color: $color-text;
+	text-decoration: none;  //remove underline from all links
+}
+//remove color and link colors from mail links
+.info-dir-name > a:link, a:visited, a:active{
+	color: $color-text;
+
 }
