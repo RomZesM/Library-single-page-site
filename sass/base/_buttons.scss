@@ -29,7 +29,7 @@
 	border: 1px solid $color-headers;
 	color: $color-headers;
 }
-.button_black:hover{
+.button_black:hover, .button_bordered:hover, .form-button:hover{
 	border: 1px solid $color-main;
 	background-color: $color-main;
 }

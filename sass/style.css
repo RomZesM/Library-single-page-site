@@ -507,7 +507,7 @@ a:link, a:visited, a:active {
   color: #0C0C0E;
 }
 
-.button_black:hover {
+.button_black:hover, .button_bordered:hover, .form-button:hover {
   border: 1px solid #BB945F;
   background-color: #BB945F;
 }
