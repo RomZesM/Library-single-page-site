@@ -1,0 +1,121 @@
+
+
+.card-form-title{
+	color: $color-text;
+	font-family: Inter;
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	letter-spacing: 0.6px;
+	text-align: center;
+}
+
+.card-form-container{
+	border: 3px solid $color-main;
+	background: $color-text-additional;
+	width: 600px;
+	height: 386px;
+	flex-shrink: 0;
+	box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.47);
+	
+	margin-bottom: 35px;
+}
+
+.fields-color-container{
+	display: flex;
+	flex-direction: column;
+	width: 560px;
+	height: 272px;
+	background-color: $color-main;
+	margin: 17px 17px 20px 17px;
+	
+
+}
+
+.form-title{ //как то надо поправить
+	text-align: left;
+	padding-left: 20px;
+	}
+
+.form-fields{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 25px;
+
+}
+
+#reader-name-id, #card-number{
+	color: #8E8E8E;
+	font-family: Forum;
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 50px; /* 166.667% */
+	letter-spacing: 0.6px;
+
+}
+
+.form-fields > input{
+	width: 520px;
+	border-radius: 10px;
+	border-width: 0;
+	border-color: $color-main;
+	background: $color-text-additional;
+	padding: 6px 20px 6px 20px;
+
+}
+
+.form-button{
+	display: flex; //todo явно есть какой то другой способо для выравнивания
+	margin: auto; //todo но работает толко flex + margin-auto
+	
+	color: #0C0C0E;
+	text-align: center;
+	font-family: Inter;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	letter-spacing: 1px;
+
+	padding: 10px 40px;
+	background-color: $color-text-additional;
+	
+	
+}
+
+.suggest-to-log-in-container{
+	width: 456px;
+}
+
+.suggest-to-log-in-container-title{
+	color: #000;
+	text-align: right;
+	font-family: Forum;
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	letter-spacing: 0.6px;
+}
+
+.suggest-to-log-in-container-txt{
+	color: #000;
+	text-align: right;
+	font-family: Inter;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 40px; /* 200% */
+	letter-spacing: 0.4px;
+
+	padding-bottom: 35px;
+}
+
+.register_buttons_container{
+	display: flex;
+	justify-content: flex-end;
+
+}

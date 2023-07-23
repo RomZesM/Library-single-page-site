@@ -273,24 +273,34 @@
 				<h2 class="section-title digital-library-cards-title">Digital Library Cards</h2>
 				<div class="line"></div>
 				<div class="layout-two-columns digital-library-cards-container">
-					<div class="card-form-container">
-						<p class="card-form-titile">Find your Library card</p>
-						<form action="carf-form">
-							<h3 class="form-title">Brooklyn Public Library</h3>
-							<input type="text" name="reader-name" id="reader-name-id" placeholder="Reader's name">
-							<input type="text" name="card-number" id="card-number" placeholder="Card number">
-							<button class="button_bordered" type="submit">Check the card</button>
-
-						</form>
-					</div>
-					<div class="suggest-to-log-in-container">
-						<h3 class="suggest-to-log-in-container-title">Get a reader card </h3>
-						<p class="suggest-to-log-in-container-txt">You will be able to see a reader card after logging into account or you can register a new account</p>
-						<div class="register_buttons_container">
-							<button class="button button_bordered">Sign Up</button>
-             				<button class="button button_bordered">Log In</button>
-						</div>
+					<div class="library-card-block-left">
+						<p class="card-form-title">Find your Library card</p>
 						
+						<div class="card-form-container">						
+							<form action method="POST">
+								<div class="fields-color-container">
+									<h3 class="form-title">Brooklyn Public Library</h3>	
+									<div class="form-fields">
+										<input type="text" name="reader-name" id="reader-name-id" placeholder="Reader's name">
+										<input type="text" name="card-number" id="card-number" placeholder="Card number">
+									</div>
+								</div>
+								<button class="form-button" type="submit">Check the card</button>
+							</form>
+						</div>
+
+					</div>					
+					<div class="library-card-block-right">
+						<div class="suggest-to-log-in-container">
+								<h3 class="suggest-to-log-in-container-title">Get a reader card </h3>
+								<p class="suggest-to-log-in-container-txt">You will be able to see a reader card after logging into account or you can register a new account</p>
+								<div class="register_buttons_container">
+								<button class="buttons button_bordered">Sign Up</button>
+								<button class="buttons button_bordered">Log In</button>
+						</div>
+								
+					</div>
+					
 						
 					</div>
 				</div>
