@@ -2,7 +2,19 @@ footer{
 	background-color: $color-headers;
 	color: $color-text-additional;
 }
+.adress-container{
+	color: #FFF;
+	font-family: Inter;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px; /* 133.333% */
+}
 
+
+.adress-container > a:link, a:visited, a:active{
+	color: $color-text-additional
+}
 .social-list{
 	display: flex;
 	gap: 15px;

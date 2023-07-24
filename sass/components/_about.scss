@@ -21,30 +21,51 @@
 }
 
 .about__carousel{
-	text-align: center;
-	margin: 0 0 20px 0;
+	margin: auto;
+  	//margin: 0 0 20px 0;
+	//width: 68px;
+	//height: 16px;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+		
 }
 
-.pagination_button{
-	background-color: transparent;
-	background-image: url(assets/ico/pagination/gold_circle_pagination.svg);
-
+.carusel-button-press-zone{ //active zone iz more than icon
 	width: 26px;
-	height: 26px;
-	cursor: pointer;
+	height: 26px;   
+	border-radius: 50%;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	outline: none;
-	//del
-	border: solid 1px black;
 }
-
-.svg-icon{
-	cursor: pointer;
-	//fill: aqua !important;
-}
-
-.pgg{
-	background-image: url(assets/ico/pagination/carousel_pagination.svg);
-	display:inline-flex;
-	height: 46px;
-	width: 46px;
-}
+  
+  .carusel-button{
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background-color: $color-headers;
+	border: $color-headers;
+	outline: none;
+	
+  }
+  
+  .carusel-button:hover{
+	background-color: $color-text-light-grey;
+  }
+  
+  .carusel-button:focus{
+	background-color: $color-main;
+  }
+  
+  .carusel-button:focus-visible{
+	background-color: $color-main;
+  }
+  
+  .carusel-button:active{
+	background-color: $color-main;
+  }

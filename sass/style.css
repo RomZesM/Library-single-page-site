@@ -661,29 +661,46 @@ header {
 }
 
 .about__carousel {
-  text-align: center;
-  margin: 0 0 20px 0;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
-.pagination_button {
-  background-color: transparent;
-  background-image: url(assets/ico/pagination/gold_circle_pagination.svg);
+.carusel-button-press-zone {
   width: 26px;
   height: 26px;
-  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   outline: none;
-  border: solid 1px black;
 }
 
-.svg-icon {
-  cursor: pointer;
+.carusel-button {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #0C0C0E;
+  border: #0C0C0E;
+  outline: none;
 }
 
-.pgg {
-  background-image: url(assets/ico/pagination/carousel_pagination.svg);
-  display: inline-flex;
-  height: 46px;
-  width: 46px;
+.carusel-button:hover {
+  background-color: #8E8E8E;
+}
+
+.carusel-button:focus {
+  background-color: #BB945F;
+}
+
+.carusel-button:focus-visible {
+  background-color: #BB945F;
+}
+
+.carusel-button:active {
+  background-color: #BB945F;
 }
 
 .picker_label {
@@ -1027,6 +1044,19 @@ header {
 
 footer {
   background-color: #0C0C0E;
+  color: #FFFFFF;
+}
+
+.adress-container {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 133.333% */
+}
+
+.adress-container > a:link, a:visited, a:active {
   color: #FFFFFF;
 }
 
