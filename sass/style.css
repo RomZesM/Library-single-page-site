@@ -401,7 +401,7 @@ ul {
   box-sizing: border-box;
 }
 
-.navigation__link:hover {
+.carusel-button:hover, .navigation__link:hover, .button_black:hover, .button_bordered:hover, .form-button:hover {
   transition: all 0.7s ease-out;
 }
 
