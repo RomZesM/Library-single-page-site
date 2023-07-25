@@ -3,19 +3,22 @@
 
 }
 
-.season-pick__form label{
+.season-pick__form  label{
 	display: flex; //to make cirkle wisible
 	align-items: center; //circle centered against label
-	padding: 5px;
+	
+	//padding: 5px;
 }
 
 .season-pick__form label::before{ //write circle "before" label
 	content: '';
-	width: 17px;
-	height: 17px;
+	width: 13px;
+	height: 13px;
 	border: 2px black solid;
 	border-radius: 50%;
-	margin-right: 20px;//margin between circkle and text
+	margin-right: 18px;//margin between circkle and text
+	
+	margin-top: 3px;;
 }
 
 .season-pick__form input[type="radio"]:checked + label::before{ //what happens with circle after checked

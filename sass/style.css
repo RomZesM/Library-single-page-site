@@ -543,16 +543,16 @@ a:link, a:visited, a:active {
 .season-pick__form label {
   display: flex;
   align-items: center;
-  padding: 5px;
 }
 
 .season-pick__form label::before {
   content: "";
-  width: 17px;
-  height: 17px;
+  width: 13px;
+  height: 13px;
   border: 2px black solid;
   border-radius: 50%;
-  margin-right: 20px;
+  margin-right: 18px;
+  margin-top: 3px;
 }
 
 .season-pick__form input[type=radio]:checked + label::before {
@@ -668,7 +668,7 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 55px;
 }
 
 .carusel-button-press-zone {
@@ -706,6 +706,10 @@ header {
   background-color: #BB945F;
 }
 
+.favourites__season-pick {
+  margin-top: 40px;
+}
+
 .picker_label {
   color: #000;
   font-family: Inter;
@@ -719,7 +723,6 @@ header {
   display: flex;
   width: 700px;
   justify-content: space-between;
-  margin-bottom: 40px;
   color: #000;
   font-family: Inter;
   font-size: 20px;
@@ -727,6 +730,8 @@ header {
   font-weight: 400;
   line-height: normal;
   text-transform: capitalize;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .book-card {
@@ -746,7 +751,11 @@ header {
 }
 
 .book-card_name {
-  margin: 15px 0 0 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 20px;
+  padding-top: 15px;
+  padding-bottom: 0px;
 }
 
 .book_title {
@@ -758,7 +767,7 @@ header {
   line-height: 40px; /* 266.667% */
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin: 15px 0 0 20px;
+  margin: 18px 0 0 20px;
 }
 
 .book_author {
@@ -776,7 +785,8 @@ header {
 .book_annotation {
   width: 376px;
   height: 320px;
-  margin: 0 0 23px 20px;
+  margin-bottom: 35px;
+  margin-left: 20px;
 }
 
 .book_annotation p {
@@ -788,11 +798,21 @@ header {
   line-height: 40px; /* 266.667% */
   letter-spacing: 2px;
   text-transform: capitalize;
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  padding-right: 17px;
+}
+
+.book-card button {
+  padding-top: 2px;
+  margin-left: 19px;
 }
 
 .book_cover {
   position: absolute;
-  left: 390px;
+  left: 389px;
   top: 254.2px;
 }
 

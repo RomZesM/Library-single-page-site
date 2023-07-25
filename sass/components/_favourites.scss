@@ -1,3 +1,7 @@
+.favourites__season-pick{
+	margin-top: 40px;
+}
+
 .picker_label{
 	color: #000;
 	font-family: Inter;
@@ -11,7 +15,7 @@
 	display: flex;
 	width: 700px;
 	justify-content: space-between;
-	margin-bottom: 40px;
+	
 
 	color: #000;
 	font-family: Inter;
@@ -20,6 +24,11 @@
 	font-weight: 400;
 	line-height: normal;
 	text-transform: capitalize;
+
+	//
+	margin-top: 40px;
+	margin-bottom: 40px;
+
 }
 
 .book-card{
@@ -40,7 +49,12 @@
 }
 
 .book-card_name{
-	margin: 15px 0 0 20px;
+	//margin: 14px 0 0 20px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 20px;
+	padding-top: 15px;
+	padding-bottom: 0px;
 }
 
 .book_title{
@@ -52,7 +66,7 @@
 	line-height: 40px; /* 266.667% */
 	letter-spacing: 2px;
 	text-transform: uppercase;
-	margin: 15px 0 0 20px;
+	margin: 18px 0 0 20px;
 }
 
 .book_author{
@@ -69,7 +83,9 @@
 .book_annotation{
 	width: 376px;
 	height: 320px;
-	margin: 0 0 23px 20px;
+	margin-bottom: 35px;
+	margin-left: 20px;
+
 }
 
 .book_annotation p{
@@ -81,12 +97,23 @@
 	line-height: 40px; /* 266.667% */
 	letter-spacing: 2px;
 	text-transform: capitalize;
-	
+
+	//
+	margin: 0;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	padding-left: 0px;
+	padding-right: 17px;	
+}
+
+.book-card button{
+	padding-top: 2px;
+	margin-left: 19px;
 }
 
 .book_cover{
 	position: absolute; //для выравнивания img parent должен быть relative
-	left: 390px;
+	left: 389px;
 	top: 254.2px;
 }
 
