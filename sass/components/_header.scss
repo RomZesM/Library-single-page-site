@@ -2,42 +2,40 @@ header {
 	background-color: $color-headers;
 		
 }
-
-// .header__wrapper{
-// 	display: flex; //place 3 div-block in row
-// 	align-items: center; //выравниваем по центру
-// 	justify-content: space-between;
-// }
-
-.nav_icon_container_right{
-	display: flex;
-	gap: 40px;
-}
-
 .header__title{
 	margin: 20px 0 20px 0;
 }
 
+.header__navigation{
+	display: flex;
+}
+
+.nav_icon_container_right{
+	display: flex;
+		
+}
 .navigation{	
 	display: flex;
+	justify-content: center;
+	align-items: center;
+	
 	list-style: none;
 	color: $color-text-additional;
-		
+	gap: 30px;
 }
 
 .navigation__item{
-	padding: 0 15px; //up-down, right-left padding
 	font-family: Inter;
 	font-size: 20px;
 	font-style: normal;
 	font-weight: 400;
 	line-height: 50px; /* 250% */
-	
+
 }
 
 .navigation__link{
 	color: $color-text-additional;
-	
+		
 }
 
 .navigation__link:hover{
@@ -47,5 +45,6 @@ header {
 }
 
 .header__icon-profile-hamburger{
-	padding: 27px 0 0 0;
+	padding: 31px 0 0 0;
+	margin-left: 40px;
 }
