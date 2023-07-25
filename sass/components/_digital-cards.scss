@@ -9,8 +9,16 @@
 	line-height: normal;
 	letter-spacing: 0.6px;
 	text-align: center;
+	//
+	margin-bottom: 29px;
+
 }
 
+
+
+.digital-library-cards-container{
+	margin-top: 11px;
+}
 .card-form-container{
 	border: 3px solid $color-main;
 	background: $color-text-additional;
@@ -36,13 +44,16 @@
 .form-title{ //как то надо поправить
 	text-align: left;
 	padding-left: 20px;
+	
+	margin-top: 27px;
+	margin-bottom: 31px;
 	}
 
 .form-fields{
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	gap: 25px;
+	gap: 26px;
 
 }
 
@@ -63,7 +74,10 @@
 	border-width: 0;
 	border-color: $color-main;
 	background: $color-text-additional;
-	padding: 6px 20px 6px 20px;
+	padding-top: 6px;
+	padding-right: 20px;
+	padding-bottom: 9px;
+	padding-left: 20px;
 	outline: none; //remove black outline it text field
 }
 
@@ -79,15 +93,20 @@
 	font-weight: 700;
 	line-height: normal;
 	letter-spacing: 1px;
-
-	padding: 10px 40px;
 	background-color: $color-text-additional;
 	
+	//
+	
+	padding-top: 9px;
+	padding-right: 38px;
+	padding-bottom: 9px;
+	padding-left: 39px;
 	
 }
 
 .suggest-to-log-in-container{
 	width: 456px;
+	
 }
 
 .suggest-to-log-in-container-title{
@@ -99,6 +118,8 @@
 	font-weight: 400;
 	line-height: normal;
 	letter-spacing: 0.6px;
+	//
+	margin-bottom: 33px;
 }
 
 .suggest-to-log-in-container-txt{
@@ -111,7 +132,8 @@
 	line-height: 40px; /* 200% */
 	letter-spacing: 0.4px;
 
-	padding-bottom: 35px;
+	margin-bottom: 36px;
+	
 }
 
 .register_buttons_container{
@@ -119,3 +141,7 @@
 	justify-content: flex-end;
 
 }
+.register_buttons_container button{
+	 margin: 0 0 15px 20px;//not here
+}
+

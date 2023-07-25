@@ -4,7 +4,7 @@
 	flex-shrink: 0;
 }
 
-.buttons{
+.buttons{ //commont font style for most buttons
 	
 	//text-align: center;
 	font-family: Inter;
@@ -16,27 +16,29 @@
 
 }
 
-.button_bordered{
-	width: 75px;
-	height: 30px;
+.button_bordered{ //common
+	//
 	flex-shrink: 0;
-	margin: 0 0 15px 20px;
 	background: none;
 	border-radius: 2px;
-	
-}
-
-.button_black{
 	border: 1px solid $color-headers;
 	color: $color-headers;
+
+	//
+	outline: none;
+	border: 1px solid $color-headers;
 }
-.button_black:hover, .button_bordered:hover, .form-button:hover{
+
+.button_small{
+	width: 75px;
+	height: 30px;
+		
+}
+
+.button_bordered:hover{
 	border: 1px solid $color-main;
 	background-color: $color-main;
 	@extend %transition;
 }
 
-.button_own{
-	border: 1px solid $color-main;
-	color: $color-main;
-}
+

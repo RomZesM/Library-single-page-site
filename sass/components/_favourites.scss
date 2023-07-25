@@ -111,6 +111,20 @@
 	margin-left: 19px;
 }
 
+.button_own{
+	border: 1px solid $color-main;
+	color: $color-main;
+	flex-shrink: 0;
+	background: none;
+	border-radius: 2px;
+	outline: none;
+	
+
+
+
+}
+
+
 .book_cover{
 	position: absolute; //для выравнивания img parent должен быть relative
 	left: 389px;

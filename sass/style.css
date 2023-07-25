@@ -401,8 +401,8 @@ ul {
   box-sizing: border-box;
 }
 
-.carusel-button:hover, .navigation__link:hover, .button_black:hover, .button_bordered:hover, .form-button:hover {
-  transition: all 0.7s ease-out;
+.carusel-button:hover, .navigation__link:hover, .button_bordered:hover {
+  transition: all 0.5s ease-out;
 }
 
 .wrapper {
@@ -492,27 +492,23 @@ a:link, a:visited, a:active {
 }
 
 .button_bordered {
-  width: 75px;
-  height: 30px;
   flex-shrink: 0;
-  margin: 0 0 15px 20px;
   background: none;
   border-radius: 2px;
-}
-
-.button_black {
   border: 1px solid #0C0C0E;
   color: #0C0C0E;
+  outline: none;
+  border: 1px solid #0C0C0E;
 }
 
-.button_black:hover, .button_bordered:hover, .form-button:hover {
+.button_small {
+  width: 75px;
+  height: 30px;
+}
+
+.button_bordered:hover {
   border: 1px solid #BB945F;
   background-color: #BB945F;
-}
-
-.button_own {
-  border: 1px solid #BB945F;
-  color: #BB945F;
 }
 
 .line {
@@ -810,6 +806,15 @@ header {
   margin-left: 19px;
 }
 
+.button_own {
+  border: 1px solid #BB945F;
+  color: #BB945F;
+  flex-shrink: 0;
+  background: none;
+  border-radius: 2px;
+  outline: none;
+}
+
 .book_cover {
   position: absolute;
   left: 389px;
@@ -914,7 +919,7 @@ header {
 
 .contacts-wrapper {
   margin-top: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 57px;
 }
 
 .info-header-one, .info-header-two, .info-dir-name {
@@ -972,6 +977,11 @@ header {
   line-height: normal;
   letter-spacing: 0.6px;
   text-align: center;
+  margin-bottom: 29px;
+}
+
+.digital-library-cards-container {
+  margin-top: 11px;
 }
 
 .card-form-container {
@@ -996,13 +1006,15 @@ header {
 .form-title {
   text-align: left;
   padding-left: 20px;
+  margin-top: 27px;
+  margin-bottom: 31px;
 }
 
 .form-fields {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 25px;
+  gap: 26px;
 }
 
 #reader-name-id, #card-number {
@@ -1021,7 +1033,10 @@ header {
   border-width: 0;
   border-color: #BB945F;
   background: #FFFFFF;
-  padding: 6px 20px 6px 20px;
+  padding-top: 6px;
+  padding-right: 20px;
+  padding-bottom: 9px;
+  padding-left: 20px;
   outline: none;
 }
 
@@ -1036,8 +1051,11 @@ header {
   font-weight: 700;
   line-height: normal;
   letter-spacing: 1px;
-  padding: 10px 40px;
   background-color: #FFFFFF;
+  padding-top: 9px;
+  padding-right: 38px;
+  padding-bottom: 9px;
+  padding-left: 39px;
 }
 
 .suggest-to-log-in-container {
@@ -1053,6 +1071,7 @@ header {
   font-weight: 400;
   line-height: normal;
   letter-spacing: 0.6px;
+  margin-bottom: 33px;
 }
 
 .suggest-to-log-in-container-txt {
@@ -1064,12 +1083,16 @@ header {
   font-weight: 400;
   line-height: 40px; /* 200% */
   letter-spacing: 0.4px;
-  padding-bottom: 35px;
+  margin-bottom: 36px;
 }
 
 .register_buttons_container {
   display: flex;
   justify-content: flex-end;
+}
+
+.register_buttons_container button {
+  margin: 0 0 15px 20px;
 }
 
 footer {
