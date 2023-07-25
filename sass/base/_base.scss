@@ -33,7 +33,7 @@ h2{
 	letter-spacing: 2px;
 	text-transform: capitalize;
 
-	@include font(41px, 400, 40px); //using mixins
+	@include font(40px, 400, 40px); //using mixins
 	
 }
 h3 {

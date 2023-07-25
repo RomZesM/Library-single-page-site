@@ -445,7 +445,7 @@ h2 {
   font-family: "Forum", Verdana, sans-serif;
   letter-spacing: 2px;
   text-transform: capitalize;
-  font-size: 41px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 400;
   line-height: 40px; /* 100% */
@@ -628,6 +628,7 @@ header {
   height: 220px;
   align-items: center;
   background-color: #0C0C0E;
+  margin: 220px 0 160px 0;
 }
 
 .welcome__text {
@@ -643,10 +644,6 @@ header {
   padding: 35px 40px;
 }
 
-.about__wrapper {
-  width: 1400px;
-}
-
 .about__text {
   color: #000;
   text-align: center;
@@ -660,9 +657,9 @@ header {
 
 .about__images {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  margin: 0 0 40px 0;
+  margin-bottom: 31px;
 }
 
 .about__carousel {
@@ -671,6 +668,7 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  margin-bottom: 40px;
 }
 
 .carusel-button-press-zone {
