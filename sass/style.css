@@ -821,7 +821,7 @@ header {
 }
 
 .wrapper-coffeshop {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 .wrapper-coffeshop p {
@@ -913,7 +913,7 @@ header {
 }
 
 .contacts-wrapper {
-  margin-top: 40px;
+  margin-top: 20px;
   margin-bottom: 40px;
 }
 
@@ -957,6 +957,10 @@ header {
 
 .info-dir-name > a:link, a:visited, a:active {
   color: #000000;
+}
+
+.map {
+  margin-top: 20px;
 }
 
 .card-form-title {
