@@ -401,7 +401,7 @@ ul {
   box-sizing: border-box;
 }
 
-.carusel-button:hover, .navigation__link:hover, .button_bordered:hover {
+.footer-link:hover, .info-dir-name:hover, .tel_href:hover, .carusel-button:hover, .navigation__link:hover, .button_bordered:hover {
   transition: all 0.5s ease-out;
 }
 
@@ -418,6 +418,7 @@ ul {
 /*base style for html body*/
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
   background-color: #8E8E8E;
 }
 
@@ -960,8 +961,12 @@ header {
   text-decoration: none;
 }
 
-.info-dir-name > a:link, a:visited, a:active {
+.info-dir-name:link, .info-dir-name:visited, .info-dir-name:active {
   color: #000000;
+}
+
+.info-dir-name:hover, .tel_href:hover {
+  text-decoration: underline;
 }
 
 .map {
@@ -982,6 +987,7 @@ header {
 
 .digital-library-cards-container {
   margin-top: 11px;
+  padding-bottom: 5px;
 }
 
 .card-form-container {
@@ -1107,15 +1113,13 @@ footer {
   font-style: normal;
   font-weight: 400;
   line-height: 20px; /* 133.333% */
-}
-
-.adress-container > a:link, a:visited, a:active {
-  color: #FFFFFF;
+  padding-top: 4px;
 }
 
 .social-list {
   display: flex;
   gap: 15px;
+  margin-top: 20px;
 }
 
 .footer__worktime {
@@ -1128,18 +1132,29 @@ footer {
   line-height: 20px; /* 133.333% */
 }
 
+.footer__worktime p:first-child {
+  padding-top: 20px;
+  padding-bottom: 1px;
+  margin: 0px;
+}
+
+.footer__worktime p:last-child {
+  padding-top: 9px;
+  padding-bottom: 1px;
+  margin: 0px;
+}
+
 .footer-line {
   width: 1400px;
   height: 1px;
   background: #FFFFFF;
-  margin-top: 10px;
+  margin-top: 17px;
 }
 
 .footer__date_logo_username {
   display: flex;
   justify-content: space-between;
   color: #FFF;
-  text-align: center;
   font-family: Inter;
   font-size: 20px;
   font-style: normal;
@@ -1148,8 +1163,36 @@ footer {
   letter-spacing: 2px;
 }
 
+.footer-link {
+  color: #FFFFFF;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+  color: #BB945F;
+}
+
 .footer__date_logo_username > div {
-  margin: 40px 0 40px 0;
+  margin-top: 30px;
+  margin-right: 0px;
+  margin-bottom: 40px;
+  margin-left: 0;
+  padding-top: 6px;
+}
+
+.footer__date_logo_username div:nth-child(1) {
+  flex-grow: 3;
+}
+
+.footer__date_logo_username div:nth-child(2) {
+  flex-grow: 1;
+  text-align: center;
+  padding-left: 45px;
+}
+
+.footer__date_logo_username div:nth-child(3) {
+  flex-grow: 2;
+  text-align: right;
 }
 
 /*# sourceMappingURL=style.css.map */

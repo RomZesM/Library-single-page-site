@@ -41,9 +41,14 @@
 	text-decoration: none;  //remove underline from all links
 }
 //remove color and link colors from mail links
-.info-dir-name > a:link, a:visited, a:active{
+.info-dir-name:link, .info-dir-name:visited, .info-dir-name:active{
 	color: $color-text;
 
+}
+
+.info-dir-name:hover, .tel_href:hover{
+	@extend %transition;
+	text-decoration: underline;
 }
 
 .map {
