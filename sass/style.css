@@ -1122,6 +1122,15 @@ footer {
   margin-top: 20px;
 }
 
+.ico-obj {
+  pointer-events: none;
+}
+
+.svg-icon-code:hover {
+  border-bottom: solid 1px #BB945F;
+  border-right: solid 1px #BB945F;
+}
+
 .footer__worktime {
   color: #FFF;
   text-align: right;

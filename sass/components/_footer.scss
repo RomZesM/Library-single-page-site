@@ -24,10 +24,17 @@ footer{
 	margin-top: 20px;
 }
 
-.social-item:hover{
-	//background-color: aqua;
-	//border: solid 1px red;
+.ico-obj{
+	pointer-events: none; //!make svg <object> clickable
 }
+
+.svg-icon-code:hover{
+	//background-color: aqua;
+	border-bottom: solid 1px $color-main;
+	border-right: solid 1px $color-main;
+}
+
+
 
 .footer__worktime{
 	color: #FFF;
