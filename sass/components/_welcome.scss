@@ -37,8 +37,17 @@
 	letter-spacing: 3px;
 	
 	padding: 35px 40px;
-	
-
-	
 }
+ .welcome__text span:first-child{
+	padding-right: 9px;
+	
+ }
+ .welcome__text span:nth-child(2){
+	padding-left: 1px;
+	
+ }
 
+ .welcome__text span:nth-child(3){
+	padding-left: 4px;
+	
+ }
