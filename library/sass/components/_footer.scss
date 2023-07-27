@@ -1,0 +1,133 @@
+footer{
+	background-color: $color-headers;
+	color: $color-text-additional;
+}
+.adress-container{
+	color: #FFF;
+	font-family: Inter;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px; /* 133.333% */
+	//
+	padding-top: 4px;
+}
+
+
+// .adress-container > a:link, a:visited, a:active{
+// 	color: $color-text-additional
+// }
+
+.social-list{
+	display: flex;
+	gap: 15px;
+	margin-top: 20px;
+}
+
+.ico-obj{
+	pointer-events: none; //!make svg <object> clickable
+}
+
+.svg-icon-code:hover{
+	//background-color: aqua;
+	border-bottom: solid 1px $color-main;
+	border-right: solid 1px $color-main;
+}
+
+
+
+.footer__worktime{
+	color: #FFF;
+	text-align: right;
+	font-family: Inter;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px; /* 133.333% */
+}
+
+.footer__worktime p:first-child{
+	padding-top: 20px;
+	padding-bottom: 1px;
+	margin: 0px;
+
+}
+.footer__worktime p:last-child{
+	padding-top: 9px;
+	padding-bottom: 1px;
+	margin: 0px;
+	
+}
+
+.footer-line{
+	width: 1400px;
+	height: 1px;
+	background: $color-text-additional;
+	margin-top: 17px;
+}
+
+.footer__date_logo_username{
+	display: flex;
+	justify-content: space-between;
+		
+	//
+	color: #FFF;
+	//text-align: center;
+	font-family: Inter;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 40px; /* 200% */
+	letter-spacing: 2px;
+
+	
+}
+
+.footer-link{
+	color: $color-text-additional
+}
+
+.footer-link:hover{
+	text-decoration: underline;
+	@extend %transition;
+	color: $color-main
+
+}
+
+
+// .footer__date_logo_username div > a{
+// 	color: $color-text-additional
+// }
+
+// .footer__date_logo_username div > a:hover{
+// 	text-decoration: underline;
+// 	@extend %transition;
+// 	color: $color-main
+
+// }
+
+
+.footer__date_logo_username > div{
+	margin-top: 30px;
+	margin-right: 0px;
+	margin-bottom: 35px;
+	margin-left: 0;
+	padding-top: 6px;
+}
+
+//todo -> some better way to make it nice?
+
+.footer__date_logo_username  div:nth-child(1){
+	flex-grow: 3;	
+}
+
+.footer__date_logo_username  div:nth-child(2){
+	flex-grow: 1;
+	text-align: center;
+	padding-left: 45px;
+}
+
+.footer__date_logo_username  div:nth-child(3){
+	flex-grow: 2;
+	text-align: right;	
+}

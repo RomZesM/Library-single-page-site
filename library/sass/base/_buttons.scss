@@ -1,0 +1,44 @@
+.ico-profile{
+	width: 28px;
+	height: 28px;
+	flex-shrink: 0;
+}
+
+.buttons{ //commont font style for most buttons
+	
+	//text-align: center;
+	font-family: Inter;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	letter-spacing: 1px;
+
+}
+
+.button_bordered{ //common
+	//
+	flex-shrink: 0;
+	background: none;
+	border-radius: 2px;
+	border: 1px solid $color-headers;
+	color: $color-headers;
+
+	//
+	outline: none;
+	border: 1px solid $color-headers;
+}
+
+.button_small{
+	width: 75px;
+	height: 30px;
+		
+}
+
+.button_bordered:hover{
+	border: 1px solid $color-main;
+	background-color: $color-main;
+	@extend %transition;
+}
+
+

@@ -1,0 +1,34 @@
+.season-pick__form input[type="radio"] {
+	display: none; //remvoe standart circle
+
+}
+
+.season-pick__form  label{
+	display: flex; //to make cirkle wisible
+	align-items: center; //circle centered against label
+	
+	//padding: 5px;
+}
+
+.season-pick__form label::before{ //write circle "before" label
+	content: '';
+	width: 13px;
+	height: 13px;
+	border: 2px black solid;
+	border-radius: 50%;
+	margin-right: 18px;//margin between circkle and text
+	
+	margin-top: 3px;;
+}
+
+.season-pick__form input[type="radio"]:checked + label::before{ //what happens with circle after checked
+	background: radial-gradient(black 10%, black 30%, transparent 30%, transparent); //can change cirecle diameter with second color % and transparent value
+	margin-right: 15px; //correction due to font weight change
+	//transition: all .7s ease-out;
+	
+}
+//change label font after checking
+.season-pick__form input[type="radio"]:checked + label{ //what happens with circle after checked
+	font-weight: 700; 
+	
+}
