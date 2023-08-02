@@ -1,7 +1,16 @@
 footer{
-	background-color: $color-headers;
+	
 	color: $color-text-additional;
 }
+
+.footer-wrapper{
+	background-color: $color-headers;
+	max-width: 1440px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+
 .adress-container{
 	color: #FFF;
 	font-family: Inter;

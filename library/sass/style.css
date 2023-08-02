@@ -406,8 +406,13 @@ ul {
 }
 
 .wrapper {
-  width: 1400px;
+  max-width: 1400px;
   margin: auto;
+}
+@media (max-width: 768px) {
+  .wrapper {
+    max-width: 768px;
+  }
 }
 
 .layout-two-columns {
@@ -419,12 +424,10 @@ ul {
 html {
   font-size: 10px;
   scroll-behavior: smooth;
-  background-color: #8E8E8E;
 }
 
 body {
   font-size: 1.6rem;
-  width: 1440px;
   margin: auto;
 }
 
@@ -561,8 +564,11 @@ a:link, a:visited, a:active {
   font-weight: 700;
 }
 
-header {
+.header__wrapper {
   background-color: #0C0C0E;
+  max-width: 1440px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .header__title {
@@ -615,7 +621,7 @@ header {
   align-content: center;
   background: linear-gradient(180deg, #0C0C0E 0%, #0C0C0E 0.01%, rgba(18, 18, 21, 0.1) 100%);
   background-image: url(../assets/img/Welcome.png);
-  width: 1440px;
+  max-width: 1440px;
   height: 600px;
 }
 
@@ -629,10 +635,10 @@ header {
 }
 
 .welcome__text {
+  font-family: Forum;
   color: #FFFFFF;
   text-align: center;
   text-transform: uppercase;
-  font-family: Forum;
   font-size: 4rem;
   font-style: normal;
   font-weight: 400;
@@ -1114,8 +1120,14 @@ header {
 }
 
 footer {
-  background-color: #0C0C0E;
   color: #FFFFFF;
+}
+
+.footer-wrapper {
+  background-color: #0C0C0E;
+  max-width: 1440px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .adress-container {

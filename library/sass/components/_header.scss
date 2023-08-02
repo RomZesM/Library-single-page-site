@@ -1,7 +1,10 @@
-header {
+.header__wrapper{
 	background-color: $color-headers;
-		
+	max-width: 1440px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
+
 .header__title{
 	margin: 20px 0 20px 0;
 }

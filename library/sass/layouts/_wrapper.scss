@@ -1,4 +1,8 @@
 .wrapper {
-	width: $content-width;
+    max-width: $content-width;
 	margin: auto; //make wrapper be in center
+
+	@media (max-width: $tablet-width) {
+		max-width: $tablet-width;
+	 }
 }
