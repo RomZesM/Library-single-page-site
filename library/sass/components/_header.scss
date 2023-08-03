@@ -57,7 +57,7 @@
 .header__icon-profile-burger a{
 	width: 28px;
 	height: 28px;
-	@include media-tablet{
+	@include media-tablet{ //move in tablet view
 		margin-right: 40px;
 	}
 }

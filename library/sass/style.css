@@ -405,6 +405,16 @@ ul {
   transition: all 0.5s ease-out;
 }
 
+.about__text {
+  color: #000000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 200% */
+}
+
 .wrapper {
   max-width: 1400px;
   margin: auto;
@@ -670,23 +680,61 @@ a:link, a:visited, a:active {
 }
 
 .about__text {
-  color: #000;
-  text-align: center;
-  font-family: Inter;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 40px; /* 200% */
   margin: 40px 0 20px 0;
 }
+@media (max-width: 768px) {
+  .about__text {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 
+@media (max-width: 768px) {
+  .about-images_container {
+    display: flex;
+    justify-content: center;
+    gap: 47px;
+  }
+}
+.left_arrow_ico, .right_arrow_ico {
+  display: none;
+}
+@media (max-width: 768px) {
+  .left_arrow_ico, .right_arrow_ico {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .left_arrow_ico {
+    padding-top: 21px;
+  }
+  .right_arrow_ico {
+    padding-top: 21px;
+  }
+}
 .about__images {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 31px;
 }
+@media (max-width: 768px) {
+  .about__images {
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+}
 
+.about__images > div:nth-child(1n+4) {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .about__images > div:nth-child(1n+2) {
+    display: none;
+  }
+}
 .about__carousel {
   margin: auto;
   display: flex;
@@ -694,6 +742,15 @@ a:link, a:visited, a:active {
   justify-content: center;
   align-items: center;
   margin-bottom: 55px;
+}
+
+.about__carousel > label:first-child, label:last-child {
+  display: none;
+}
+@media (max-width: 768px) {
+  .about__carousel > label:first-child, label:last-child {
+    display: flex;
+  }
 }
 
 .carusel-button-press-zone {
@@ -704,6 +761,10 @@ a:link, a:visited, a:active {
   justify-content: center;
   align-items: center;
   outline: none;
+}
+
+.carusel-button-press-zone:hover {
+  cursor: pointer;
 }
 
 .carusel-button {
