@@ -1,6 +1,20 @@
+//how to use mixin
+// @include mixin-name(arg)
+//or
+// @include mixin-name{ some:style }
+//
+
 @mixin font($size, $weight, $height, $style: normal){ //we can not send here last parameter, so :normal would set by default
 	font-size: $size;
 	font-style: $style;
 	font-weight: $weight;
 	line-height: $height; /* 100% */
+}
+
+@mixin media-tablet { //send here a block of style rules, all of them will replase @content
+	@media (max-width: $tablet-width){ @content;} 
+}
+
+@mixin media-laptop { 
+	@media (max-width: $content-width){ @content;} 
 }

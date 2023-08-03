@@ -47,7 +47,23 @@
 	
 }
 
-.header__icon-profile-hamburger{
-	padding: 31px 0 0 0;
+.header__icon-profile-burger{
+	display: flex;
+	align-items: center;
 	margin-left: 40px;
+
+}
+
+.header__icon-profile-burger a{
+	width: 28px;
+	height: 28px;
+	@include media-tablet{
+		margin-right: 40px;
+	}
+}
+
+@include media-tablet{ //mixin for tablet view
+	.navigation{
+		display: none; //remove navigation when in tablet view
+	}
 }
