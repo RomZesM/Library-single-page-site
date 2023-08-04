@@ -405,7 +405,7 @@ ul {
   transition: all 0.5s ease-out;
 }
 
-.about__text {
+.menu-page-list-item-name, .coffeshop__description, .about__text {
   color: #000000;
   text-align: center;
   font-family: Inter;
@@ -413,6 +413,18 @@ ul {
   font-style: normal;
   font-weight: 400;
   line-height: 40px; /* 200% */
+}
+
+.menu-page-title-right, .menu-page-title-left {
+  color: #BB945F;
+  font-family: Forum;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 100% */
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin-bottom: 40px;
 }
 
 .wrapper {
@@ -929,44 +941,37 @@ a:link, a:visited, a:active {
   margin-bottom: 60px;
 }
 
+@media (max-width: 768px) {
+  .wrapper__coffeshop-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  .cafe-menu-left {
+    margin-left: 20px;
+  }
+  .cafe-menu-right {
+    margin-left: 287px;
+  }
+  .menu-page-title-right {
+    padding-right: 3px;
+  }
+}
 .wrapper-coffeshop p {
   margin-top: 40px;
   margin-bottom: 40px;
 }
-
-.coffeshop__description {
-  color: #000;
-  text-align: center;
-  font-family: Inter;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 40px; /* 200% */
-  letter-spacing: 2px;
+@media (max-width: 768px) {
+  .wrapper-coffeshop p {
+    padding: 0 15px;
+  }
 }
 
-.menu-page-title-left {
-  color: #BB945F;
-  font-family: Forum;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 40px; /* 100% */
+.coffeshop__description {
   letter-spacing: 2px;
-  text-transform: capitalize;
-  margin-bottom: 40px;
 }
 
 .menu-page-title-right {
-  color: #BB945F;
-  font-family: Forum;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 40px; /* 100% */
-  letter-spacing: 2px;
-  text-transform: capitalize;
-  margin-bottom: 40px;
   text-align: right;
 }
 
@@ -987,14 +992,9 @@ a:link, a:visited, a:active {
 }
 
 .menu-page-list-item-name {
-  color: #000;
-  font-family: Inter;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 40px; /* 200% */
   letter-spacing: 2px;
   text-transform: capitalize;
+  text-align: left;
 }
 
 .menu-page-list-item-cost {
@@ -1014,7 +1014,7 @@ a:link, a:visited, a:active {
   background: #BB945F;
   flex-shrink: 0;
   align-self: center;
-  margin: 0 60px;
+  margin: 0 59px;
 }
 
 .contacts-wrapper {
