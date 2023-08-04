@@ -1072,6 +1072,22 @@ a:link, a:visited, a:active {
   margin-top: 20px;
 }
 
+@media (max-width: 768px) {
+  .contact__title {
+    padding-left: 4px;
+  }
+  .contacts-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+  }
+  .contact__info {
+    margin-left: 21px;
+  }
+  .map {
+    margin-left: 36px;
+  }
+}
 .card-form-title {
   color: #000000;
   font-family: Inter;

@@ -54,3 +54,23 @@
 .map {
 	margin-top: 20px;
 }
+
+@include media-tablet{
+	.contact__title{
+		padding-left: 4px;
+	}
+
+	.contacts-wrapper{
+		display: flex;
+		flex-wrap: wrap;
+		gap: 60px;
+	}
+	
+	.contact__info{
+		margin-left: 21px;
+	}
+	.map{
+		margin-left: 36px;
+	}
+
+}
