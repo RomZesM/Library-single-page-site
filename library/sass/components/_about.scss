@@ -69,12 +69,14 @@
 	align-items: center;		
 	margin-bottom: 55px;
 }
-.about__carousel > label:first-child, label:last-child{
+
+.about__carousel > .carusel-button-press-zone:first-child, .carusel-button-press-zone:last-child{
 	display: none;
 	@include media-tablet{
 		display: flex;
 	}
 }
+
 
 
 .carusel-button-press-zone{ //active zone is more than icon

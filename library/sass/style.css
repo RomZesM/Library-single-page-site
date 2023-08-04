@@ -744,11 +744,11 @@ a:link, a:visited, a:active {
   margin-bottom: 55px;
 }
 
-.about__carousel > label:first-child, label:last-child {
+.about__carousel > .carusel-button-press-zone:first-child, .carusel-button-press-zone:last-child {
   display: none;
 }
 @media (max-width: 768px) {
-  .about__carousel > label:first-child, label:last-child {
+  .about__carousel > .carusel-button-press-zone:first-child, .carusel-button-press-zone:last-child {
     display: flex;
   }
 }
@@ -795,6 +795,11 @@ a:link, a:visited, a:active {
 .favourites__season-pick {
   margin-top: 40px;
 }
+@media (max-width: 768px) {
+  .favourites__season-pick {
+    padding-left: 20px;
+  }
+}
 
 .picker_label {
   color: #000;
@@ -828,6 +833,11 @@ a:link, a:visited, a:active {
   margin-right: 40px;
   flex-shrink: 0;
   position: relative;
+}
+@media (max-width: 768px) {
+  .book-card {
+    margin-left: 89px;
+  }
 }
 
 .book-cards-wrapper {
