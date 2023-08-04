@@ -11,9 +11,25 @@
 	font-weight: 400;
 	line-height: 40px; /* 200% */
 }
+%font-Inter-30-text-color{
+	color: $color-text;
+	font-family: Inter;
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	letter-spacing: 0.6px;
+}
 
-
-
+%font-Forum-30-text-color-light-grey{
+	color: $color-text-light-grey;
+	font-family: Forum;
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 50px; /* 166.667% */
+	letter-spacing: 0.6px;
+}
 
 
 %font-Forum-40-main-color{
