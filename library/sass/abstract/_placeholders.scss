@@ -1,6 +1,8 @@
 %transition{ //just for example ==   @extend %transition;
 	transition: all .5s ease-out;
 }
+//!todo make text size in rem
+
 
 %font-Inter-20{
 	color: $color-text;

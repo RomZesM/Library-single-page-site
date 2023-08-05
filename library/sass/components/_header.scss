@@ -55,12 +55,17 @@
 }
 
 .header__icon-profile-burger a{
-	width: 28px;
-	height: 28px;
+	display: flex; //we need this to avoid free space in <a> element in bottom
 	@include media-tablet{ //move in tablet view
 		margin-right: 40px;
 	}
 }
+@include media-resizer-breakpoint(995px){
+	.navigation{
+		display: none; //remove navigation when in tablet view
+	}
+}
+
 
 @include media-tablet{ //mixin for tablet view
 	.navigation{

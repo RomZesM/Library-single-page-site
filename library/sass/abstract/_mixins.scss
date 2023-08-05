@@ -18,3 +18,7 @@
 @mixin media-laptop { 
 	@media (max-width: $content-width){ @content;} 
 }
+
+@mixin media-resizer-breakpoint($width_point) { 
+	@media (max-width: $width_point){ @content;} 
+}
