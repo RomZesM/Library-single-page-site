@@ -129,6 +129,44 @@
 	 margin: 0 0 15px 20px;//not here
 }
 
+//move suggestion container more smooth
+@include media-laptop{
+	.suggest-to-log-in-container{
+		padding-left: 5vw;
+
+	}
+
+}
+@include media-resizer-breakpoint(860px){
+	.digital-library-cards-container{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;	
+		
+	}
+	.suggest-to-log-in-container{
+		padding-left: 0px;
+	}
+
+	.suggest-to-log-in-container-title {
+		text-align: center;
+		margin-top: 20px;
+		
+	}
+	.suggest-to-log-in-container-txt{
+		text-align: center;
+		padding: 8px 82px;
+		margin-bottom: 31px;
+	}
+	.register_buttons_container{
+		display: flex;
+		justify-content: center;
+		padding-right: 18px;
+		padding-bottom: 20px;
+	}
+
+
+}
 
 
 @include media-tablet{
@@ -158,11 +196,7 @@
 		text-align: center;
 		padding: 8px 82px;
 		margin-bottom: 31px;
-		
-		
 	}
-
-
 	.register_buttons_container{
 		display: flex;
 		justify-content: center;

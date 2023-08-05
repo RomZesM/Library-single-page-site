@@ -2,25 +2,6 @@
 	margin-bottom: 60px;
 }
 
-@include media-tablet{
-	.wrapper__coffeshop-menu{
-		display:flex;
-		flex-wrap: wrap;
-		gap: 40px;
-	}
-	.cafe-menu-left{
-		margin-left: 20px;
-	}
-	.cafe-menu-right{
-		margin-left: 287px;
-
-	}
-	.menu-page-title-right{
-		padding-right: 3px;
-	}
-}
-
-
 .wrapper-coffeshop p{
 	margin-top: 40px;
 	margin-bottom: 40px;
@@ -90,3 +71,43 @@
 	margin: 0 59px;
 }
 
+//scale
+
+@include media-resizer-breakpoint(965px){ //i dont know do i need last one
+	.wrapper__coffeshop-menu{
+		display:flex;
+		flex-wrap: wrap;
+		gap: 40px;
+	}
+	.cafe-menu-left{
+		margin-left: 20px;
+	}
+	.cafe-menu-right{
+		margin-left: 287px;
+
+	}
+	.menu-page-title-right{
+		padding-right: 3px;
+	}
+}
+
+
+
+
+@include media-tablet{
+	.wrapper__coffeshop-menu{
+		display:flex;
+		flex-wrap: wrap;
+		gap: 40px;
+	}
+	.cafe-menu-left{
+		margin-left: 20px;
+	}
+	.cafe-menu-right{
+		margin-left: 287px;
+
+	}
+	.menu-page-title-right{
+		padding-right: 3px;
+	}
+}

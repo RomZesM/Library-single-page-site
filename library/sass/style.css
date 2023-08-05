@@ -984,22 +984,6 @@ a:link, a:visited, a:active {
   margin-bottom: 60px;
 }
 
-@media (max-width: 768px) {
-  .wrapper__coffeshop-menu {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-  }
-  .cafe-menu-left {
-    margin-left: 20px;
-  }
-  .cafe-menu-right {
-    margin-left: 287px;
-  }
-  .menu-page-title-right {
-    padding-right: 3px;
-  }
-}
 .wrapper-coffeshop p {
   margin-top: 40px;
   margin-bottom: 40px;
@@ -1060,6 +1044,38 @@ a:link, a:visited, a:active {
   margin: 0 59px;
 }
 
+@media (max-width: 965px) {
+  .wrapper__coffeshop-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  .cafe-menu-left {
+    margin-left: 20px;
+  }
+  .cafe-menu-right {
+    margin-left: 287px;
+  }
+  .menu-page-title-right {
+    padding-right: 3px;
+  }
+}
+@media (max-width: 768px) {
+  .wrapper__coffeshop-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  .cafe-menu-left {
+    margin-left: 20px;
+  }
+  .cafe-menu-right {
+    margin-left: 287px;
+  }
+  .menu-page-title-right {
+    padding-right: 3px;
+  }
+}
 .contacts-wrapper {
   margin-top: 20px;
   margin-bottom: 57px;
@@ -1115,6 +1131,13 @@ a:link, a:visited, a:active {
   margin-top: 20px;
 }
 
+@media (max-width: 1081px) {
+  .contacts-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+  }
+}
 @media (max-width: 768px) {
   .contact__title {
     padding-left: 4px;
@@ -1242,6 +1265,36 @@ a:link, a:visited, a:active {
   margin: 0 0 15px 20px;
 }
 
+@media (max-width: 1400px) {
+  .suggest-to-log-in-container {
+    padding-left: 5vw;
+  }
+}
+@media (max-width: 860px) {
+  .digital-library-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .suggest-to-log-in-container {
+    padding-left: 0px;
+  }
+  .suggest-to-log-in-container-title {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .suggest-to-log-in-container-txt {
+    text-align: center;
+    padding: 8px 82px;
+    margin-bottom: 31px;
+  }
+  .register_buttons_container {
+    display: flex;
+    justify-content: center;
+    padding-right: 18px;
+    padding-bottom: 20px;
+  }
+}
 @media (max-width: 768px) {
   .digital-library-cards-title {
     padding-left: 4px;
