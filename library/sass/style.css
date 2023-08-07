@@ -457,6 +457,12 @@ ul {
     padding-right: 20px;
   }
 }
+@media (max-width: 768px) {
+  .wrapper {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
 
 .layout-two-columns {
   display: flex;
@@ -678,6 +684,9 @@ a:link, a:visited, a:active {
   align-content: center;
   background: linear-gradient(180deg, #0C0C0E 0%, #0C0C0E 0.01%, rgba(18, 18, 21, 0.1) 100%);
   background-image: url(../assets/img/Welcome.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: right;
   max-width: 1440px;
   height: 600px;
 }
@@ -730,7 +739,7 @@ a:link, a:visited, a:active {
   .about-images_container {
     display: flex;
     justify-content: center;
-    gap: 47px;
+    gap: 46px;
   }
 }
 .left_arrow_ico, .right_arrow_ico {
@@ -748,6 +757,7 @@ a:link, a:visited, a:active {
   }
   .right_arrow_ico {
     padding-top: 21px;
+    padding-right: 5px;
   }
 }
 .about__images {
@@ -788,6 +798,9 @@ a:link, a:visited, a:active {
 @media (max-width: 768px) {
   .about__images > div:nth-child(1n+2) {
     display: none;
+  }
+  .about__images > div:first-child {
+    padding-right: 0px;
   }
 }
 .about__carousel {

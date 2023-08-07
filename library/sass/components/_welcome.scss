@@ -7,10 +7,13 @@
 
 	background: linear-gradient(180deg, #0C0C0E 0%, #0C0C0E 0.01%, rgba(18, 18, 21, 0.10) 100%);
 	background-image: url(../assets/img/Welcome.png);
+	background-repeat: no-repeat;
+	background-size: auto;
+	background-position: right;
+	//
 	max-width: 1440px;
 	height: 600px;
-	
-	
+		
 }
 
 .welcome__title{

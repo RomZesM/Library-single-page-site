@@ -10,7 +10,7 @@
 	.about-images_container{
 		display: flex;
 		justify-content: center;
-		gap: 47px;
+		gap: 46px;
 	}
 }
 
@@ -28,7 +28,7 @@
 	}
 	.right_arrow_ico{
 		padding-top: 21px;
-		
+		padding-right: 5px;
 	}
 
 }
@@ -72,6 +72,9 @@
 			display: none;
 
 	}	
+	.about__images > div:first-child{
+		padding-right: 0px; //make a gap between photo during resizing
+	}
 }
 
 
