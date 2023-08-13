@@ -1,5 +1,10 @@
 .favourites__season-pick{
 	margin-top: 40px;
+
+	@include media-tablet{
+		padding-left: 20px;
+	}
+
 }
 
 .picker_label{
@@ -39,6 +44,9 @@
 	margin-right: 40px;
 	flex-shrink: 0;
 	position: relative;
+	@include media-tablet{
+		margin-left: 89px;
+	}
 }
 
 .book-cards-wrapper{
@@ -119,9 +127,6 @@
 	border-radius: 2px;
 	outline: none;
 	
-
-
-
 }
 
 

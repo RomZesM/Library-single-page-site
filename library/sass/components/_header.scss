@@ -1,7 +1,10 @@
-header {
+.header__wrapper{
 	background-color: $color-headers;
-		
+	max-width: 1440px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
+
 .header__title{
 	margin: 20px 0 20px 0;
 }
@@ -44,7 +47,60 @@ header {
 	
 }
 
-.header__icon-profile-hamburger{
-	padding: 31px 0 0 0;
+.header__icon-profile-burger{
+	display: flex;
+	align-items: center;
 	margin-left: 40px;
+	z-index: 1000;
+
+}
+
+.header__icon-profile-burger a{
+	display: flex; //we need this to avoid free space in <a> element in bottom
+	@include media-tablet{ //move in tablet view
+		margin-right: 40px;
+	}
+}
+@include media-resizer-breakpoint(995px){
+	.header__navigation{
+		display: none; //remove navigation when in tablet view
+	}
+}
+
+
+@include media-tablet{ //mixin for tablet view
+	//.navigation{
+		.header__navigation{
+		position: fixed;
+		right: 0;
+		//top: 90px;
+		display: flex;
+		background-color: $color-headers;
+		z-index: 999; //make menu above page
+		min-width: 332px;
+		height: 570px;
+		//height: calc(50vh - 90px);
+		overflow-y: auto; //make scroll in menu but doesnot work
+		justify-content: center;
+		align-items: center;	
+
+		gap: 30px;
+		transform: translateX(100%);
+		transition: all .5s ease-in-out;
+		//
+		//border: solid 1px white;
+	}
+
+	.navigation{	
+		flex-direction: column;
+	}
+
+
+	.navigation--visible{ //class for showing menu
+		transform: none;		
+	}
+
+	.stop-scroll{
+		overflow: hidden; //to stop scrolling while side menu is visible
+	}
 }

@@ -1,4 +1,19 @@
 .wrapper {
-	width: $content-width;
+    max-width: $content-width;
 	margin: auto; //make wrapper be in center
+
+	
+	@include media-laptop{ //for keeping padding during decreasing size
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	
+	@include media-tablet{
+		padding-left: 0px;
+		padding-right: 0px;
+	} 
+
+	// @media (max-width: $tablet-width) { //?i forget what is this
+	// 	max-width: $tablet-width;
+	//  }
 }

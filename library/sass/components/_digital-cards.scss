@@ -1,15 +1,8 @@
 
-
 .card-form-title{
-	color: $color-text;
-	font-family: Inter;
-	font-size: 30px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
-	letter-spacing: 0.6px;
-	text-align: center;
+	@extend %font-Inter-30-text-color;
 	//
+	text-align: center;
 	margin-bottom: 29px;
 
 }
@@ -25,7 +18,7 @@
 	height: 386px;
 	flex-shrink: 0;
 	box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.47);
-	
+	//
 	margin-bottom: 35px;
 }
 
@@ -57,14 +50,7 @@
 }
 
 #reader-name-id, #card-number{
-	color: #8E8E8E;
-	font-family: Forum;
-	font-size: 30px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 50px; /* 166.667% */
-	letter-spacing: 0.6px;
-
+	@extend %font-Forum-30-text-color-light-grey;
 }
 
 .form-fields > input{
@@ -104,8 +90,7 @@
 }
 
 .suggest-to-log-in-container{
-	width: 456px;
-	
+	padding-left: 320px;;
 }
 
 .suggest-to-log-in-container-title{
@@ -130,7 +115,7 @@
 	font-weight: 400;
 	line-height: 40px; /* 200% */
 	letter-spacing: 0.4px;
-
+//
 	margin-bottom: 36px;
 	
 }
@@ -144,3 +129,80 @@
 	 margin: 0 0 15px 20px;//not here
 }
 
+//move suggestion container more smooth
+@include media-laptop{
+	.suggest-to-log-in-container{
+		padding-left: 5vw;
+
+	}
+
+}
+@include media-resizer-breakpoint(860px){
+	.digital-library-cards-container{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;	
+		
+	}
+	.suggest-to-log-in-container{
+		padding-left: 0px;
+	}
+
+	.suggest-to-log-in-container-title {
+		text-align: center;
+		margin-top: 20px;
+		
+	}
+	.suggest-to-log-in-container-txt{
+		text-align: center;
+		padding: 8px 82px;
+		margin-bottom: 31px;
+	}
+	.register_buttons_container{
+		display: flex;
+		justify-content: center;
+		padding-right: 18px;
+		padding-bottom: 20px;
+	}
+
+
+}
+
+
+@include media-tablet{
+	.digital-library-cards-title{
+		padding-left: 4px;
+	}
+	.card-form-container{
+		margin-bottom: 0px;
+	}
+
+	.digital-library-cards-container{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;	
+		
+	}
+	.suggest-to-log-in-container{
+		padding-left: 0px;
+	}
+
+	.suggest-to-log-in-container-title {
+		text-align: center;
+		margin-top: 20px;
+		
+	}
+	.suggest-to-log-in-container-txt{
+		text-align: center;
+		padding: 8px 82px;
+		margin-bottom: 31px;
+	}
+	.register_buttons_container{
+		display: flex;
+		justify-content: center;
+		padding-right: 18px;
+		padding-bottom: 20px;
+	}
+	
+
+}

@@ -1,0 +1,58 @@
+//local [laceholders
+%burger-line{ //view-style
+	display: inline-block;
+	position: absolute;
+	content: ''; //need for :after :before pseudoelements
+	background-color: $color-text-additional;
+	height: 2px;
+	width: 100%;
+	//
+	transition: 0.3s ease-in-out;	//for smooth dissapearing on center line
+
+}
+
+
+.burger_icon{
+	display: none; //hide on destop
+	//display: inline-block;
+	position: relative;
+	width: 45px;
+	height: 20px;
+	
+	@include media-tablet{
+		display: inline-block;
+	}
+	
+	&:before{  //drow one line before and aftel burgel line container
+		@extend %burger-line;
+		top: calc(0% - 2px);
+		left: 0px;
+	}
+	&:after{
+		@extend %burger-line;
+		top: calc(100% - 2px);
+		left: 0px;
+	}
+}
+
+.burger_line{
+	@extend %burger-line;
+	top: calc(50% - 2px); //? we need center so 50 - line height
+	
+}
+
+@include media-tablet{//make burger menu looks like cross
+	.burger--active-animate .burger_line{ 
+		opacity: 0%; //hide center line
+	}
+
+	.burger--active-animate::before{ //rotate line to make cross
+		transform: rotate(45deg);
+		top: 50%
+	}
+
+	.burger--active-animate::after{
+		transform: rotate(-45deg);
+		top: 50%
+	}
+}

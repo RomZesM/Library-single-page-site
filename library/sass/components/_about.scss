@@ -1,32 +1,101 @@
 .about__text{
-	color: #000;
-	text-align: center;
-	font-family: Inter;
-	font-size: 20px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 40px; /* 200% */
+	@extend %font-Inter-20;
 	margin: 40px 0 20px 0;
+	@include media-tablet{
+		padding-left: 20px;
+		padding-right: 20px; 
+	}
 }
+@include media-tablet{
+	.about-images_container{
+		display: flex;
+		justify-content: center;
+		gap: 46px;
+	}
+}
+
+
+.left_arrow_ico, .right_arrow_ico{
+	display: none;
+	@include media-tablet{
+		display: flex;
+	}
+}
+
+@include media-tablet{
+	.left_arrow_ico{
+		padding-top: 21px;		
+	}
+	.right_arrow_ico{
+		padding-top: 21px;
+		padding-right: 5px;
+	}
+
+}
+
 
 .about__images{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	@include media-laptop{ //make pictures in center when decrese res
+		justify-content: center;
+	}
 	margin-bottom: 31px;
+	@include media-tablet{
+		flex-direction: column;
+		margin-bottom: 16px;
+	}
 }
+
+.about__images > div:nth-child(1n + 4){ //!? why 1n + 4
+	display: none;
+}
+
+@include media-laptop{
+	.about__images > div:first-child{
+		padding-right: 20px; //make a gap between photo during resizing
+	}
+	.about__images > div:nth-child(3){ 
+		display: none; //remove 3d pic during -res
+	}
+}
+@include media-resizer-breakpoint(872px){
+	.about__images > div:nth-child(2){ 
+		display: none; //remove 2d pic during -res
+	}
+}
+
+
+@include media-tablet{
+	.about__images > div:nth-child(1n + 2){ 
+			display: none;
+
+	}	
+	.about__images > div:first-child{
+		padding-right: 0px; //make a gap between photo during resizing
+	}
+}
+
 
 .about__carousel{
 	margin: auto;
   	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	align-items: center;
-		
+	align-items: center;		
 	margin-bottom: 55px;
 }
 
-.carusel-button-press-zone{ //active zone iz more than icon
+.about__carousel > .carusel-button-press-zone:first-child, .carusel-button-press-zone:last-child{
+	display: none;
+	@include media-tablet{
+		display: flex;
+	}
+}
+
+
+.carusel-button-press-zone{ //active zone is more than icon
 	width: 26px;
 	height: 26px;   
 	border-radius: 50%;
@@ -36,31 +105,33 @@
 	align-items: center;
 	outline: none;
 }
+
+.carusel-button-press-zone:hover{
+	cursor: pointer;
+}
   
-  .carusel-button{
+.carusel-button{
 	width: 16px;
 	height: 16px;
 	border-radius: 50%;
 	background-color: $color-headers;
 	border: $color-headers;
 	outline: none;
-	
-  }
+}
   
-  .carusel-button:hover{
+.carusel-button:hover{
 	@extend %transition;
 	background-color: $color-text-light-grey;
-	
-  }
-  
-  .carusel-button:focus{
+}
+
+.carusel-button:focus{
 	background-color: $color-main;
-  }
-  
-  .carusel-button:focus-visible{
+}
+
+.carusel-button:focus-visible{
 	background-color: $color-main;
-  }
-  
-  .carusel-button:active{
+}
+
+.carusel-button:active{
 	background-color: $color-main;
-  }
+}

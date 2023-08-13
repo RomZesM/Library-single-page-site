@@ -16,7 +16,7 @@
 	<title>Library</title>
 </head>
 <body>
-	<script src="scripts/index.js"></script>
+	
 	<header>
 		<div class="wrapper header__wrapper">
 			<div class="layout-two-columns">
@@ -33,17 +33,13 @@
 							<li class="navigation__item"><a class="navigation__link" href="#lib-cards">Library Card</a></li>
 						</ul>
 					</nav>
-					<div class="header__icon-profile-hamburger">
+					<div class="header__icon-profile-burger">
 						<a href="#"><img class="ico ico-profile" src="assets/ico/icon_profile.svg" alt="Profile icon"></a>
+						<span class="burger_icon"><span class="burger_line"></span></span>
 					</div>
 				</div>
 			</div>
-			
-			
 		</div>
-		
-		
-		
 	</header>
 	<main>
 		<section class="welcome">
@@ -63,17 +59,32 @@
 				<h2 class="sec-title about__title">About</h2>
 				<div class="line"></div>
 				<p class="about__text">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside</p>
-				<div class="about__images">
-					<div><img src="assets/img/about/image-1.jpg" alt="library image"></div>
-					<div><img src="assets/img/about/image-2.jpg" alt="library image"></div>
-					<div><img src="assets/img/about/image-3.jpg" alt="library image"></div>
+				<div class="about-images_container">
+					<div class="left_arrow_ico"><img src="assets/ico/arrow_left.svg" alt="left arrow image"></div>
+					<div class="about__images">					
+						<div><img src="assets/img/about/image-1.jpg" alt="library image"></div>
+						<div><img src="assets/img/about/image-2.jpg" alt="library image"></div>
+						<div><img src="assets/img/about/image-3.jpg" alt="library image"></div>
+						<div><img src="assets/img/about/image-4.jpg" alt="library image"></div>
+						<div><img src="assets/img/about/image-5.jpg" alt="library image"></div>
+					</div>
+					<div class="right_arrow_ico"><img src="assets/ico/arrow_right.svg" alt="right arrow image"></div>
 				</div>
+
+				</div>
+				
 				<div class="about__carousel">
+					<label class="carusel-button-press-zone">
+						<button class="carusel-button"></button>
+					</label>
 					<label class="carusel-button-press-zone">
 						<button class="carusel-button" autofocus></button>
 					</label>
 					<label class="carusel-button-press-zone">
 						<button class="carusel-button" ></button>
+					</label>
+					<label class="carusel-button-press-zone">
+						<button class="carusel-button"></button>
 					</label>
 					<label class="carusel-button-press-zone">
 						<button class="carusel-button"></button>
@@ -385,7 +396,7 @@
 				<div class="line"></div>
 				<p class="coffeshop__description">In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and friendly conversation. You can get a favorite book and read in coffee shop. our barista to cook you best coffee, and also you can try desserts from bakery.</p>
 				<div class="layout-two-columns wrapper__coffeshop-menu">
-					<div class="cafe-menu">
+					<div class="cafe-menu-left">
 						<div class="menu-page-title-left">Coffee & Tea</div>
 						<div class="menu-page-list">
 							<div class="menu-page-list-item-left">
@@ -420,7 +431,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="cafe-menu">
+					<div class="cafe-menu-right">
 						<div class="menu-page-title-right">Desserts & Cakes</div>
 						<div class="menu-page-list">
 							<div class="menu-page-list-item-right">
@@ -464,8 +475,7 @@
 				<h2 class="sec-title contact__title">Our Contacts</h2>
 				<div class="line"></div>
 				<div class="layout-two-columns contacts-wrapper">
-					<div class="contact__info">
-						
+					<div class="contact__info">						
 						<div class="contacts__information"></div>
 							<div class="information-block-one">
 								<p class="info-header-one">For all Library inquiries:</p>
@@ -576,5 +586,6 @@
 			</div>
 		</div>
 	</footer>
+	<script src="scripts/index.js"></script>
 </body>
 </html>

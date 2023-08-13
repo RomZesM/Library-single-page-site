@@ -1,15 +1,14 @@
 /*base style for html body*/
-
 html {
 	font-size: 10px;
-	scroll-behavior: smooth; //при обновлении страницы отматывает на начало
-	background-color: $color-text-light-grey;
-}
+	scroll-behavior: smooth; 
+	}
 
 body {
 	font-size: 1.6rem;
-	width: 1440px;
 	margin: auto; //make all content in center while zooming
+	//
+	overflow-x: hidden;
 }	
 
 main{

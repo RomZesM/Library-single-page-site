@@ -1,7 +1,16 @@
 footer{
-	background-color: $color-headers;
+	
 	color: $color-text-additional;
 }
+
+.footer-wrapper{
+	background-color: $color-headers;
+	max-width: 1440px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+
 .adress-container{
 	color: #FFF;
 	font-family: Inter;
@@ -60,7 +69,7 @@ footer{
 }
 
 .footer-line{
-	width: 1400px;
+	width: 100%;
 	height: 1px;
 	background: $color-text-additional;
 	margin-top: 17px;
@@ -130,4 +139,10 @@ footer{
 .footer__date_logo_username  div:nth-child(3){
 	flex-grow: 2;
 	text-align: right;	
+}
+
+@include media-tablet{
+	.footer__date_logo_username  div:nth-child(2){
+		padding-left: 110px;
+	}
 }
