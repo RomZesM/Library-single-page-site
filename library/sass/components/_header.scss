@@ -51,6 +51,7 @@
 	display: flex;
 	align-items: center;
 	margin-left: 40px;
+	z-index: 1000;
 
 }
 
@@ -61,38 +62,42 @@
 	}
 }
 @include media-resizer-breakpoint(995px){
-	.navigation{
+	.header__navigation{
 		display: none; //remove navigation when in tablet view
 	}
 }
 
 
 @include media-tablet{ //mixin for tablet view
-	.navigation{
-		//display: none; //make navigation in vertical and hidden in tablet view
+	//.navigation{
+		.header__navigation{
 		position: fixed;
 		right: 0;
-		top: 90px;
+		//top: 90px;
 		display: flex;
-		flex-direction: column;
-		background-color: $color-text;
+		background-color: $color-headers;
 		z-index: 999; //make menu above page
 		min-width: 332px;
-		min-height: 570px;
-		//overflow-y: auto; //make scroll in menu but doesnot work
-		
+		height: 570px;
+		//height: calc(50vh - 90px);
+		overflow-y: auto; //make scroll in menu but doesnot work
+		justify-content: center;
+		align-items: center;	
 
 		gap: 30px;
 		transform: translateX(100%);
 		transition: all .5s ease-in-out;
 		//
-		border: solid 1px white;
+		//border: solid 1px white;
 	}
 
-	.navigation--visible{ //class for showing menu
-		transform: none;
-		
+	.navigation{	
+		flex-direction: column;
+	}
 
+
+	.navigation--visible{ //class for showing menu
+		transform: none;		
 	}
 
 	.stop-scroll{

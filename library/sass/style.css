@@ -656,6 +656,7 @@ a:link, a:visited, a:active {
   display: flex;
   align-items: center;
   margin-left: 40px;
+  z-index: 1000;
 }
 
 .header__icon-profile-burger a {
@@ -668,25 +669,28 @@ a:link, a:visited, a:active {
 }
 
 @media (max-width: 995px) {
-  .navigation {
+  .header__navigation {
     display: none;
   }
 }
 @media (max-width: 768px) {
-  .navigation {
+  .header__navigation {
     position: fixed;
     right: 0;
-    top: 90px;
     display: flex;
-    flex-direction: column;
-    background-color: #000000;
+    background-color: #0C0C0E;
     z-index: 999;
     min-width: 332px;
-    min-height: 570px;
+    height: 570px;
+    overflow-y: auto;
+    justify-content: center;
+    align-items: center;
     gap: 30px;
     transform: translateX(100%);
     transition: all 0.5s ease-in-out;
-    border: solid 1px white;
+  }
+  .navigation {
+    flex-direction: column;
   }
   .navigation--visible {
     transform: none;
