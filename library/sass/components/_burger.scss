@@ -6,6 +6,9 @@
 	background-color: $color-text-additional;
 	height: 2px;
 	width: 100%;
+	//
+	transition: 0.3s ease-in-out;	//for smooth dissapearing on center line
+
 }
 
 
@@ -36,4 +39,20 @@
 	@extend %burger-line;
 	top: calc(50% - 2px); //? we need center so 50 - line height
 	
+}
+
+@include media-tablet{//make burger menu looks like cross
+	.burger--active-animate .burger_line{ 
+		opacity: 0%; //hide center line
+	}
+
+	.burger--active-animate::before{ //rotate line to make cross
+		transform: rotate(45deg);
+		top: 50%
+	}
+
+	.burger--active-animate::after{
+		transform: rotate(-45deg);
+		top: 50%
+	}
 }

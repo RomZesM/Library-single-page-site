@@ -69,6 +69,33 @@
 
 @include media-tablet{ //mixin for tablet view
 	.navigation{
-		display: none; //remove navigation when in tablet view
+		//display: none; //make navigation in vertical and hidden in tablet view
+		position: fixed;
+		right: 0;
+		top: 90px;
+		display: flex;
+		flex-direction: column;
+		background-color: $color-text;
+		z-index: 999; //make menu above page
+		min-width: 332px;
+		min-height: 570px;
+		//overflow-y: auto; //make scroll in menu but doesnot work
+		
+
+		gap: 30px;
+		transform: translateX(100%);
+		transition: all .5s ease-in-out;
+		//
+		border: solid 1px white;
+	}
+
+	.navigation--visible{ //class for showing menu
+		transform: none;
+		
+
+	}
+
+	.stop-scroll{
+		overflow: hidden; //to stop scrolling while side menu is visible
 	}
 }
