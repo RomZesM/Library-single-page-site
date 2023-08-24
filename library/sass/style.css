@@ -673,6 +673,23 @@ a:link, a:visited, a:active {
     display: none;
   }
 }
+.user_login_menu_small {
+  background-color: yellow;
+  width: 80px;
+  height: 115px;
+  position: fixed;
+  top: 28px;
+  left: 1400px;
+  display: none;
+  flex-direction: column;
+  transition: all 1s ease-out;
+}
+
+.user_login_menu-visible {
+  display: flex;
+  transition: all 1s ease-out;
+}
+
 @media (max-width: 768px) {
   .header__navigation {
     position: fixed;
