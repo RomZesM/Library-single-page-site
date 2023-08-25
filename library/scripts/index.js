@@ -67,6 +67,18 @@ loginFormCloseButton.addEventListener('click', (event) =>{
 	loginForm.classList.remove('login_form-visible');
 });
 
+//call register windows from mini menu
+const registerRef = document.querySelector('.register-ref__small-menu');
+const regForm = document.querySelector('.register_form');
+const regFormCloseButton = document.querySelector('.register_form-close_button');
+
+registerRef.addEventListener('click', (event) =>{
+	regForm.classList.add('register_form-visible');
+});
+//close-button for reg menu
+regFormCloseButton.addEventListener('click', (event) =>{
+	regForm.classList.remove('register_form-visible');
+});
 
 
 

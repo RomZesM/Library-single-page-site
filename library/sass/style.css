@@ -1554,4 +1554,18 @@ footer {
   display: block;
 }
 
+.register_form {
+  position: fixed;
+  top: 10vw;
+  left: 45vw;
+  background-color: #FFFFFF;
+  width: 250px;
+  height: 382px;
+  display: none;
+}
+
+.register_form-visible {
+  display: block;
+}
+
 /*# sourceMappingURL=style.css.map */
