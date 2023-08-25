@@ -1,0 +1,33 @@
+.user_login_menu_small{
+	//--menu-coord-right:1000px; //have local variable for js
+	//
+	//background-color: $color-text-additional;
+	background-color: yellow;
+	width: 80px;
+	height: 115px;
+	position: absolute;
+	top: 28px;
+	left: 1400px;	
+	flex-direction: column;
+	transition: all 1s ease-out;
+	display: none;
+	
+}
+.user_login_menu-visible{
+	display: flex;
+	transition: all 1s ease-out;
+}
+
+.login_form{
+	position: fixed;
+	top: 10vw;
+	left: 45vw;
+	background-color: $color-text-additional;
+	width: 250px;
+	height: 262px;
+	display: none;
+}
+
+.login_form-visible{
+	display: block;
+}

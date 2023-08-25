@@ -1,12 +1,11 @@
 "strict mode"
 
 import { sayHello } from "./1.js";
+import { getOffset } from "./utils.js";
+import { changeCSSproperty } from "./utils.js";
 
  console.log("HHHHHH");
  sayHello('bub');
-
-
-
 
 //burger menu functional
 const burger = document?.querySelector('.burger_icon'); //get .class from DOM
@@ -31,17 +30,18 @@ nav_items.forEach(element => {
 		body?.classList.remove('stop-scroll') 
 	}
 });
+//--------------------------------------//
 
 
-
-//reg menu while press user icon
+//mini menu while press user icon
 const ico_profile = document.querySelector('.ico-profile');
 const user_login_menu = document.querySelector('.user_login_menu_small');
-var x = getOffset(ico_profile); //get coordinate
+
 	
 ico_profile.addEventListener('click', (event) =>{
 	user_login_menu.classList.toggle('user_login_menu-visible');
 
+	var x = getOffset(ico_profile); //get coordinate of user icon
 	//correction for menu coordinate
 	let top = x.top + 28 + '';
 	let left = x.left - 50 + '';	
@@ -49,35 +49,25 @@ ico_profile.addEventListener('click', (event) =>{
 	changeCSSproperty('.user_login_menu_small', 'top', `${top}px`);
 });
 
+//remove menu while scrolling
+addEventListener('scroll', (event) => {
+	user_login_menu.classList.remove('user_login_menu-visible');
+});
 
-//get coordinates of element
-function getOffset( el ) {
-    var _x = 0;
-    var _y = 0;
-    while( el && !isNaN( el.offsetLeft ) && !isNaN( el.offsetTop ) ) {
-        _x += el.offsetLeft - el.scrollLeft;
-        _y += el.offsetTop - el.scrollTop;
-        el = el.offsetParent;
-    }
-	console.log("---------------- " + _x + " " + _y);
-    return { top: _y, left: _x };
-}
+//call Login windows from mini menu
+const loginRef = document.querySelector('.login-ref__small-menu');
+const loginForm = document.querySelector('.login_form');
+const loginFormCloseButton = document.querySelector('.login_form-close_button');
 
-//try to change stylecheet handy
-// Getting the stylesheet
+loginRef.addEventListener('click', (event) =>{
+	loginForm.classList.add('login_form-visible');
+});
+//close-button for login menu
+loginFormCloseButton.addEventListener('click', (event) =>{
+	loginForm.classList.remove('login_form-visible');
+});
 
-function changeCSSproperty(element, prop, value){
-	const stylesheet = document.styleSheets[2];
-let elementRules;
 
-// looping through all its rules and getting your rule
-for(let i = 0; i < stylesheet.cssRules.length; i++) {
-  if(stylesheet.cssRules[i].selectorText === `${element}`) {
-    elementRules = stylesheet.cssRules[i];
-  }
-}
-// modifying the rule in the stylesheet
-elementRules.style.setProperty(`${prop}`, `${value}`);
-}
+
 
 

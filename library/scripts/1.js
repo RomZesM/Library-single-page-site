@@ -4,6 +4,8 @@ export function sayHello(user){
 	console.log(`Hello!!!, ${user}`);
 }
 
+
+
 export class Modal{
 	constructor(classes){
 		this.classes = classes;
