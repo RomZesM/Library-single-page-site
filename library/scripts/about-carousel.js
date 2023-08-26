@@ -22,32 +22,28 @@ export function createCarousel(){
 	
 	button01.addEventListener('click', (event) =>{
 		position = (itemWidth * 2) + gapBetweenPic * 2;
-		track.style.transform = `translateX(${position}px)`;
-		console.log("bPrev0" + "position: " + position);
+		track.style.transform = `translateX(${position}px)`;		
 	});
 
 	button02.addEventListener('click', (event) =>{
 		position = (itemWidth) + gapBetweenPic;
-		track.style.transform = `translateX(${position}px)`;
-		console.log("bPrev" + "position: " + position);
+		track.style.transform = `translateX(${position}px)`;		
 	});
 
 	buttonCenter03.addEventListener('click', (event) =>{
 		position = 0;
-		track.style.transform = `translateX(${position}px)`;
-		console.log("bCntr" + "position: " + position);
+		track.style.transform = `translateX(${position}px)`;		
 	});
 
 	button04.addEventListener('click', (event) =>{
 		position = -(itemWidth + gapBetweenPic);
 		track.style.transform = `translateX(${position}px)`;
-		console.log("bNext" + "position: " + position);
 	});
 
 	button05.addEventListener('click', (event) =>{
 		position = -(itemWidth * 2 + gapBetweenPic * 2);
 		track.style.transform = `translateX(${position}px)`;
-		console.log("bNext0" + "position: " + position);
+		
 	});
 
 	
@@ -56,7 +52,7 @@ export function createCarousel(){
 			position = position + 475
 		}		
 		track.style.transform = `translateX(${position}px)`;
-		console.log("leftArrow"  + "position: " + position);
+		
 	});
 
 	arrowRight.addEventListener('click', (event) => {
@@ -64,7 +60,7 @@ export function createCarousel(){
 			position = position - 475
 		}
 		track.style.transform = `translateX(${position}px)`;
-		console.log("rightArrow"  + "position: " + position);
+		
 	});
 
 		window.addEventListener('resize', () => {
