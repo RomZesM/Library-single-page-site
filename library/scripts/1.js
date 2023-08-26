@@ -58,7 +58,7 @@ export class Modal{
 
 window.onload = function() {
 	//generate test modal
-	addTestModalWindow();
+	//addTestModalWindow();
 
 
 }

@@ -44,15 +44,30 @@
 	margin-right: 40px;
 	flex-shrink: 0;
 	position: relative;
+	display: block;
+	//
+	transition: all 1s linear;
 
-	//
-	// transition: all 1s;
-	// opacity: 50%;
-	//
+	//	
 	@include media-tablet{
 		margin-left: 89px;
 	}
 }
+
+
+// .visible-book-card{
+// 	display: block;
+	
+// }
+
+.hidden-book-card{ //? do i need this
+	display: none;
+}
+
+.visuallyhidden {
+	opacity: 0;
+  }
+
 
 .book-cards-wrapper{
 	display: flex;
@@ -145,15 +160,6 @@
 // 	display: none;
 // }
 
-.visible-book-card{
-	display: block;
-	
-}
-
-.invisible-book-card{ //? do i need this
-	display: none;
-	
-}
 
 
 

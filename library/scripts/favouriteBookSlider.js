@@ -23,15 +23,35 @@ export function createFavBooksSlider(){
 	}
 	
 	function makeCardsVisible(){
+		let buff = 0;
+
 		for(let i = 0; i < bookCards.length; i++){
 		if(bookCards[i].classList.contains(`${currentSeason}-card`)){
-			bookCards[i].classList.remove('invisible-book-card')
-			bookCards[i].classList.add('visible-book-card')
-			console.log("BOOK");
+			bookCards[i].classList.remove('hidden-book-card')
+			//
+			//bookCards[i].classList.add('visible-book-card')
+			setTimeout(function () {
+				bookCards[i].classList.remove('visuallyhidden');
+			  }, 1000);
+			  console.log("dddd: " + i);
 		}
 		else{
-			bookCards[i].classList.remove('visible-book-card')
-			bookCards[i].classList.add('invisible-book-card')
+			if(bookCards[i].classList.contains)	
+			//bookCards[i].classList.remove('visible-book-card')
+			//
+			buff = bookCards[i];
+			buff.classList.add('visuallyhidden'); //make opasity 0 with transient
+			setTimeout(function () {
+				bookCards[i].classList.add('hidden-book-card');
+			  }, 1000);
+			  console.log("dddd: " + i);
+			
+			// buff.addEventListener("transitionend", (e)=> {
+			// 	console.log("eeeee: " + i);
+			// 	buff.classList.add('hidden-book-card')
+			// });
+		
+		
 		}
 			
 	}

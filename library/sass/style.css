@@ -923,11 +923,21 @@ a:link, a:visited, a:active {
   margin-right: 40px;
   flex-shrink: 0;
   position: relative;
+  display: block;
+  transition: all 1s linear;
 }
 @media (max-width: 768px) {
   .book-card {
     margin-left: 89px;
   }
+}
+
+.hidden-book-card {
+  display: none;
+}
+
+.visuallyhidden {
+  opacity: 0;
 }
 
 .book-cards-wrapper {
@@ -1009,14 +1019,6 @@ a:link, a:visited, a:active {
   position: absolute;
   left: 389px;
   top: 254.2px;
-}
-
-.visible-book-card {
-  display: block;
-}
-
-.invisible-book-card {
-  display: none;
 }
 
 .wrapper-coffeshop {
