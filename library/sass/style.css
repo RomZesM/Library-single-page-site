@@ -1011,7 +1011,11 @@ a:link, a:visited, a:active {
   top: 254.2px;
 }
 
-.book-cards-wrapper > div:nth-child(1n+5) {
+.visible-book-card {
+  display: block;
+}
+
+.invisible-book-card {
   display: none;
 }
 

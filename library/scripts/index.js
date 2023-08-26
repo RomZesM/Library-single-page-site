@@ -4,6 +4,7 @@ import { sayHello } from "./1.js";
 import { getOffset } from "./utils.js";
 import { changeCSSproperty } from "./utils.js";
 import { createCarousel } from "./about-carousel.js";
+import { createFavBooksSlider } from "./favouriteBookSlider.js";
 
  console.log("HHHHHH");
  sayHello('bub');
@@ -83,3 +84,4 @@ regFormCloseButton.addEventListener('click', (event) =>{
 
 
 createCarousel();
+createFavBooksSlider();
