@@ -94,34 +94,59 @@ function createCarousel(){
 	const container = document.querySelector('.about-images_container');
 	const track = document.querySelector('.about__images');
 	const itemsPictures = document.querySelectorAll('.about__images-item');
-	const buttonPrev = document.querySelector('.carousel-b2');
-	const buttonCenter = document.querySelector('.carousel-b3');
-	const buttonNext = document.querySelector('.carousel-b4');
+	const button01 = document.querySelector('.carousel-b1');
+	const button02 = document.querySelector('.carousel-b2');
+	const buttonCenter03 = document.querySelector('.carousel-b3');
+	const button04 = document.querySelector('.carousel-b4');
+	const button05 = document.querySelector('.carousel-b5');
 	const itemCount = itemsPictures.length; //get a quantity of pictures 
 	const itemWidth = (container.clientWidth - 50) / slidesToShow; //calculate image size (cotainer - gap)
 
 	console.log("Calc size of pic: " + itemWidth);
 	console.log("Size of one picture" + document.querySelector('.about__images-item').clientWidth);
 
-
-	buttonPrev.addEventListener('click', (event) =>{
-		position = 0;
+	button01.addEventListener('click', (event) =>{
+		position = (450 * 2) + gapBetweenPic * 2;
 		track.style.transform = `translateX(${position}px)`;
-		console.log("bPrev" + "position: " + position);
-		
+		console.log("bPrev0" + "position: " + position);
 	});
 
-	buttonCenter.addEventListener('click', (event) =>{
-		position = -(450 + gapBetweenPic);
+	button02.addEventListener('click', (event) =>{
+		position = (450) + gapBetweenPic;
+		track.style.transform = `translateX(${position}px)`;
+		console.log("bPrev" + "position: " + position);
+	});
+
+	buttonCenter03.addEventListener('click', (event) =>{
+		position = 0;
 		track.style.transform = `translateX(${position}px)`;
 		console.log("bCntr" + "position: " + position);
 	});
 
-	buttonNext.addEventListener('click', (event) =>{
-		position = -(450 * 2 + gapBetweenPic);
+	button04.addEventListener('click', (event) =>{
+		position = -(450 + gapBetweenPic);
 		track.style.transform = `translateX(${position}px)`;
 		console.log("bNext" + "position: " + position);
 	});
+
+	button05.addEventListener('click', (event) =>{
+		position = -(450 * 2 + gapBetweenPic * 2);
+		track.style.transform = `translateX(${position}px)`;
+		console.log("bNext0" + "position: " + position);
+	});
+
+	
+		window.addEventListener('resize', () => {
+			if(screen.width < 770){
+				position = 950;
+				track.style.transform = `translateX(${position}px)`;
+			}
+			if(screen.width > 770){
+				position = 0;
+				track.style.transform = `translateX(${position}px)`;
+			}
+			
+		});
 }
 
 createCarousel();

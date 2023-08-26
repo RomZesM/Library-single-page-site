@@ -32,6 +32,10 @@
 	}
 
 }
+.carusel{
+	display: flex;
+	justify-content: space-around;
+}
 
 .about-images_container{
 	width: 1400px;
@@ -49,14 +53,14 @@
 	justify-content: space-between;
 	align-items: center;
 	gap: 25px;
+	margin-bottom: 31px;
 
-
-	@include media-laptop{ //make pictures in center when decrese res
+	@include media-laptop{ //make pictures in center when reduce res
 		justify-content: center;
 	}
-	margin-bottom: 31px;
+	
 	@include media-tablet{
-		flex-direction: column;
+		//flex-direction: column;
 		margin-bottom: 16px;
 	}
 }
@@ -70,22 +74,26 @@
 	.about__images > div:first-child{
 		padding-right: 20px; //make a gap between photo during resizing
 	}
-	.about__images > div:nth-child(3){ 
-		display: none; //remove 3d pic during -res
+	// .about__images > div:nth-child(3){ 
+	// 	display: none; //remove 3d pic during -res
+	// }
+
+	.about-images_container{
+		width: 475px;
 	}
 }
-@include media-resizer-breakpoint(872px){
-	.about__images > div:nth-child(2){ 
-		display: none; //remove 2d pic during -res
-	}
-}
+// @include media-resizer-breakpoint(872px){
+// 	.about__images > div:nth-child(2){ 
+// 		display: none; //remove 2d pic during -res
+// 	}
+// }
 
 
 @include media-tablet{
-	.about__images > div:nth-child(1n + 2){ 
-			display: none;
+	// .about__images > div:nth-child(1n + 2){ 
+	// 		display: none;
 
-	}	
+	// }	
 	.about__images > div:first-child{
 		padding-right: 0px; //make a gap between photo during resizing
 	}
@@ -101,7 +109,7 @@
 	margin-bottom: 55px;
 }
 
-.about__carousel > .carusel-button-press-zone:first-child, .carusel-button-press-zone:last-child{
+.about__carousel > .carusel-button-press-zone:nth-child(1), .carusel-button-press-zone:nth-child(2){
 	display: none;
 	@include media-tablet{
 		display: flex;
