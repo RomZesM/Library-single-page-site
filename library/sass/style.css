@@ -783,10 +783,19 @@ a:link, a:visited, a:active {
     padding-right: 5px;
   }
 }
+.about-images_container {
+  width: 1400px;
+  overflow: hidden;
+  background-color: yellow;
+}
+
 .about__images {
+  background-color: red;
+  transition: all 0.2s;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 25px;
   margin-bottom: 31px;
 }
 @media (max-width: 1400px) {
@@ -799,10 +808,6 @@ a:link, a:visited, a:active {
     flex-direction: column;
     margin-bottom: 16px;
   }
-}
-
-.about__images > div:nth-child(1n+4) {
-  display: none;
 }
 
 @media (max-width: 1400px) {

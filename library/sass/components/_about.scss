@@ -33,11 +33,24 @@
 
 }
 
+.about-images_container{
+	width: 1400px;
+	overflow: hidden; //cut images out of container
+	//
+	background-color: yellow; //!del
+}
 
-.about__images{
+
+.about__images{ //"track"
+	background-color: red; //!del
+	transition: all 0.2s;
+	//
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	gap: 25px;
+
+
 	@include media-laptop{ //make pictures in center when decrese res
 		justify-content: center;
 	}
@@ -48,9 +61,10 @@
 	}
 }
 
-.about__images > div:nth-child(1n + 4){ //!? why 1n + 4
-	display: none;
-}
+// .about__images > div:nth-child(1n + 4){ //!? why 1n + 4
+// 	display: none;
+// }
+
 
 @include media-laptop{
 	.about__images > div:first-child{

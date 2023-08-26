@@ -63,11 +63,11 @@ window.onload = function() {
 
 }
 //по нажатию на кнопку (вешаем listener) должно сгенерироваться окно ?
-function addTestModalWindow(){
-	document.querySelector('test_button').addEventListener('click', () => {
-		generateTestToolModal();
-	})
-};
+// function addTestModalWindow(){
+// 	document.querySelector('test_button').addEventListener('click', () => {
+// 		generateTestToolModal();
+// 	})
+// };
 //должно сгенерироваться само окно
 function generateTestToolModal(){
 	console.log("generate_tools_Modal")
