@@ -46,7 +46,7 @@
 	position: relative;
 	display: block;
 	//
-	transition: all 1s linear;
+	transition: all 1s ease-out;
 
 	//	
 	@include media-tablet{
@@ -60,9 +60,10 @@
 	
 // }
 
-.hidden-book-card{ //? do i need this
+.hidden-book-card{ 
 	display: none;
 }
+
 
 .visuallyhidden {
 	opacity: 0;

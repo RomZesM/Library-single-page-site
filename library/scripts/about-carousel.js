@@ -2,13 +2,13 @@
 export function createCarousel(){
 	let position = 0; //start position
 	let gapBetweenPic = 25;
-	const slidesToShow = 3;
+	//const slidesToShow = 3;
 	const itemWidth = 450;
 	//const slidesToScroll = 1;
 
 	//const container = document.querySelector('.about-images_container');
 	const track = document.querySelector('.about__images');
-	const itemsPictures = document.querySelectorAll('.about__images-item');
+	//const itemsPictures = document.querySelectorAll('.about__images-item');
 	const button01 = document.querySelector('.carousel-b1');
 	const button02 = document.querySelector('.carousel-b2');
 	const buttonCenter03 = document.querySelector('.carousel-b3');
@@ -17,7 +17,7 @@ export function createCarousel(){
 	const arrowLeft = document.querySelector('.left_arrow_ico')
 	const arrowRight = document.querySelector('.right_arrow_ico')
 
-	const itemCount = itemsPictures.length; //get a quantity of pictures 
+	//const itemCount = itemsPictures.length; //get a quantity of pictures 
 	//const itemWidth = (container.clientWidth - gapBetweenPic * 2) / slidesToShow; //calculate image size (cotainer - gap)
 	
 	button01.addEventListener('click', (event) =>{
@@ -63,7 +63,7 @@ export function createCarousel(){
 		
 	});
 
-		window.addEventListener('resize', () => {
+		window.addEventListener('resize', () => { //thah for tablet version
 			if(screen.width < 770){
 				position = 950;
 				track.style.transform = `translateX(${position}px)`;
@@ -75,5 +75,5 @@ export function createCarousel(){
 			
 		});
 
-
+	
 }

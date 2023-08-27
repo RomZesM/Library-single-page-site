@@ -85,3 +85,4 @@ regFormCloseButton.addEventListener('click', (event) =>{
 
 createCarousel();
 createFavBooksSlider();
+
