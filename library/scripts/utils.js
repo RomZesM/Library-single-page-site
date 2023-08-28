@@ -29,3 +29,13 @@ elementRules.style.setProperty(`${prop}`, `${value}`);
 export function testForm(){
   const formL = document.querySelector('.')
 }
+
+export function checkIfKeyExistInLocalStorage(key){
+  for (let i = 0; i < localStorage.length; i++) {
+    if(key === localStorage.key(i)){
+       return true;
+    }
+     
+  }
+  return false;
+}

@@ -55,10 +55,7 @@
 }
 
 
-// .visible-book-card{
-// 	display: block;
-	
-// }
+
 
 .hidden-book-card{ 
 	display: none;
@@ -68,6 +65,11 @@
 .visuallyhidden {
 	opacity: 0;
   }
+
+
+// .book-cards-wrapper > div:nth-child(1n + 5){ //hide book cards more than 4
+// 	display: none;
+// }
 
 
 .book-cards-wrapper{
@@ -157,9 +159,7 @@
 	top: 254.2px;
 }
 
-// .book-cards-wrapper > div:nth-child(1n + 5){ //hide book cards more than 4
-// 	display: none;
-// }
+
 
 
 

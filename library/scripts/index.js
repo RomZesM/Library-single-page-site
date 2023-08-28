@@ -5,6 +5,8 @@ import { createCarousel } from "./about-carousel.js";
 import { createFavBooksSlider } from "./favouriteBookSlider.js";
 import { authorisationMenuInit } from "./authorisationMenu.js";
 import { registerMenuInit } from "./registerMenu.js";
+import { checkIfKeyExistInLocalStorage } from "./utils.js";
+
 
  console.log("HHHHHH");
  sayHello('bub');
@@ -52,11 +54,20 @@ authorisationMenuInit();
 //regMenu
 registerMenuInit();
 
+//start global variable inition
+if(!checkIfKeyExistInLocalStorage('loggedInUser')){
+	localStorage.setItem('loggedInUser', '')
+}
 
-console.log(localStorage.getItem('userCounter'));
-console.log(localStorage.getItem('name'));
+//save the last scroll position after reload
+document.addEventListener("DOMContentLoaded", function(event) { 
+	var scrollpos = localStorage.getItem('scrollpos');
+	if (scrollpos) {
+		window.scrollTo(0, scrollpos);
+		//localStorage.setItem('scrollpos', 0);
+	}
+});
+addEventListener('scroll', (event) => {
+	localStorage.setItem('scrollpos', window.scrollY);
+});
 
-//get through all keys
-for (let i = 0; i < localStorage.length; i++) {
-    console.log(localStorage.key(i));
-  }

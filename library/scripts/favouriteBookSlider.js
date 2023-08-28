@@ -4,7 +4,10 @@ export function createFavBooksSlider(){
 	let currentSeason = 'winter';
 	let previousSeason = '';
 	let counterHiddenCostyl = 0;
-	makeCardsVisible(); //make first card visible
+
+	makeAllCardsInvisible()//make all card invisible in firstload
+	makeFirstCardsVisible()//make first card visible
+	//makeCardsVisible(); //make first card visible
 	
 	for(let i = 0; i < seasons.length; i++){ //add click event for every button
 		seasons[i].addEventListener('click', (event) =>{
@@ -75,6 +78,22 @@ export function createFavBooksSlider(){
 			}
 		}
 		console.log(aa + " " + bb);
+	}
+
+	function makeAllCardsInvisible(){
+		for(let i = 0; i < bookCards.length; i++){
+			bookCards[i].classList.add('hidden-book-card');
+			bookCards[i].classList.add('visuallyhidden');
+		}
+	}
+	function makeFirstCardsVisible(){
+		for(let i = 0; i < bookCards.length; i++){
+			if(bookCards[i].classList.contains(`${currentSeason}-card`)){
+				bookCards[i].classList.remove('hidden-book-card');	
+				bookCards[i].classList.remove('visuallyhidden');
+			}
+			
+		}
 	}
 	
 	// function openNewCards(season){
