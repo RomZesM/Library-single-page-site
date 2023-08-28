@@ -1,7 +1,7 @@
 import { getOffset } from "./utils.js";
 import { changeCSSproperty } from "./utils.js";
 
-export function miniMenuInit(){
+export function authorisationMenuInit(){
 //mini menu while press user icon
 const ico_profile = document.querySelector('.ico-profile');
 const user_login_menu = document.querySelector('.user_login_menu_small');
@@ -35,18 +35,16 @@ loginRef.addEventListener('click', (event) =>{
 loginFormCloseButton.addEventListener('click', (event) =>{
 	loginFormOverlay.classList.remove('login_form-overlay-visible');
 });
+//close while clock on overlay
+loginFormOverlay.addEventListener('click', (closeLogOverlay));
 
-//call register windows from mini menu
-const registerRef = document.querySelector('.register-ref__small-menu');//button
-const regFormOverlay = document.querySelector('.register_form-overlay');
-const regFormCloseButton = document.querySelector('.register_form-close_button');
+function closeLogOverlay(event){
+	if(event.target === loginFormOverlay){
+			loginFormOverlay.classList.remove('login_form-overlay-visible');
+	}
+}
 
-registerRef.addEventListener('click', (event) =>{
-	regFormOverlay.classList.add('register_form-overlay-visible');
-});
-//close-button for reg menu
-regFormCloseButton.addEventListener('click', (event) =>{
-	regFormOverlay.classList.remove('register_form-overlay-visible');
-});
+
+
 
 }

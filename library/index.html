@@ -51,9 +51,9 @@
 								</svg>
 								<div class="login_form-fields">
 									<label for="login_form-email-id">E-mail or readers card</label>
-									<input type="text" name="login_form-email" id="login_form-email-id">
+									<input type="text" name="login_form-email" id="login_form-email-id" required>
 									<label for="login_form-email-password">Password</label>
-									<input type="text" name="login_form-password" id="login_form-email-password">
+									<input type="text" name="login_form-password" id="login_form-email-password" required>
 								</div>
 							
 							<button class="button_bordered login_form_login" type="submit">Login</button>
@@ -68,13 +68,13 @@
 								</svg>
 								<div class="register_form_fields">
 									<label for="register_form-first_name-id">First name</label>
-									<input type="text" name="register_form-first_name" id="register_form-first_name-id">
+									<input type="text" name="register_form-first_name" id="register_form-first_name-id" required>
 									<label for="register_form-second_name-id">Last name</label>
-									<input type="text" name="register_form-second_name" id="register_form-second_name-id">
+									<input type="text" name="register_form-second_name" id="register_form-second_name-id" required>
 									<label for="register_form-email-id">E-mail</label>
-									<input type="email" name="register_form-email" id="register_form-email-id">
+									<input type="email" name="register_form-email" id="register_form-email-id" required>
 									<label for="register_form-password-id">Password</label>
-									<input type="password" name="register_form-password" id="register_form-password-id">
+									<input type="password" name="register_form-password" id="register_form-password-id" required minlength="8">
 								</div>							
 							<button class="button_bordered register_form_sign_up" type="submit">SignUp</button>	
 						</form>
@@ -636,6 +636,7 @@
 	<script type="module" src="scripts/about-carousel.js"></script>
 	<script type="module" src="scripts/favouriteBookSlider.js"></script>
 	<script type="module" src="scripts/login.js"></script>
-	<script type="module" src="scripts/miniMenu.js"></script>
+	<script type="module" src="scripts/authorisationMenu.js"></script>
+	<script type="module" src="scripts/registerMenu.js"></script>
 </body>
 </html>

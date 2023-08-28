@@ -8,7 +8,7 @@ export function getOffset( el ) {
         _y += el.offsetTop - el.scrollTop;
         el = el.offsetParent;
     }
-	console.log("---------------- " + _x + " " + _y);
+	//console.log("---------------- " + _x + " " + _y);
     return { top: _y, left: _x };
 }
 

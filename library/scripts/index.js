@@ -3,7 +3,8 @@
 import { sayHello } from "./1.js";
 import { createCarousel } from "./about-carousel.js";
 import { createFavBooksSlider } from "./favouriteBookSlider.js";
-import { miniMenuInit } from "./miniMenu.js";
+import { authorisationMenuInit } from "./authorisationMenu.js";
+import { registerMenuInit } from "./registerMenu.js";
 
  console.log("HHHHHH");
  sayHello('bub');
@@ -12,7 +13,7 @@ import { miniMenuInit } from "./miniMenu.js";
 const burger = document?.querySelector('.burger_icon'); //get .class from DOM
 const nav_menu = document?.querySelector('.header__navigation');
 const body = document?.querySelector('body');
-const nav_items = nav_menu?.querySelectorAll('a'); //taka all links from menu list
+const nav_items = nav_menu?.querySelectorAll('a'); //take all links from menu list
 
 burger.addEventListener('click', () => { //when we CLICK on burger
 	nav_menu?.classList.toggle('navigation--visible'); //add some another class
@@ -31,6 +32,8 @@ nav_items.forEach(element => {
 		body?.classList.remove('stop-scroll') 
 	}
 });
+
+
 //--------------------------------------//
 
 
@@ -43,5 +46,17 @@ createFavBooksSlider();
 //login form
 //loginFormLogic(); //todo
 
-//mini menu
-miniMenuInit();
+//auth menu
+authorisationMenuInit();
+
+//regMenu
+registerMenuInit();
+
+
+console.log(localStorage.getItem('userCounter'));
+console.log(localStorage.getItem('name'));
+
+//get through all keys
+for (let i = 0; i < localStorage.length; i++) {
+    console.log(localStorage.key(i));
+  }
