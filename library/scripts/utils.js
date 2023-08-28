@@ -40,14 +40,30 @@ export function checkIfKeyExistInLocalStorage(key){
   return false;  
   }
 
-  export function getSimpleValueFronLocalStorage(key){
+  export function getSimpleValueFromLocalStorage(key){
      return localStorage.getItem(`${key}`)
   }
 
   export function getUserValueFromLocalStorage(login, value){
       const user = JSON.parse(localStorage.getItem(`${login}`))
       let ret = user[`${value}`];
-      console.log('['+ret+']');
+     // console.log('['+ret+']');
     return ret;
+ }
+
+ export function isSomeoneLogIn(){
+  if(getSimpleValueFromLocalStorage('loggedInUser') != '')
+    return true;
+  else
+    return false;
+ }
+
+ export function getCurrentUserLogin(){
+  if(isSomeoneLogIn){
+    const userLogin = getSimpleValueFromLocalStorage('loggedInUser');
+       return userLogin
+  }
+  else 
+     return 'unregistered user'
  }
 

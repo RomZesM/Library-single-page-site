@@ -1,4 +1,10 @@
-.user_login_menu_small{
+//auth  menu - unregistered
+
+.auth-menu-container{
+	position: relative;
+}
+
+.user_login_menu_small, .user_in_menu_small{
 	//--menu-coord-right:1000px; //have local variable for js
 	//
 	//background-color: $color-text-additional;
@@ -6,19 +12,26 @@
 	width: 80px;
 	height: 115px;
 	position: absolute;
-	top: 28px;
-	left: 1400px;	
+	top: 28	px;
+	right: 0px;	
 	flex-direction: column;
 	transition: all 1s ease-out;
-	display: none;
+	display: block;
+	//
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease-out;
 	
 }
 .user_login_menu-visible{
-	display: flex;
+	opacity: 1;
+	visibility: visible;
 	transition: all 0.3s ease-out;
 }
 
 
+
+//register modal window
 .register_form-overlay, .login_form-overlay{
 	position: fixed;
 	left: 0;
