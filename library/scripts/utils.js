@@ -25,3 +25,7 @@ for(let i = 0; i < stylesheet.cssRules.length; i++) {
 // modifying the rule in the stylesheet
 elementRules.style.setProperty(`${prop}`, `${value}`);
 }
+
+export function testForm(){
+  const formL = document.querySelector('.')
+}

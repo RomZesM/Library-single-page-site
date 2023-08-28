@@ -15,34 +15,70 @@
 }
 .user_login_menu-visible{
 	display: flex;
-	transition: all 1s ease-out;
+	transition: all 0.3s ease-out;
 }
+
+
+.register_form-overlay, .login_form-overlay{
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0, 0.5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	//
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.4 ease-out;
+
+}
+
+.register_form-overlay-visible{ // make visibility of overlay with opacity and visibility 
+								//todo
+								//!make the same for mini menu
+	opacity: 1;
+	visibility: visible;
+	transition: all 0.4s ease-in-out;
+}
+
+.login_form-overlay-visible{
+	opacity: 1;
+	visibility: visible;
+	transition: all 0.4s ease-in-out;
+}
+
+
 
 .login_form{
-	position: fixed;
-	top: 10vw;
-	left: 45vw;
+	// position: fixed;
+	// top: 10vw;
+	// left: 45vw;
 	background-color: $color-text-additional;
 	width: 250px;
-	height: 262px;
-	display: none;
+	height: 262px;	
+	
+
 }
-
-.login_form-visible{
-	display: block;
-}
-
-
 .register_form{
-	position: fixed;
-	top: 10vw;
-	left: 45vw;
+	// position: fixed;
+	// top: 10vw;
+	// left: 45vw;
 	background-color: $color-text-additional;
 	width: 250px;
 	height: 382px;
-	display: none;
+	
+	
+}
+.register_form_fields{
+	display: flex;
+	flex-direction: column;
 }
 
-.register_form-visible{
-	display: block;
+.login_form-fields{
+	display: flex;
+	flex-direction: column;
 }
+
