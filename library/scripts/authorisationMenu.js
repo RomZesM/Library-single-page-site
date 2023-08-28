@@ -2,7 +2,7 @@ import { getOffset } from "./utils.js";
 import { changeCSSproperty } from "./utils.js";
 
 export function authorisationMenuInit(){
-//mini menu while press user icon
+//Init mini menu while press user icon
 const ico_profile = document.querySelector('.ico-profile');
 const user_login_menu = document.querySelector('.user_login_menu_small');
 
@@ -23,28 +23,32 @@ addEventListener('scroll', (event) => {
 	user_login_menu.classList.remove('user_login_menu-visible');
 });
 
-//call Login windows from mini menu
-const loginRef = document.querySelector('.login-ref__small-menu');
+//--------------------------------------------
+
+
+//call Login windows from mini menu and from library card menu
+
+const loginRef = document.querySelectorAll('.login-ref');
 const loginFormOverlay = document.querySelector('.login_form-overlay');
-const loginFormCloseButton = document.querySelector('.login_form-close_button');
 
-loginRef.addEventListener('click', (event) =>{
-	loginFormOverlay.classList.add('login_form-overlay-visible');
-});
-//close-button for login menu
-loginFormCloseButton.addEventListener('click', (event) =>{
-	loginFormOverlay.classList.remove('login_form-overlay-visible');
-});
-//close while clock on overlay
-loginFormOverlay.addEventListener('click', (closeLogOverlay));
-
-function closeLogOverlay(event){
-	if(event.target === loginFormOverlay){
-			loginFormOverlay.classList.remove('login_form-overlay-visible');
-	}
+for (let index = 0; index < loginRef.length; index++) {
+	loginRef[index].addEventListener('click', (event) =>{
+		loginFormOverlay.classList.add('login_form-overlay-visible');
+	});	
 }
 
 
+//call reg windows from mini menu and from library card menu
+
+const registerRef = document.querySelectorAll('.register-ref');//button
+const regFormOverlay = document.querySelector('.register_form-overlay');
+
+for (let index = 0; index < registerRef.length; index++) {
+	registerRef[index].addEventListener('click', (event) =>{
+		regFormOverlay.classList.add('register_form-overlay-visible');
+	});
+	
+}
 
 
 }

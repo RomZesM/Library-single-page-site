@@ -2,19 +2,13 @@
 export function registerMenuInit(){
 
 	//
-//----Register Menu //todo move to separate file
-//
-//call register windows from mini menu
+//----Register Menu 
+
+//close-button for reg menu 
 const regForm = document.querySelector('.register_form');
-const registerRef = document.querySelector('.register-ref__small-menu');//button
 const regFormOverlay = document.querySelector('.register_form-overlay');
 const regFormCloseButton = document.querySelector('.register_form-close_button');
 
-
-registerRef.addEventListener('click', (event) =>{
-	regFormOverlay.classList.add('register_form-overlay-visible');
-});
-//close-button for reg menu 
 
 regFormCloseButton.addEventListener('click', (event) =>{
 	regFormOverlay.classList.remove('register_form-overlay-visible');

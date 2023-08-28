@@ -5,7 +5,9 @@ import { createCarousel } from "./about-carousel.js";
 import { createFavBooksSlider } from "./favouriteBookSlider.js";
 import { authorisationMenuInit } from "./authorisationMenu.js";
 import { registerMenuInit } from "./registerMenu.js";
+import { loginForm } from "./login.js";
 import { checkIfKeyExistInLocalStorage } from "./utils.js";
+
 
 
  console.log("HHHHHH");
@@ -36,30 +38,14 @@ nav_items.forEach(element => {
 });
 
 
-//--------------------------------------//
+//--------------Start Init-------------//
 
-
-
-
-
-createCarousel();
-createFavBooksSlider();
-//
-//login form
-//loginFormLogic(); //todo
-
-//auth menu
-authorisationMenuInit();
-
-//regMenu
-registerMenuInit();
-
-//start global variable inition
+//start global variable inition //todo move into single file
 if(!checkIfKeyExistInLocalStorage('loggedInUser')){
 	localStorage.setItem('loggedInUser', '')
 }
 
-//save the last scroll position after reload
+//save the last scroll position after reload //todo move into single file
 document.addEventListener("DOMContentLoaded", function(event) { 
 	var scrollpos = localStorage.getItem('scrollpos');
 	if (scrollpos) {
@@ -71,3 +57,17 @@ addEventListener('scroll', (event) => {
 	localStorage.setItem('scrollpos', window.scrollY);
 });
 
+//--------------------------------------//
+
+createCarousel();
+createFavBooksSlider();
+//
+
+//auth menu
+authorisationMenuInit();
+
+//regMenu
+registerMenuInit();
+
+//login form
+loginForm(); 
