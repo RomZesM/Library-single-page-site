@@ -1,4 +1,4 @@
-import { getOffset } from "./utils.js";
+import { checkIfKeyExistInLocalStorage, getOffset, getSimpleValueFronLocalStorage, getUserValueFromLocalStorage } from "./utils.js";
 import { changeCSSproperty } from "./utils.js";
 
 export function authorisationMenuInit(){
@@ -49,6 +49,20 @@ for (let index = 0; index < registerRef.length; index++) {
 	});
 	
 }
+//have name of registered user
+ico_profile.addEventListener('mouseover', (event) =>{
+	if(getSimpleValueFronLocalStorage('loggedInUser') != ''){
+		
+		let name = getUserValueFromLocalStorage(getSimpleValueFronLocalStorage('loggedInUser'), 'firstName').concat(' ',
+		getUserValueFromLocalStorage(getSimpleValueFronLocalStorage('loggedInUser'), 'secondName'));
+		console.log(name);
+		ico_profile.setAttribute('title', name); 
+	}
+	else
+		ico_profile.setAttribute('title', 'unregistered');
+
+});
+
 
 
 }

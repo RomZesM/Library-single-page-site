@@ -36,7 +36,7 @@ regForm.addEventListener('submit', (event) =>{
 	password = regForm.elements[3];
 	cardNumber = getRandomInt(4_299_000_000, 50_000_000_000).toString(16);
 	localStorage.setItem(`${email.value}`, JSON.stringify({
-							firsrName: `${firstName.value}`, 
+							firstName: `${firstName.value}`, 
 							secondName: `${secondName.value}`,
 							password: `${password.value}`,
 							cardNumber: `${cardNumber}`

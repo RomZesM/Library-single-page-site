@@ -71,6 +71,7 @@ export function createCarousel(){
 			if(screen.width > 770){
 				position = 0;
 				track.style.transform = `translateX(${position}px)`;
+				
 			}
 			
 		});
