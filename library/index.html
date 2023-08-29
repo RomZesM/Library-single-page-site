@@ -43,8 +43,8 @@
 									<div class="auth-menu-line"></div>
 								</div>
 								<div class="auth-menu-down">
-									<div class="login-ref">LogIn</div>
-									<div class="register-ref">Register</div>
+									<div class="login-ref my-reference">LogIn</div>
+									<div class="register-ref my-reference">Register</div>
 								</div>
 								
 							</div>
@@ -54,8 +54,8 @@
 									<div class="auth-menu-line"></div>
 								</div>
 								<div class="auth-menu-down">
-									<div class="profile-ref">My profile</div>
-									<div class="logout-ref">LogOut</div>
+									<div class="profile-ref my-reference">My profile</div>
+									<div class="logout-ref my-reference">LogOut</div>
 								</div>
 								
 								
@@ -142,8 +142,6 @@
 											<li><p class="rented-books-book-title">The Last Queen, Clive Irving</p></li>
 											<li><p class="rented-books-book-title">Dominicana, Angie Cruz</p></li>
 										</ul>
-										
-										
 									</div>
 									<div class="modal_profile-card-number-block">
 										<span>Card number</span>
@@ -154,13 +152,63 @@
 										<path d="M2 16.8507L17 2.00003" stroke="#0C0C0E" stroke-width="3"/>
 										<path d="M2 2.14926L17 17" stroke="#0C0C0E" stroke-width="3"/>
 									</svg>
-								</div>
+									</div>
 								
 							</div>
 							
 						</div>
 					</div>
+					<div class="modal_buy_card-overlay">
+						<div class="modal_buy_card-wrapper">
+							<div class="modal_buy_card-title-block">
+								<p>Buy a library card</p>						
+								<svg class="modal_buy_card-close_button" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+									<path d="M2 16.8507L17 2" stroke="white" stroke-width="3"/>
+									<path d="M2 2.14929L17 17" stroke="white" stroke-width="3"/>
+								</svg>
+								
+							</div>
+							<div class="modal_buy_card-content-block layout-two-columns-modal">
+								<div class="content-block-left">
+									<form  class="credit-card-form ccf">
+										<label class="ccf-label-bank-card-number" for="ccf-label-bank-card-number-id">Bank card number</label>
+										<input type="text" class="ccf-label-bank-card-number" id="ccf-label-bank-card-number-id">
+										
+										<label class="ccf-label-expiration-code" for="ccf-expiration-code-id1">Expiration code</label>
+										<div class="cvc-input-block">
+											<input type="text" class="ccf-expiration-code1" id="ccf-expiration-code-id1">
+											<input type="text" class="ccf-expiration-code2" id="ccf-expiration-code-id2">
+										</div>
+										
 
+										<label class="ccf-label-cvc" for="ccf-cvc-id">CVC</label>
+										<input type="text" class="ccf-cvc" id="ccf-cvc-id">
+										
+										<label class="ccf-label-cardholder" for="ccf-cardholder-id">Cardholder name</label>
+										<input type="text" class="ccf-cardholder" id="ccf-cardholder-id">
+										
+										<label class="ccf-label-postal-code" for="ccf-postal-code-id">Postal code</label>
+										<input type="text" class="ccf-postal-code" id="ccf-postal-code-id">
+										
+										<label class="ccf-label-city" for="ccf-city-id">City / Town</label>
+										<input type="text" class="ccf-city" id="ccf-city-id">
+										
+										<div class="price-block">
+											<div class="buttons">
+												<button class="button_bordered button_small button_black" type="submit" id="buy-card-button">Buy</button>
+											</div>
+											<div class="price">$ 25.00</div>
+										</div>										
+									</form>
+								</div>
+								<div class="content-block-right">
+									<div class="buy-card-text-instruction">
+										If you are live, work, attend school, or pay property taxes in New York State, you can get a $25 digital library card right now using this online form. Visitors to New York State can also use this form to apply for a temporary card.
+								</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			
 			</div>
@@ -246,7 +294,7 @@
 							<p>An unusual sci-fi story about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.</p>
 						</div>
 						<div class="buttons">
-							<button class="button_bordered button_small button_black">Buy</button>
+							<button class="button_bordered button_small button_black book_buy_btn">Buy</button>
 						</div>
 						<div class="book_cover">
 							<img src="assets/book_covers/book_eater.jpg" alt="Book eater cover image">
@@ -263,7 +311,7 @@
 							<p>Are your Halloween movies of choice The Witches of Eastwick and Practical Magic? Look no further than here - where a woman recovering from a breakup moves to a quaint town in upstate New York and befriends a beautiful witch.</p>
 						</div>
 						<div class="buttons">
-							<button class="button_bordered button_small button_black">Buy</button>
+							<button class="button_bordered button_small button_black book_buy_btn">Buy</button>
 						</div>
 						<div class="book_cover">
 							<img src="assets/book_covers/cackle.jpg" alt="Cackle cover image">	
@@ -280,7 +328,7 @@
 							<p>Auerbach's engaging book places the 'Comedy' within the tradition of epic, tragedy, and philosophy in general, arguing for Dante's uniqueness as one who raised the individual and his drama of soul into something of divine significance—an inspired introduction to Dante's main themes.</p>
 						</div>	
 						<div class="buttons">
-							<button class="button_bordered button_small button_black">Buy</button>
+							<button class="button_bordered button_small button_black book_buy_btn">Buy</button>
 						</div>
 						<div class="book_cover">
 							<img src="assets/book_covers/dante.jpg" alt="Dante: Poet of the Secular World cover image">
@@ -719,5 +767,6 @@
 	<script type="module" src="scripts/authorisationMenu.js"></script>
 	<script type="module" src="scripts/registerMenu.js"></script>
 	<script type="module" src="scripts/modalProfile.js"></script>
+	<script type="module" src="scripts/modalBuyCard.js"></script>
 </body>
 </html>

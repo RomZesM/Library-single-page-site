@@ -84,6 +84,10 @@
     margin-bottom: 6px;
 }
 
+.my-reference{
+	cursor: pointer;
+}
+
 
 
 
@@ -91,6 +95,7 @@
 //register modal window
 .register_form-overlay, .login_form-overlay{
 	position: fixed;
+	z-index: 100;
 	left: 0;
 	top: 0;
 	right: 0;

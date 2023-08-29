@@ -8,6 +8,7 @@ import { registerMenuInit } from "./registerMenu.js";
 import { loginForm } from "./login.js";
 import { checkIfKeyExistInLocalStorage } from "./utils.js";
 import { modalProfileInit } from "./modalProfile.js";
+import { ModalBuyCardInit } from "./modalBuyCard.js";
 
 
 
@@ -75,3 +76,6 @@ loginForm();
 
 //modal Profile window
 modalProfileInit();
+
+//modal buyCard init
+ModalBuyCardInit();

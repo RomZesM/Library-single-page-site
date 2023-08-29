@@ -1600,8 +1600,13 @@ footer {
   margin-bottom: 6px;
 }
 
+.my-reference {
+  cursor: pointer;
+}
+
 .register_form-overlay, .login_form-overlay {
   position: fixed;
+  z-index: 100;
   left: 0;
   top: 0;
   right: 0;
@@ -1651,6 +1656,7 @@ footer {
 
 .modal_profile_overlay {
   position: fixed;
+  z-index: 100;
   left: 0;
   top: 0;
   right: 0;
@@ -1852,6 +1858,127 @@ footer {
   position: absolute;
   right: 24px;
   top: 20px;
+}
+
+.modal_buy_card-overlay {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4 ease-out;
+}
+
+.modal_buy_card-overlay-visible {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.4s ease-out;
+}
+
+.modal_buy_card-wrapper {
+  background-color: #FFFFFF;
+  width: 640px;
+  height: 540px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.modal_buy_card-title-block p {
+  color: #FFFFFF;
+  text-align: center;
+  font-family: Forum;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 50% */
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 20px;
+  padding-left: 30px;
+}
+
+.modal_buy_card-title-block {
+  background-color: #0C0C0E;
+  position: relative;
+}
+
+.modal_buy_card-close_button {
+  position: absolute;
+  top: 23px;
+  right: 13px;
+  cursor: pointer;
+}
+
+.layout-two-columns-modal {
+  display: flex;
+  padding: 30px 40px 40px 40px;
+  flex: 1;
+}
+
+.credit-card-form {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.credit-card-form input {
+  height: 20px;
+}
+
+.ccf-expiration-code1, .ccf-expiration-code2, .ccf-cvc {
+  width: 45px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.cvc-input-block {
+  display: flex;
+  gap: 10px;
+}
+
+.ccf-cvc {
+  margin-bottom: 10px;
+}
+
+.ccf-city {
+  margin-bottom: 10px;
+}
+
+.price-block {
+  display: flex;
+  gap: 25px;
+  align-items: end;
+}
+
+.price {
+  color: #0C0C0E;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 100% */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.buy-card-text-instruction {
+  color: #8E8E8E;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 133.333% */
+  letter-spacing: 2px;
+  padding-left: 36px;
 }
 
 /*# sourceMappingURL=style.css.map */
