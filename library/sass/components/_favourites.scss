@@ -1,5 +1,13 @@
+.favourite__wrapper{
+	position: relative;
+}
+
 .favourites__season-pick{
 	margin-top: 40px;
+	position: sticky;
+	z-index: 1;
+	top: 0;
+	background-color: $color-text-additional;
 
 	@include media-tablet{
 		padding-left: 20px;
@@ -140,7 +148,16 @@
 .book-card button{
 	padding-top: 2px;
 	margin-left: 19px;
+
+	
 }
+
+.book_buy_btn-hide{
+	display: none;
+}
+
+
+
 
 .button_own{
 	border: 1px solid $color-main;
@@ -149,7 +166,11 @@
 	background: none;
 	border-radius: 2px;
 	outline: none;
-	
+
+	display: none;
+}
+.button_own-visible{
+	display:block;
 }
 
 

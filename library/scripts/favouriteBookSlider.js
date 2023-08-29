@@ -1,3 +1,7 @@
+import { showModalBuyCardOverlay } from "./modalBuyCard.js";
+import { showModalLogin } from "./authorisationMenu.js";
+import { isSomeoneLogIn } from "./utils.js";
+
 export function createFavBooksSlider(){
 	const seasons = document.getElementsByName('seasons-fav'); //get all radio button form
 	const bookCards = document.querySelectorAll('.book-card')
@@ -95,37 +99,27 @@ export function createFavBooksSlider(){
 			
 		}
 	}
-	
-	// function openNewCards(season){
-	// 	for(let i = 0; i < bookCards.length; i++){
-	// 		if(bookCards[i].classList.contains(`${season}-card`)){
-	// 			bookCards[i].classList.remove('hidden-book-card')
-	// 		//	console.log("remove hidden: " + i);
-	// 			//
-	// 			//bookCards[i].classList.add('visible-book-card')
-				
-	// 		setTimeout(function () {
-	// 				bookCards[i].classList.remove('visuallyhidden');
-	// 			  }, 20);
-	// 			//  console.log("remove visualhidden: " + i);
-				
-	// 		}
-	// 	}
-	// }
+	//make button buy functional
 
-	// function hideOldCards(season){
-	// 	for(let i = 0; i < bookCards.length; i++){
-	// 		if(bookCards[i].classList.contains(`${season}-card`)){
-	// 		bookCards[i].classList.add('visuallyhidden'); //make opasity 0 with transient
-	// 			///console.log("add visualhidden: " + i);
-	// 		setTimeout(function () {
-	// 				bookCards[i].classList.add('hidden-book-card');
-	// 			}, 500);
-	// 			//  console.log("add hidden: " + i);
+	const modalBuyCardOpenButtons = document.querySelectorAll('.book_buy_btn')
 
-	// 		}
-	// 	}
-	// }
-	
-	
+	for (let i = 0; i < modalBuyCardOpenButtons.length; i++) {
+		//make all by button open byCardMenu if user logged in
+		
+		modalBuyCardOpenButtons[i].addEventListener('click', (event)=>{
+			if(isSomeoneLogIn()){			
+				showModalBuyCardOverlay();
+			}
+			else{
+				showModalLogin();
+			}
+		
+		});
+		
+	}
 }
+	
+
+
+	
+	

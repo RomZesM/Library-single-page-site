@@ -882,8 +882,16 @@ a:link, a:visited, a:active {
   background-color: #BB945F;
 }
 
+.favourite__wrapper {
+  position: relative;
+}
+
 .favourites__season-pick {
   margin-top: 40px;
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  background-color: #FFFFFF;
 }
 @media (max-width: 768px) {
   .favourites__season-pick {
@@ -1006,6 +1014,10 @@ a:link, a:visited, a:active {
   margin-left: 19px;
 }
 
+.book_buy_btn-hide {
+  display: none;
+}
+
 .button_own {
   border: 1px solid #BB945F;
   color: #BB945F;
@@ -1013,6 +1025,11 @@ a:link, a:visited, a:active {
   background: none;
   border-radius: 2px;
   outline: none;
+  display: none;
+}
+
+.button_own-visible {
+  display: block;
 }
 
 .book_cover {

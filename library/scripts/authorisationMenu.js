@@ -42,7 +42,7 @@ const loginFormOverlay = document.querySelector('.login_form-overlay');
 
 for (let index = 0; index < loginRef.length; index++) {
 	loginRef[index].addEventListener('click', (event) =>{
-		loginFormOverlay.classList.add('login_form-overlay-visible');
+		showModalLogin();
 	});	
 }
 
@@ -86,4 +86,14 @@ modalLogoutButton.addEventListener('click', (event)=>{
 	localStorage.setItem('loggedInUser', '')
 	location.reload();  //reload page after logout
 });
+}
+
+export function showModalLogin(){
+	const loginFormOverlay = document.querySelector('.login_form-overlay');
+		loginFormOverlay.classList.add('login_form-overlay-visible');
+}
+
+export function showModalRegister(){
+	const regFormOverlay = document.querySelector('.register_form-overlay');
+	regFormOverlay.classList.add('register_form-overlay-visible');
 }
