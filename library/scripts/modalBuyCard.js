@@ -1,6 +1,6 @@
 
 
-export function ModalBuyCardInit(){
+export function modalBuyCardInit(){
  
 const modalBuyCardOverlay = document.querySelector('.modal_buy_card-overlay');
 const modalBuyCardOpenButtons = document.querySelectorAll('.book_buy_btn')

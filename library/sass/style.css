@@ -1563,6 +1563,11 @@ footer {
   visibility: hidden;
   transition: all 0.3s ease-out;
 }
+@media (max-width: 768px) {
+  .user_login_menu_small, .user_in_menu_small {
+    right: 40px;
+  }
+}
 
 .user_login_menu-visible {
   opacity: 1;

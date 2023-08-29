@@ -1,6 +1,11 @@
 import { checkIfKeyExistInLocalStorage, getCurrentUserLogin, getOffset,
 		 getSimpleValueFromLocalStorage, getUserValueFromLocalStorage, isSomeoneLogIn } from "./utils.js";
 import { changeCSSproperty } from "./utils.js";
+import { hideModalBurgerMenu } from "./burgerMenu.js";
+import { showModalRegister } from "./registerMenu.js";
+import { showModalProfile } from "./modalProfile.js";
+import { showModalLogin } from "./modalLogin.js";
+
 
 export function authorisationMenuInit(){
 //Init mini menu while press user icon
@@ -19,10 +24,15 @@ ico_profile.addEventListener('click', (event) =>{
 		//make font smaller for card number
 		logInMenuTitle.classList.add('auth_menu_title-small-text');
 
-		user_in_menu.classList.toggle('user_login_menu-visible'); 
+		showModalAuthLogged();
+		hideModalBurgerMenu();
 		}
-	else
-		user_login_menu.classList.toggle('user_login_menu-visible');
+	else{
+
+		showModalAuthUnlogged();
+		hideModalBurgerMenu();
+	}
+		
 
 });
 
@@ -31,18 +41,43 @@ addEventListener('scroll', (event) => {
 	user_login_menu.classList.remove('user_login_menu-visible');
 	user_in_menu.classList.remove('user_login_menu-visible');
 });
+//remove menu if unfocused
+//click outside
 
+const body = document.querySelector('body');
+const container = document.querySelector('.auth-menu-container');
+
+body.addEventListener('click', (event)=>{
+	if(event.target.closest('#ggg')){ //! не понимаю как работает (())
+	
+		console.log('true');
+	}
+	else
+	{	
+		hideModalAuthLogged();
+		hideModalAuthUnlogged();
+		console.log('false');
+	}
+	console.log("click: " + event.target.className);
+	console.log("click: " + event.target);
+})
+
+// $(document).on('click', function(event) {
+// 	if (!$(event.target).closest('#menucontainer').length) {
+// 	  // Hide the menus.
+// 	}
+//   });
 //--------------------------------------------
 
 
 //call Login windows from mini menu and from library card menu
 
 const loginRef = document.querySelectorAll('.login-ref');
-const loginFormOverlay = document.querySelector('.login_form-overlay');
 
 for (let index = 0; index < loginRef.length; index++) {
 	loginRef[index].addEventListener('click', (event) =>{
-		showModalLogin();
+		showModalLogin();		
+
 	});	
 }
 
@@ -50,11 +85,10 @@ for (let index = 0; index < loginRef.length; index++) {
 //call reg windows from mini menu and from library card menu
 
 const registerRef = document.querySelectorAll('.register-ref');//button
-const regFormOverlay = document.querySelector('.register_form-overlay');
 
 for (let index = 0; index < registerRef.length; index++) {
 	registerRef[index].addEventListener('click', (event) =>{
-		regFormOverlay.classList.add('register_form-overlay-visible');
+		showModalRegister();
 	});
 	
 }
@@ -71,13 +105,10 @@ ico_profile.addEventListener('mouseover', (event) =>{
 		ico_profile.setAttribute('title', 'unregistered');
 
 });
-//open profile modal window
-const modal_profile_overlay = document.querySelector(".modal_profile_overlay");
-const profile_button = document.querySelector(".profile-ref"); 
+//init profile modal open button
 
-profile_button.addEventListener('click', (e)=>{
-	modal_profile_overlay.classList.add('modal_profile_overlay-visible');
-});
+const profile_button = document.querySelector(".profile-ref"); 
+profile_button.addEventListener('click', showModalProfile)
 
 //logout button
 const modalLogoutButton = document.querySelector('.logout-ref'); 
@@ -88,12 +119,27 @@ modalLogoutButton.addEventListener('click', (event)=>{
 });
 }
 
-export function showModalLogin(){
-	const loginFormOverlay = document.querySelector('.login_form-overlay');
-		loginFormOverlay.classList.add('login_form-overlay-visible');
+export function showModalAuthLogged(){	
+	const user_in_menu = document.querySelector('.user_in_menu_small')
+	user_in_menu.classList.toggle('user_login_menu-visible'); 
+
 }
 
-export function showModalRegister(){
-	const regFormOverlay = document.querySelector('.register_form-overlay');
-	regFormOverlay.classList.add('register_form-overlay-visible');
+export function hideModalAuthLogged(){	
+	const user_in_menu = document.querySelector('.user_in_menu_small')
+	user_in_menu.classList.remove('user_login_menu-visible'); 
+
 }
+
+export function showModalAuthUnlogged(){
+	const user_login_menu = document.querySelector('.user_login_menu_small');
+	user_login_menu.classList.toggle('user_login_menu-visible');
+}
+
+export function hideModalAuthUnlogged(){
+	const user_login_menu = document.querySelector('.user_login_menu_small');
+	user_login_menu.classList.remove('user_login_menu-visible');
+}
+
+
+

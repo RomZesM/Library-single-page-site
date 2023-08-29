@@ -18,6 +18,9 @@
 	flex-direction: column;
 	text-align: center;
 	//
+	@include media-tablet{
+		right: 40px;	
+	}
 
 	//animation and visibility
 	opacity: 0;

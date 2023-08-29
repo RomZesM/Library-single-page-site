@@ -8,37 +8,13 @@ import { registerMenuInit } from "./registerMenu.js";
 import { loginForm } from "./login.js";
 import { checkIfKeyExistInLocalStorage } from "./utils.js";
 import { modalProfileInit } from "./modalProfile.js";
-import { ModalBuyCardInit } from "./modalBuyCard.js";
+import { modalBuyCardInit } from "./modalBuyCard.js";
+import { modalBurgerMenuInit } from "./burgerMenu.js";
 
 
 
  console.log("HHHHHH");
  sayHello('bub');
-
-//burger menu functional
-const burger = document?.querySelector('.burger_icon'); //get .class from DOM
-const nav_menu = document?.querySelector('.header__navigation');
-const body = document?.querySelector('body');
-const nav_items = nav_menu?.querySelectorAll('a'); //take all links from menu list
-
-burger.addEventListener('click', () => { //when we CLICK on burger
-	nav_menu?.classList.toggle('navigation--visible'); //add some another class
-													//in css make navigation-visible display=none	
-	burger?.classList.toggle('burger--active-animate');
-
-	body?.classList.toggle('stop-scroll') //add for body to stop scroll while menu is visible
-});
-
-nav_items.forEach(element => {
-	element.addEventListener('click', removeTempClasses) //after clicking on item
-														//remove all temp classes
-	function removeTempClasses(){
-		nav_menu?.classList.remove('navigation--visible'); 
-		burger?.classList.remove('burger--active-animate');
-		body?.classList.remove('stop-scroll') 
-	}
-});
-
 
 //--------------Start Init-------------//
 
@@ -64,6 +40,8 @@ addEventListener('scroll', (event) => {
 createCarousel();
 createFavBooksSlider();
 //
+//init burger menu
+modalBurgerMenuInit();
 
 //auth menu
 authorisationMenuInit();
@@ -78,4 +56,16 @@ loginForm();
 modalProfileInit();
 
 //modal buyCard init
-ModalBuyCardInit();
+modalBuyCardInit();
+
+
+
+
+
+
+// document.addEventListener('click', function(event) {
+// 	if (!event.target.closest('user_login_menu_small').length) {
+// 	  // Hide the menus.
+// 	  console.log("kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk");
+// 	}
+//   });

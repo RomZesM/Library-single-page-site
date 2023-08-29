@@ -52,3 +52,13 @@ function getRandomInt(min, max) {
 }
 //4_299_000_000 - 50_000_000_000
 }
+
+export function showModalRegister(){
+	const regFormOverlay = document.querySelector('.register_form-overlay');
+	regFormOverlay.classList.add('register_form-overlay-visible');
+}
+
+export function hideModalRegister(){
+	const regFormOverlay = document.querySelector('.register_form-overlay');
+	regFormOverlay.classList.remove('register_form-overlay-visible');
+}

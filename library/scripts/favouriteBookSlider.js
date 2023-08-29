@@ -1,5 +1,5 @@
 import { showModalBuyCardOverlay } from "./modalBuyCard.js";
-import { showModalLogin } from "./authorisationMenu.js";
+import { showModalLogin } from "./modalLogin.js";
 import { isSomeoneLogIn } from "./utils.js";
 
 export function createFavBooksSlider(){

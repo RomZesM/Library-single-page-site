@@ -19,3 +19,15 @@ modalProfileOverlay.addEventListener('click', (event)=>{
 
 
 }
+
+export function showModalProfile(){
+	const modal_profile_overlay = document.querySelector(".modal_profile_overlay");
+	
+	modal_profile_overlay.classList.add('modal_profile_overlay-visible');
+}
+
+export function hideModalProfile(){
+	const modal_profile_overlay = document.querySelector(".modal_profile_overlay");
+	
+	modal_profile_overlay.classList.remove('modal_profile_overlay-visible');
+}
