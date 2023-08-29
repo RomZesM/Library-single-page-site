@@ -1,0 +1,222 @@
+.modal_profile_overlay{
+
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0, 0.5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	//animation
+	// opacity: 0;
+	// visibility: hidden;
+	// transition: all 0.4 ease-out;
+}
+
+.wrapper_modal_profile{
+	background-color: $color-text-additional;
+	width: 600px;
+	height: 400px;
+	display: flex;
+	flex-direction: row;
+	//
+	//justify-content: space-between;
+	//flex-basis: 60%;
+	//flex-shrink: 1;
+	align-items: stretch;
+
+}
+
+.modal_profile-left{
+	background-color: $color-headers;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 16px;
+}
+
+.modal_profile__logo{
+	//
+	color: $color-main;
+	text-align: center;
+	font-family: Inter;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px; /* 100% */
+	text-transform: capitalize;
+	//
+	display: flex;
+    justify-content: center;
+	align-items: center;
+	width: 80px;
+	height: 80px;
+	background-color: $color-text-additional;
+	margin-left: 45px;
+	margin-right: 45px;
+	
+}
+.modal_profile__username{
+	//
+	color: $color-text;
+	text-align: center;
+	font-family: Inter;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px; /* 100% */
+	text-transform: capitalize;
+	//
+	background-color: $color-text-additional;
+	margin-left: 25px;
+	margin-right: 25px;
+	padding: 5px 15px;
+}
+
+.modal_profile-right{
+	//display: flex;
+		//
+	flex: 1;
+}
+
+.modal_profile-right-wrapper{
+	position: relative;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 40px;
+	padding-bottom: 39px;
+
+
+}
+
+.modal_profile-title{
+	color: #000;
+	font-family: Forum;
+	font-size: 40px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px; /* 50% */
+	letter-spacing: 0.8px;
+	text-transform: uppercase;
+	//
+	margin: 0px;
+}
+
+.modal_profile-counter-block{
+	display: flex;
+	flex-direction: row;
+	gap: 21px;
+	margin-top: 40px;
+}
+
+.counter_visits-title, 
+.counter_bonuses-title,
+.counter_books-title {
+	color: #000;
+	text-align: center;
+	font-family: Inter;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px; /* 100% */
+	letter-spacing: 0.4px;
+	text-transform: capitalize;
+	//
+	margin: 0;
+}
+
+.counter_visit,
+.counter_books,
+.counter_bonuses{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 8px;
+}
+
+.small-digits{
+
+	color: #000;
+	text-align: center;
+	font-family: Inter;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px; /* 200% */
+	letter-spacing: 0.2px;
+	text-transform: capitalize;
+	margin: 0;
+}
+//----Rented books block--------------------
+
+.modal_profile-rented-books-block{
+	margin-top: 20px;
+}
+
+.rented-books-title{
+	color: #0C0C0E;
+	font-family: Inter;
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px; /* 80% */
+	//
+	margin: 0px;
+	margin-bottom: 30px;
+
+}
+.modal_profile-rented-books-block ul{
+	list-style: disc;
+	padding-left: 30px;
+}
+.rented-books-book-title{
+	color: #000;
+	font-family: Inter;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px; /* 100% */
+	letter-spacing: 2px;
+	text-transform: capitalize;
+	
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+
+//-------Card Number block
+
+.modal_profile-card-number-block{
+	display: flex;
+	gap: 15px;
+	margin-top: 40px;
+}
+
+.modal_profile-card-number-block span{
+	color: #0C0C0E;
+	text-align: center;
+	font-family: Inter;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px; /* 100% */
+}
+
+.modal_profile-card-number{
+	color: #BB945F;
+	text-align: center;
+	font-family: Inter;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px; /* 100% */
+
+}
+
+//------Close button
+.modal_profile-close_button{
+	position: absolute;
+	right: 24px;
+	top: 20px;
+}
