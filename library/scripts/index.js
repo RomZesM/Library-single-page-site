@@ -7,6 +7,7 @@ import { authorisationMenuInit } from "./authorisationMenu.js";
 import { registerMenuInit } from "./registerMenu.js";
 import { loginForm } from "./login.js";
 import { checkIfKeyExistInLocalStorage } from "./utils.js";
+import { modalProfileInit } from "./modalProfile.js";
 
 
 
@@ -71,3 +72,6 @@ registerMenuInit();
 
 //login form
 loginForm(); 
+
+//modal Profile window
+modalProfileInit();

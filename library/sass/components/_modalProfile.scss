@@ -10,9 +10,15 @@
 	align-items: center;
 	justify-content: center;
 	//animation
-	// opacity: 0;
-	// visibility: hidden;
-	// transition: all 0.4 ease-out;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.4 ease-out;
+}
+
+.modal_profile_overlay-visible{
+	opacity: 1;
+	visibility: visible;
+	transition: all 0.4s ease-out;
 }
 
 .wrapper_modal_profile{

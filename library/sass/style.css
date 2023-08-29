@@ -1533,15 +1533,15 @@ footer {
 }
 
 .user_login_menu_small, .user_in_menu_small {
-  background-color: yellow;
+  background-color: #FFFFFF;
   width: 80px;
   height: 115px;
   position: absolute;
   top: 28 px;
   right: 0px;
+  display: flex;
   flex-direction: column;
-  transition: all 1s ease-out;
-  display: block;
+  text-align: center;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease-out;
@@ -1551,6 +1551,53 @@ footer {
   opacity: 1;
   visibility: visible;
   transition: all 0.3s ease-out;
+}
+
+.auth_menu_title {
+  color: #000;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 133.333% */
+  margin-top: 5px;
+}
+
+.auth_menu_title-small-text {
+  font-size: 12px;
+}
+
+.auth-menu-line {
+  width: 40px;
+  height: 1px;
+  background-color: #BB945F;
+  margin: auto;
+  margin-top: 5px;
+}
+
+.auth-menu-down {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+
+.register-ref {
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+
+.logout-ref {
+  margin-top: 10px;
+  margin-bottom: 6px;
 }
 
 .register_form-overlay, .login_form-overlay {
@@ -1612,6 +1659,15 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4 ease-out;
+}
+
+.modal_profile_overlay-visible {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.4s ease-out;
 }
 
 .wrapper_modal_profile {
