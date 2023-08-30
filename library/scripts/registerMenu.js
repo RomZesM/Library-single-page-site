@@ -29,7 +29,8 @@ let password = {};
 let cardNumber = 1;
 
 regForm.addEventListener('submit', (event) =>{
-	
+	//! todo сделать проверку если пользоватьель уже зарегестрирован? 
+
 	firstName = regForm.elements[0];
 	secondName = regForm.elements[1];
 	email = regForm.elements[2];
@@ -41,6 +42,8 @@ regForm.addEventListener('submit', (event) =>{
 							email: `${email.value}`,
 							password: `${password.value}`,
 							cardNumber: `${cardNumber}`,
+							booksList: [],
+							abonCard: false,
 							authCounter: 1,
 							bookCounter: 0
 							}));

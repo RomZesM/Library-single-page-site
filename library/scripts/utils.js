@@ -84,8 +84,31 @@ export function setUserFieldInLocalstorage(login, key, val){ //change one field 
   localStorage.setItem(`${login}`, JSON.stringify(user));
 }
 
+
+
 export function increaseCounterInLocalStorage(login, counter, increment){
     let i = getUserValueFromLocalStorage(login, counter); //current value
     i = Number.parseInt(i) + increment;
     setUserFieldInLocalstorage(login, `${counter}`, i)
+}
+
+export function addBookIntoUserAccount(login, book){
+  
+    //check if user have this book
+  if(!isBookInUserBookList(login, book)){
+    const user = JSON.parse(localStorage.getItem(`${login}`));
+    let booksList = user.booksList;
+    booksList.push(book);
+    user.booksList = booksList;
+    localStorage.setItem(`${login}`, JSON.stringify(user));
+  }
+ 
+
+}
+
+export function isBookInUserBookList(login, book){
+    const user = JSON.parse(localStorage.getItem(`${login}`));
+    let booksList = user.booksList;
+
+    return (booksList.includes(book));
 }

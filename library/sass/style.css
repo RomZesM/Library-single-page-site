@@ -559,6 +559,10 @@ a:link, a:visited, a:active {
   background-color: #BB945F;
 }
 
+.button_prototype {
+  display: none;
+}
+
 .line {
   margin: auto;
   width: 50px;
@@ -1025,7 +1029,7 @@ a:link, a:visited, a:active {
   background: none;
   border-radius: 2px;
   outline: none;
-  display: none;
+  display: block;
 }
 
 .button_own-visible {

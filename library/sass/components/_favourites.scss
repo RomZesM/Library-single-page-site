@@ -156,9 +156,6 @@
 	display: none;
 }
 
-
-
-
 .button_own{
 	border: 1px solid $color-main;
 	color: $color-main;
@@ -167,7 +164,7 @@
 	border-radius: 2px;
 	outline: none;
 
-	display: none;
+	display: block;
 }
 .button_own-visible{
 	display:block;

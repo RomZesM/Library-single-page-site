@@ -1,10 +1,13 @@
 import { showModalBuyCardOverlay } from "./modalBuyCard.js";
 import { showModalLogin } from "./modalLogin.js";
-import { isSomeoneLogIn } from "./utils.js";
+import { addBookIntoUserAccount, getCurrentUserLogin, getSingleDomElementByClass, getUserValueFromLocalStorage, increaseCounterInLocalStorage, isBookInUserBookList, isSomeoneLogIn } from "./utils.js";
+
+const bookCards = document.querySelectorAll('.book-card');
+const ownBtn = '<button class="button_small button_own" disabled>Own</button>';
 
 export function createFavBooksSlider(){
 	const seasons = document.getElementsByName('seasons-fav'); //get all radio button form
-	const bookCards = document.querySelectorAll('.book-card')
+	//const bookCards = document.querySelectorAll('.book-card')
 	let currentSeason = 'winter';
 	let previousSeason = '';
 	let counterHiddenCostyl = 0;
@@ -28,10 +31,9 @@ export function createFavBooksSlider(){
 			}			
 		}
 		if(counterHiddenCostyl != 12 && counterHiddenCostyl != 0){
-			console.log("alarm");
+			console.log("alarm");//!del
 			makeCardsVisible();
 		}
-		//console.log("kostyl: " + counterHiddenCostyl);
 	}
 
 
@@ -41,7 +43,7 @@ export function createFavBooksSlider(){
 			
 			previousSeason = currentSeason;
 			currentSeason = seasons[i].value
-			console.log("CurrentSeason: " + currentSeason + ", prev: " + previousSeason);
+			
 		}
 	}
 	}
@@ -52,23 +54,19 @@ export function createFavBooksSlider(){
 
 		setTimeout(chekVisibillity, 1300);
 
-		// openNewCards(currentSeason);
-		// hideOldCards(previousSeason);
-		
-
 		for(let i = 0; i < bookCards.length; i++){
-		if(bookCards[i].classList.contains(`${currentSeason}-card`)){
-			bookCards[i].classList.remove('hidden-book-card')
-		//	console.log("remove hidden: " + i);
-			//
-			//bookCards[i].classList.add('visible-book-card')
-			
-		aa = setTimeout(function () {
-				bookCards[i].classList.remove('visuallyhidden');
-			  }, 1000);
-			//  console.log("remove visualhidden: " + i);
-			
-		}
+			if(bookCards[i].classList.contains(`${currentSeason}-card`)){
+				bookCards[i].classList.remove('hidden-book-card')
+			//	console.log("remove hidden: " + i);
+				//
+				//bookCards[i].classList.add('visible-book-card')
+				
+			aa = setTimeout(function () {
+					bookCards[i].classList.remove('visuallyhidden');
+				}, 1000);
+				//  console.log("remove visualhidden: " + i);
+				
+			}
 		else{
 				//if(bookCards[i].classList.contains)	
 				//bookCards[i].classList.remove('visible-book-card')
@@ -99,16 +97,30 @@ export function createFavBooksSlider(){
 			
 		}
 	}
-	//make button buy functional
 
-	const modalBuyCardOpenButtons = document.querySelectorAll('.book_buy_btn')
-
-	for (let i = 0; i < modalBuyCardOpenButtons.length; i++) {
-		//make all by button open byCardMenu if user logged in
+	//make buttons buy functional
 		
-		modalBuyCardOpenButtons[i].addEventListener('click', (event)=>{
-			if(isSomeoneLogIn()){			
-				showModalBuyCardOverlay();
+	//go through cards
+	for (let i = 0; i < bookCards.length; i++) {
+		let currentButton = bookCards[i].querySelector('.book-btn');	
+		//create button dependin on book		
+		createButtonInBookCard(bookCards[i])
+
+		//make all by button open byCardMenu if user logged in
+		currentButton.addEventListener('click', (event)=>{		
+			let isHaveAbonement = getUserValueFromLocalStorage(getCurrentUserLogin(), 'abonCard');
+			
+			if(isSomeoneLogIn()){		
+				if(isHaveAbonement){
+					//increase book counter
+					increaseCounterInLocalStorage(getCurrentUserLogin(), 'bookCounter', 1);
+					//change button
+					currentButton.innerHTML = ownBtn;
+					buyBook(bookCards[i]);
+				}
+				else{
+					showModalBuyCardOverlay();
+				}					
 			}
 			else{
 				showModalLogin();
@@ -118,8 +130,35 @@ export function createFavBooksSlider(){
 		
 	}
 }
+
+function buyBook(bookCard){
 	
+	// let bookTitle = bookCard.querySelector('.book_title').innerText;
+	// let author = bookCard.querySelector('.book_author').innerText.slice(3);
+	// let book = bookTitle + ', ' + author;
+	let book = createBook(bookCard);
+	addBookIntoUserAccount(getCurrentUserLogin(), book)
+	//console.log("Buy: " + book);
+}
 
+function createBook(bookCard){
+	let bookTitle = bookCard.querySelector('.book_title').innerText.toLowerCase();
+	let author = bookCard.querySelector('.book_author').innerText.slice(3).toLowerCase();
+	let book = bookTitle + ', ' + author;
+	return book;
+}
 
+function createButtonInBookCard(bookCard){
+	let ownBtn = '<button class="button_small button_own" disabled>Own</button>'
+	let buyBtn = '<button class="button_bordered button_small button_black book_buy_btn">Buy</button>'
+	let currentButton = bookCard.querySelector('.book-btn');	
+	if(!isBookInUserBookList(getCurrentUserLogin(), createBook(bookCard))){
+		currentButton.innerHTML = buyBtn;
+	}
+	else{
+		currentButton.innerHTML = ownBtn;				
+	}	
+
+}
 	
 	
