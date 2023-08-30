@@ -1887,6 +1887,10 @@ footer {
   line-height: 20px; /* 100% */
 }
 
+.modal_profile-card-number-copyico {
+  cursor: pointer;
+}
+
 .modal_profile-close_button {
   position: absolute;
   right: 24px;

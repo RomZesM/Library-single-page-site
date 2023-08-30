@@ -38,7 +38,7 @@ export function loginForm(){
 		
 		if(checkIfKeyExistInLocalStorage(login.value)){
 			localStorage.setItem('loggedInUser', `${login.value}`) //make user login if it exist
-			increaseCounterInLocalStorage(`${login.value}`, 'authCount', 1);
+			increaseCounterInLocalStorage(`${login.value}`, 'authCounter', 1);
 			hideModalLogin();
 			location.reload();//reload after login
 		}

@@ -21,7 +21,14 @@ modalProfileOverlay.addEventListener('click', (event)=>{
 	}
 
 });
+//init copy button
+const copyButton = getSingleDomElementByClass('modal_profile-card-number-copyico');
+const elementWithTextToCopy = getSingleDomElementByClass('modal_profile-card-number');
 
+copyButton.addEventListener('click', (event ) =>{
+	let txt = elementWithTextToCopy.textContent;
+	navigator.clipboard.writeText(`${txt}`)
+});
 
 }
 
@@ -30,7 +37,9 @@ export function fillModalProfile(){
 		//fill name field
 		const userLogin = getCurrentUserLogin();
 		const userName = getUserFullName(userLogin);
-		const visitsCounter = getUserValueFromLocalStorage(userLogin, 'authCount');
+		const visitsCounter = getUserValueFromLocalStorage(userLogin, 'authCounter');
+		const bookCounter = getUserValueFromLocalStorage(userLogin, 'bookCounter');
+		const cardNumber = getUserValueFromLocalStorage(userLogin, 'cardNumber');
 		
 		//make smaller font for long name
 		if(userName.length >= 15){
@@ -41,6 +50,8 @@ export function fillModalProfile(){
 		}
 		getSingleDomElementByClass('modal_profile__username').innerHTML = userName;
 		getSingleDomElementByClass('counter_visit-counter').innerHTML = visitsCounter;
+		getSingleDomElementByClass('counter_books-counter').innerHTML = bookCounter;
+		getSingleDomElementByClass('modal_profile-card-number').innerHTML = cardNumber;
 	}
 }
 

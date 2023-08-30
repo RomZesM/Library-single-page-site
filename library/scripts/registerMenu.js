@@ -41,7 +41,8 @@ regForm.addEventListener('submit', (event) =>{
 							email: `${email.value}`,
 							password: `${password.value}`,
 							cardNumber: `${cardNumber}`,
-							authCount: 1
+							authCounter: 1,
+							bookCounter: 0
 							}));
 
 });
