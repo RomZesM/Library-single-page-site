@@ -172,17 +172,17 @@
 								<div class="content-block-left">
 									<form  class="credit-card-form ccf">
 										<label class="ccf-label-bank-card-number" for="ccf-label-bank-card-number-id">Bank card number</label>
-										<input type="text" class="ccf-label-bank-card-number" id="ccf-label-bank-card-number-id">
+										<input type="text" class="ccf-label-bank-card-number" id="ccf-label-bank-card-number-id" minlength="16" maxlength="16">
 										
 										<label class="ccf-label-expiration-code" for="ccf-expiration-code-id1">Expiration code</label>
 										<div class="cvc-input-block">
-											<input type="text" class="ccf-expiration-code1" id="ccf-expiration-code-id1">
-											<input type="text" class="ccf-expiration-code2" id="ccf-expiration-code-id2">
+											<input type="text" class="ccf-expiration-code1" id="ccf-expiration-code-id1" minlength="2" maxlength="2">
+											<input type="text" class="ccf-expiration-code2" id="ccf-expiration-code-id2" minlength="2" maxlength="2">
 										</div>
 										
 
 										<label class="ccf-label-cvc" for="ccf-cvc-id">CVC</label>
-										<input type="text" class="ccf-cvc" id="ccf-cvc-id">
+										<input type="text" class="ccf-cvc" id="ccf-cvc-id" minlength="3" maxlength="3">
 										
 										<label class="ccf-label-cardholder" for="ccf-cardholder-id">Cardholder name</label>
 										<input type="text" class="ccf-cardholder" id="ccf-cardholder-id">

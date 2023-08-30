@@ -108,9 +108,10 @@ export function createFavBooksSlider(){
 
 		//make all by button open byCardMenu if user logged in
 		currentButton.addEventListener('click', (event)=>{		
-			let isHaveAbonement = getUserValueFromLocalStorage(getCurrentUserLogin(), 'abonCard');
 			
-			if(isSomeoneLogIn()){		
+			
+			if(isSomeoneLogIn()){	
+				let isHaveAbonement = getUserValueFromLocalStorage(getCurrentUserLogin(), 'abonCard');	
 				if(isHaveAbonement){
 					//increase book counter
 					increaseCounterInLocalStorage(getCurrentUserLogin(), 'bookCounter', 1);

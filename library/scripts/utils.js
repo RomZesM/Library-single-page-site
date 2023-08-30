@@ -107,8 +107,13 @@ export function addBookIntoUserAccount(login, book){
 }
 
 export function isBookInUserBookList(login, book){
-    const user = JSON.parse(localStorage.getItem(`${login}`));
-    let booksList = user.booksList;
+    if(isSomeoneLogIn()){
+      const user = JSON.parse(localStorage.getItem(`${login}`));
+      let booksList = user.booksList;
 
-    return (booksList.includes(book));
+      return (booksList.includes(book));
+    }
+    else
+      return false;
+   
 }
