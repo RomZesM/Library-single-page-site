@@ -58,14 +58,8 @@ modalProfileInit();
 //modal buyCard init
 modalBuyCardInit();
 
+//
 
 
 
-
-
-// document.addEventListener('click', function(event) {
-// 	if (!event.target.closest('user_login_menu_small').length) {
-// 	  // Hide the menus.
-// 	  console.log("kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk");
-// 	}
-//   });
+//

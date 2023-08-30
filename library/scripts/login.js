@@ -1,5 +1,5 @@
 "strict mode"
-import { checkIfKeyExistInLocalStorage } from "./utils.js";
+import { checkIfKeyExistInLocalStorage, getSingleDomElementByClass, increaseCounterInLocalStorage} from "./utils.js";
 
 
 
@@ -30,16 +30,27 @@ export function loginForm(){
 	let pass = {};
 
 	loginForm.addEventListener('submit', (event) => {
-		if(checkIfKeyExistInLocalStorage)
+		// if(checkIfKeyExistInLocalStorage){
+			
+		// }
 		login = loginForm.elements[0]; //get first field from form
 		pass = loginForm.elements[1]; //get second field from form
 		
 		if(checkIfKeyExistInLocalStorage(login.value)){
 			localStorage.setItem('loggedInUser', `${login.value}`) //make user login if it exist
+			increaseCounterInLocalStorage(`${login.value}`, 'authCount', 1);
+			hideModalLogin();
+			location.reload();//reload after login
 		}
 		
 		//localStorage.setItem(`${login.value}`, `${pass.value}` );
 		
 		//localStorage.setItem('login', 'aa@hm.ru');
 	});
+}
+
+export function hideModalLogin(){
+	getSingleDomElementByClass('login_form-overlay').classList.remove('login_form-overlay-visible');
+
+
 }

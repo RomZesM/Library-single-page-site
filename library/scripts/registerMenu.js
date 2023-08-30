@@ -40,7 +40,8 @@ regForm.addEventListener('submit', (event) =>{
 							secondName: `${secondName.value}`,
 							email: `${email.value}`,
 							password: `${password.value}`,
-							cardNumber: `${cardNumber}`
+							cardNumber: `${cardNumber}`,
+							authCount: 1
 							}));
 
 });

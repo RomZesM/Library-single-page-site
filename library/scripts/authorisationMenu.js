@@ -41,33 +41,20 @@ addEventListener('scroll', (event) => {
 	user_login_menu.classList.remove('user_login_menu-visible');
 	user_in_menu.classList.remove('user_login_menu-visible');
 });
+
 //remove menu if unfocused
 //click outside
-
 const body = document.querySelector('body');
-const container = document.querySelector('.auth-menu-container');
 
 body.addEventListener('click', (event)=>{
-	if(event.target.closest('#ggg')){ //! не понимаю как работает (())
-	
-		console.log('true');
+	if(!event.target.closest('.header__icon-profile-burger')){ 
+		//		console.log('not a menu');
+		 hideModalAuthLogged();
+		 hideModalAuthUnlogged();
+		
 	}
-	else
-	{	
-		hideModalAuthLogged();
-		hideModalAuthUnlogged();
-		console.log('false');
-	}
-	console.log("click: " + event.target.className);
-	console.log("click: " + event.target);
 })
 
-// $(document).on('click', function(event) {
-// 	if (!$(event.target).closest('#menucontainer').length) {
-// 	  // Hide the menus.
-// 	}
-//   });
-//--------------------------------------------
 
 
 //call Login windows from mini menu and from library card menu

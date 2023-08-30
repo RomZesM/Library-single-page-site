@@ -67,3 +67,25 @@ export function checkIfKeyExistInLocalStorage(key){
      return 'unregistered user'
  }
 
+ export function getUserFullName(userLogin){
+    if(userLogin){
+      return getUserValueFromLocalStorage(userLogin, 'firstName').concat(' ', getUserValueFromLocalStorage(userLogin, 'secondName'))
+    }
+ }
+
+ export function getSingleDomElementByClass(elClass){
+      return (document.querySelector(`.${elClass}`));
+ }
+
+export function setUserFieldInLocalstorage(login, key, val){ //change one field in userObject
+  const user = JSON.parse(localStorage.getItem(`${login}`)); //get current user
+  user[`${key}`] = val; //set new param
+
+  localStorage.setItem(`${login}`, JSON.stringify(user));
+}
+
+export function increaseCounterInLocalStorage(login, counter, increment){
+    let i = getUserValueFromLocalStorage(login, counter); //current value
+    i = Number.parseInt(i) + increment;
+    setUserFieldInLocalstorage(login, `${counter}`, i)
+}
