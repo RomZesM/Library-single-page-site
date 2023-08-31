@@ -43,8 +43,8 @@ export function checkIfKeyExistInLocalStorage(key){
     for (let i = 0; i < localStorage.length; i++) {
       if(localStorage.key(i).includes(key)){
           //!del
-          console.log(key);
-          console.log(localStorage.key(i).includes(key));
+          // console.log(key);
+          // console.log(localStorage.key(i).includes(key));
         return true;
       }     
     }
@@ -52,11 +52,13 @@ export function checkIfKeyExistInLocalStorage(key){
     }
 
   export function getUserKeyFromLocalStorage(login){
+    console.log('getUserKeyFromLocalStorage: ' + '['+login+']');
     for (let i = 0; i < localStorage.length; i++) {
-      if(localStorage.key(i).includes(login)){
-         return localStorage.key(i);
-      }     
-  }    
+       if(localStorage.key(i).includes(login)){
+                return localStorage.key(i);
+      }
+    }
+    return null;
   } 
 
 

@@ -1,4 +1,4 @@
-import { checkIfKeyExistInLocalStorage, getSingleDomElementByClass } from "./utils.js";
+import { checkIfKeyExistInLocalStorage, checkIfUserWasRegistered, getSimpleValueFromLocalStorage, getSingleDomElementByClass, getUserKeyFromLocalStorage } from "./utils.js";
 import { isSomeoneLogIn } from "./utils.js";
 import { getCurrentUserLogin } from "./utils.js";
 import { getUserFullName } from "./utils.js";
@@ -20,13 +20,35 @@ export function digitalLibraryCardInit(){
 
 	buttonSubmit.addEventListener('click', (event)=>{
 		
-		if(readerNameInput.value != '' && readerCardNumberInput.value != '')
-		console.log(readerNameInput.value)
-		console.log(readerCardNumberInput.value)
-		if(readerNameInput.value === '')
-			console.log('empty');
-		//let userName = 
-		checkIfKeyExistInLocalStorage()
+		if(readerNameInput.value != '' && readerCardNumberInput.value != ''){
+			if(checkIfUserWasRegistered(readerCardNumberInput.value.toLowerCase())){
+				let userKey = getUserKeyFromLocalStorage(readerCardNumberInput.value.toLowerCase())
+				let userName = getUserValueFromLocalStorage(userKey, 'firstName')
+				let secondName = getUserValueFromLocalStorage(userKey, 'secondName')
+				let splitedNameFromInput = readerNameInput.value.toLowerCase().split(' ').filter((element)=> element != '') ;
+				if(splitedNameFromInput.length === 2 || splitedNameFromInput.length === 1){
+					if(splitedNameFromInput.length === 2){
+						if(splitedNameFromInput[0] === userName && splitedNameFromInput[1] === secondName){
+							fillDigitalCardUnloginned(userKey)
+						}
+					}
+					if(splitedNameFromInput.length === 1){
+						if(splitedNameFromInput[0] === userName){
+							fillDigitalCardUnloginned(userKey)
+						}
+
+					}
+				}
+
+
+				console.log("user founded by number: " + userKey	);
+				console.log("get from local storage: " + userName +' ' + secondName);
+				console.log(splitedNameFromInput);
+			}
+			
+		}
+		
+	
 	});
 
 }
@@ -50,5 +72,30 @@ function fillDigitalCard(){
 		buttonSubmit.classList.add('form-button-hide');
 		countersBlock.classList.add('digital-card-counter-block-visible');
 
+	}
+}
+
+function fillDigitalCardUnloginned(userLogin){
+	if(!isSomeoneLogIn()){
+		//fill name field
+		
+		const userName = getUserFullName(userLogin);
+		const visitsCounter = getUserValueFromLocalStorage(userLogin, 'authCounter');
+		const bookCounter = getUserValueFromLocalStorage(userLogin, 'bookCounter');
+		const cardNumber = getUserValueFromLocalStorage(userLogin, 'cardNumber');
+		
+
+		readerNameInput.value = userName;
+		readerCardNumberInput.value = cardNumber;
+		document.getElementById('dc-visitCounter-id').innerHTML = visitsCounter;
+		document.getElementById('dc-bookCounter-id').innerHTML = bookCounter;
+				
+		buttonSubmit.classList.add('form-button-hide');
+		countersBlock.classList.add('digital-card-counter-block-visible');
+
+		setTimeout(function () {
+			buttonSubmit.classList.remove('form-button-hide');
+			countersBlock.classList.remove('digital-card-counter-block-visible');
+		}, 10000);
 	}
 }
