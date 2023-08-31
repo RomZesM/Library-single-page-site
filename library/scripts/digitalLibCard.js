@@ -1,4 +1,4 @@
-import { getSingleDomElementByClass } from "./utils.js";
+import { checkIfKeyExistInLocalStorage, getSingleDomElementByClass } from "./utils.js";
 import { isSomeoneLogIn } from "./utils.js";
 import { getCurrentUserLogin } from "./utils.js";
 import { getUserFullName } from "./utils.js";
@@ -8,10 +8,27 @@ import { getUserValueFromLocalStorage } from "./utils.js";
 
 const buttonSubmit = document.getElementById('check_the_card_button'); 
 const countersBlock = getSingleDomElementByClass('digital-card-counter-block'); 
+const libraryCardForm = getSingleDomElementByClass('check-card-form');
+const readerNameInput = document.getElementById('reader-name-id');
+const readerCardNumberInput = document.getElementById('card-number')
 
 export function digitalLibraryCardInit(){
 	console.log("init digital card");
 	fillDigitalCard();
+
+
+
+	buttonSubmit.addEventListener('click', (event)=>{
+		
+		if(readerNameInput.value != '' && readerCardNumberInput.value != '')
+		console.log(readerNameInput.value)
+		console.log(readerCardNumberInput.value)
+		if(readerNameInput.value === '')
+			console.log('empty');
+		//let userName = 
+		checkIfKeyExistInLocalStorage()
+	});
+
 }
 
 
@@ -24,15 +41,9 @@ function fillDigitalCard(){
 		const bookCounter = getUserValueFromLocalStorage(userLogin, 'bookCounter');
 		const cardNumber = getUserValueFromLocalStorage(userLogin, 'cardNumber');
 		
-		// //make smaller font for long name
-		// if(userName.length >= 15){
-		// 	getSingleDomElementByClass('modal_profile__username').classList.add('modal_profile__username-small-font')
-		// }
-		// else{
-		// 	getSingleDomElementByClass('modal_profile__username').classList.add('modal_profile__username-normal-font')
-		// }
-		document.getElementById('reader-name-id').value = userName;
-		document.getElementById('card-number').value = cardNumber;
+
+		readerNameInput.value = userName;
+		readerCardNumberInput.value = cardNumber;
 		document.getElementById('dc-visitCounter-id').innerHTML = visitsCounter;
 		document.getElementById('dc-bookCounter-id').innerHTML = bookCounter;
 				

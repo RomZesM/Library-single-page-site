@@ -34,11 +34,31 @@ export function checkIfKeyExistInLocalStorage(key){
   for (let i = 0; i < localStorage.length; i++) {
     if(key === localStorage.key(i)){
        return true;
-    }
-     
+    }     
   }
   return false;  
   }
+
+  export function checkIfUserWasRegistered(key){
+    for (let i = 0; i < localStorage.length; i++) {
+      if(localStorage.key(i).includes(key)){
+          //!del
+          console.log(key);
+          console.log(localStorage.key(i).includes(key));
+        return true;
+      }     
+    }
+    return false;  
+    }
+
+  export function getUserKeyFromLocalStorage(login){
+    for (let i = 0; i < localStorage.length; i++) {
+      if(localStorage.key(i).includes(login)){
+         return localStorage.key(i);
+      }     
+  }    
+  } 
+
 
   export function getSimpleValueFromLocalStorage(key){
      return localStorage.getItem(`${key}`)
@@ -117,3 +137,8 @@ export function isBookInUserBookList(login, book){
       return false;
    
 }
+
+// export function isUserWasRegistered(userToCheck){
+//     let user = localStorage.key(userToCheck);
+//     console.log("is user registered: " + userToCheck);
+// }

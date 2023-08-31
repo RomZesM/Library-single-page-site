@@ -79,7 +79,8 @@ for (let index = 0; index < registerRef.length; index++) {
 	});
 	
 }
-//have name of registered user
+//have name of registered user 
+//todo //сделать добавление по клику, иначе 2 разных листенера на одну кнопку
 ico_profile.addEventListener('mouseover', (event) =>{
 	if(getSimpleValueFromLocalStorage('loggedInUser') != ''){ //check if someone is login
 		

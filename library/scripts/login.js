@@ -1,5 +1,5 @@
-"strict mode"
-import { checkIfKeyExistInLocalStorage, getSingleDomElementByClass, increaseCounterInLocalStorage} from "./utils.js";
+
+import { checkIfKeyExistInLocalStorage, checkIfUserWasRegistered, getSingleDomElementByClass, getUserKeyFromLocalStorage, increaseCounterInLocalStorage} from "./utils.js";
 
 
 
@@ -36,11 +36,18 @@ export function loginForm(){
 		login = loginForm.elements[0]; //get first field from form
 		pass = loginForm.elements[1]; //get second field from form
 		
-		if(checkIfKeyExistInLocalStorage(login.value)){
-			localStorage.setItem('loggedInUser', `${login.value}`) //make user login if it exist
+		//if(checkIfKeyExistInLocalStorage(login.value)){
+		if(checkIfUserWasRegistered(login.value.toLowerCase())){
+			
+			let currentUser = getUserKeyFromLocalStorage(login.value.toLowerCase());
+			localStorage.setItem('loggedInUser', `${currentUser}`) //make user login if it exist
 			increaseCounterInLocalStorage(`${login.value}`, 'authCounter', 1);
 			hideModalLogin();
-			location.reload();//reload after login
+			//reload after login, work only if wrap into setTimeOut()
+			setTimeout(function(){
+				window.location.reload();
+			},100); 
+			
 		}
 		
 		//localStorage.setItem(`${login.value}`, `${pass.value}` );

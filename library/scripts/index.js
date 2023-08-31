@@ -13,7 +13,6 @@ import { modalBurgerMenuInit } from "./burgerMenu.js";
 import { digitalLibraryCardInit } from "./digitalLibCard.js";
 
 
-
  console.log("HHHHHH");
  sayHello('bub');
 
@@ -32,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		//localStorage.setItem('scrollpos', 0);
 	}
 });
+
 addEventListener('scroll', (event) => {
 	localStorage.setItem('scrollpos', window.scrollY);
 });
