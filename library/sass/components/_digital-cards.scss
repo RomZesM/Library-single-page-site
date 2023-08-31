@@ -88,6 +88,30 @@
 	padding-left: 39px;
 	
 }
+.form-button-hide{
+	display: none;
+}
+
+.digital-card-counter-block{
+	//display: flex;
+	justify-content: center;
+	gap: 35px;
+	margin-top: -5px;
+	//
+	display: none;
+}
+.digital-card-counter-block-visible{
+	display: flex;
+}
+
+.counter_visit-mini-version,
+.counter_bonuses-mini-version,
+.counter_books-mini-version{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+}
 
 .suggest-to-log-in-container{
 	padding-left: 320px;;

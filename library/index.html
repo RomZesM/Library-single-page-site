@@ -657,8 +657,31 @@
 										<input type="text" name="card-number" id="card-number" placeholder="Card number">
 									</div>
 								</div>
-								<button class="button_bordered form-button" type="submit">Check the card</button>
+								<button class="button_bordered form-button" type="submit" id="check_the_card_button">Check the card</button>
 							</form>
+							<div class="digital-card-counter-block">
+								<div class="counter_visit-mini-version">
+									<p class="counter_visits-title small-digits">Visits</p>
+									<div class="counter_visit-ico">
+										<img src="/library/assets/ico/prof_user_01.svg" alt="profile user ico">
+									</div>
+									<p class="counter_visit-counter small-digits" id="dc-visitCounter-id">22</p>
+								</div>
+								<div class="counter_bonuses-mini-version">
+									<p class="counter_bonuses-title small-digits">Bonuses</p>
+									<div class="counter_bonuses-ico">
+										<img src="/library/assets/ico/prof_star_02.svg" alt="bonuses ico">
+									</div>
+									<p class="counter_bonuses-counter small-digits" >1240</p>
+								</div>
+								<div class="counter_books-mini-version">
+									<p class="counter_books-title small-digits">Books</p>
+									<div class="counter_books-ico">
+										<img src="/library/assets/ico/prof_book_03.svg" alt="book counter ico">
+									</div>
+									<p class="counter_books-counter small-digits" id="dc-bookCounter-id">2</p>
+								</div>
+							</div>
 						</div>
 
 					</div>					
@@ -670,7 +693,6 @@
 								<button class="buttons button_bordered button_small register-ref">Sign Up</button>
 								<button class="buttons button_bordered button_small login-ref">Log In</button>
 						</div>
-								
 					</div>
 					
 						
@@ -742,6 +764,7 @@
 	<script type="module" src="scripts/modalBuyCard.js"></script>
 	<script type="module" src="scripts/burgerMenu.js"></script>
 	<script type="module" src="scripts/modalLogin.js"></script>
+	<script type="module" src="scripts/digitalLibCard.js"></script>
 	
 </body>
 </html>

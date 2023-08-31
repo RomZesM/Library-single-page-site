@@ -10,6 +10,7 @@ import { checkIfKeyExistInLocalStorage } from "./utils.js";
 import { modalProfileInit } from "./modalProfile.js";
 import { modalBuyCardInit } from "./modalBuyCard.js";
 import { modalBurgerMenuInit } from "./burgerMenu.js";
+import { digitalLibraryCardInit } from "./digitalLibCard.js";
 
 
 
@@ -59,7 +60,7 @@ modalProfileInit();
 modalBuyCardInit();
 
 //
-
+digitalLibraryCardInit();
 
 
 //
