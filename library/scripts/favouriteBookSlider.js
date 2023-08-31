@@ -153,12 +153,16 @@ function createButtonInBookCard(bookCard){
 	let ownBtn = '<button class="button_small button_own" disabled>Own</button>'
 	let buyBtn = '<button class="button_bordered button_small button_black book_buy_btn">Buy</button>'
 	let currentButton = bookCard.querySelector('.book-btn');	
-	if(!isBookInUserBookList(getCurrentUserLogin(), createBook(bookCard))){
-		currentButton.innerHTML = buyBtn;
+	if(isSomeoneLogIn){
+		if(!isBookInUserBookList(getCurrentUserLogin(), createBook(bookCard))){
+			currentButton.innerHTML = buyBtn;
+		}
+		else{
+			currentButton.innerHTML = ownBtn;				
+		}
 	}
-	else{
-		currentButton.innerHTML = ownBtn;				
-	}	
+	else
+		currentButton.innerHTML = buyBtn;
 
 }
 	

@@ -77,6 +77,11 @@
 }
 
 .credit-card-form input{
+	outline: none;
+	border: 1px solid $color-main;
+}
+
+.credit-card-form input{
 	height: 20px;
 }
 
@@ -103,6 +108,14 @@
 	display: flex;
 	gap: 25px;
 	align-items: end;
+}
+
+.disabled-button{
+	background-color: $color-text-light-grey;	
+}
+
+.disabled-button:hover{
+	background-color: $color-text-light-grey;
 }
 
 .price{

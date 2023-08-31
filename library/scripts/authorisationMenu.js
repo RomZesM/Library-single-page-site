@@ -101,7 +101,7 @@ profile_button.addEventListener('click', showModalProfile)
 const modalLogoutButton = document.querySelector('.logout-ref'); 
 
 modalLogoutButton.addEventListener('click', (event)=>{
-	localStorage.setItem('loggedInUser', '')
+	localStorage.setItem('loggedInUser', '') //todo add check if loginuser is in localStorage to prevent error while handy delete user
 	location.reload();  //reload page after logout
 });
 }
