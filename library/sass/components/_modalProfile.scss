@@ -129,6 +129,7 @@
 	flex-direction: row;
 	gap: 21px;
 	margin-top: 40px;
+	margin-bottom: 20px;
 }
 
 .counter_visits-title, 
@@ -171,9 +172,7 @@
 }
 //----Rented books block--------------------
 
-.modal_profile-rented-books-block{
-	margin-top: 20px;
-}
+
 
 .rented-books-title{
 	color: #0C0C0E;
@@ -184,9 +183,39 @@
 	line-height: 20px; /* 80% */
 	//
 	margin: 0px;
-	margin-bottom: 30px;
+	margin-bottom: 13px;
 
 }
+
+.modal_profile-rented-books-block{
+	max-width: 388px;
+	height: 77px;
+	overflow-y: auto;
+	overflow-x: auto;
+	margin-bottom: 30px;
+}
+//scroll bar styling
+.modal_profile-rented-books-block::-webkit-scrollbar{
+		//background-color: #cec7c7;
+		width: 10px;
+		height: 10px;
+		border: 1px solid $color-text-light-grey;
+}
+.modal_profile-rented-books-block::-webkit-scrollbar-thumb {
+		background-color: $color-main;
+	
+}
+.modal_profile-rented-books-block::-webkit-scrollbar-button  {
+		background-color: $color-text-light-grey;
+		width: 10px;
+		height: 10px;
+
+}
+
+
+     
+	
+
 .modal_profile-rented-books-block ul{
 	list-style: disc;
 	padding-left: 30px;
@@ -203,6 +232,7 @@
 	
 	margin-top: 0px;
 	margin-bottom: 10px;
+	white-space: nowrap; //отключает перенос для длинной стоки, чтобы появился горизонтальный скроллбар
 }
 
 //-------Card Number block
@@ -210,7 +240,7 @@
 .modal_profile-card-number-block{
 	display: flex;
 	gap: 15px;
-	margin-top: 40px;
+	//margin-top: 40px;
 }
 
 .modal_profile-card-number-block span{

@@ -52,7 +52,27 @@ export function fillModalProfile(){
 		getSingleDomElementByClass('counter_visit-counter').innerHTML = visitsCounter;
 		getSingleDomElementByClass('counter_books-counter').innerHTML = bookCounter;
 		getSingleDomElementByClass('modal_profile-card-number').innerHTML = cardNumber;
+		insertBooksIntoProfile();
 	}
+}
+
+
+function insertBooksIntoProfile(){
+	//<li><p class="rented-books-book-title">Dominicana, Angie Cruz</p></li>
+	
+	if(isSomeoneLogIn()){
+		const booksList = getUserValueFromLocalStorage(getCurrentUserLogin(),'booksList');
+		const htmlRentetBooksList = getSingleDomElementByClass('rented-books-list');
+		let generatedList = ''
+		for (let i = 0; i < booksList.length; i++) {
+			const book = booksList[i];
+			let li = `<li><p class="rented-books-book-title">${book}</p></li>`
+			generatedList = generatedList.concat(' ', li);
+			
+		}
+		htmlRentetBooksList.innerHTML = generatedList;
+	}
+	
 }
 
 export function clearModalProfile(){

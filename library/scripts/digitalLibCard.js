@@ -96,6 +96,9 @@ function fillDigitalCardUnloginned(userLogin){
 		setTimeout(function () {
 			buttonSubmit.classList.remove('form-button-hide');
 			countersBlock.classList.remove('digital-card-counter-block-visible');
-		}, 10000);
+			readerNameInput.value = '';
+			readerCardNumberInput.value = '';
+			
+		}, 1000);
 	}
 }

@@ -1817,6 +1817,7 @@ footer {
   flex-direction: row;
   gap: 21px;
   margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 .counter_visits-title,
@@ -1856,10 +1857,6 @@ footer {
   margin: 0;
 }
 
-.modal_profile-rented-books-block {
-  margin-top: 20px;
-}
-
 .rented-books-title {
   color: #0C0C0E;
   font-family: Inter;
@@ -1868,7 +1865,31 @@ footer {
   font-weight: 400;
   line-height: 20px; /* 80% */
   margin: 0px;
+  margin-bottom: 13px;
+}
+
+.modal_profile-rented-books-block {
+  max-width: 388px;
+  height: 77px;
+  overflow-y: auto;
+  overflow-x: auto;
   margin-bottom: 30px;
+}
+
+.modal_profile-rented-books-block::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #8E8E8E;
+}
+
+.modal_profile-rented-books-block::-webkit-scrollbar-thumb {
+  background-color: #BB945F;
+}
+
+.modal_profile-rented-books-block::-webkit-scrollbar-button {
+  background-color: #8E8E8E;
+  width: 10px;
+  height: 10px;
 }
 
 .modal_profile-rented-books-block ul {
@@ -1887,12 +1908,12 @@ footer {
   text-transform: capitalize;
   margin-top: 0px;
   margin-bottom: 10px;
+  white-space: nowrap;
 }
 
 .modal_profile-card-number-block {
   display: flex;
   gap: 15px;
-  margin-top: 40px;
 }
 
 .modal_profile-card-number-block span {
