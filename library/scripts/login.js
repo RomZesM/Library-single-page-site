@@ -1,7 +1,8 @@
 
-import { checkIfKeyExistInLocalStorage, checkIfUserWasRegistered, getSingleDomElementByClass, getUserKeyFromLocalStorage, increaseCounterInLocalStorage} from "./utils.js";
+import { showModalRegister } from "./registerMenu.js";
+import { checkIfUserWasRegistered, getSingleDomElementByClass, getUserKeyFromLocalStorage, increaseCounterInLocalStorage} from "./utils.js";
 
-
+const loginFormRegisterRef = getSingleDomElementByClass('login_form-register-ref');
 
 
 export function loginForm(){
@@ -30,15 +31,10 @@ export function loginForm(){
 	let pass = {};
 
 	loginForm.addEventListener('submit', (event) => {
-		// if(checkIfKeyExistInLocalStorage){
-			
-		// }
 		login = loginForm.elements[0]; //get first field from form
 		pass = loginForm.elements[1]; //get second field from form
-		
-		//if(checkIfKeyExistInLocalStorage(login.value)){
+				
 		if(checkIfUserWasRegistered(login.value.toLowerCase())){
-			
 			let currentUser = getUserKeyFromLocalStorage(login.value.toLowerCase());
 			localStorage.setItem('loggedInUser', `${currentUser}`) //make user login if it exist
 			increaseCounterInLocalStorage(`${login.value}`, 'authCounter', 1);
@@ -48,11 +44,12 @@ export function loginForm(){
 				window.location.reload();
 			},100); 
 			
-		}
-		
-		//localStorage.setItem(`${login.value}`, `${pass.value}` );
-		
-		//localStorage.setItem('login', 'aa@hm.ru');
+		}	
+	});
+
+	loginFormRegisterRef.addEventListener('click', (event)=>{
+		hideModalLogin();
+		showModalRegister();
 	});
 }
 

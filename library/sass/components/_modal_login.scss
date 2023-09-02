@@ -1,0 +1,122 @@
+.login_form-overlay{
+	position: fixed;
+	z-index: 100;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0, 0.5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.4 ease-out;
+
+}
+
+
+.login_form-overlay-visible{
+	opacity: 1;
+	visibility: visible;
+	transition: all 0.4s ease-in-out;
+}
+
+
+.login_form-wrapper{
+	 position: relative;
+	background-color: $color-text-additional;
+	width: 250px;
+	height: 262px;	
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 25px;
+	padding-right: 25px;
+
+
+}
+
+.login_form-title{
+	color: #000;
+	text-align: center;
+	font-family: Forum;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px; /* 100% */
+	letter-spacing: 0.4px;
+	text-transform: uppercase;
+	margin: 0;
+}
+.login_form{
+	margin-top: 21px;
+
+}
+
+.login_form-fields{
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-bottom: 19px;
+}
+.login_form-fields input{
+	width: 200px;
+	height: 20px;
+	flex-shrink: 0;
+	outline: none;
+	border: 1px solid $color-main;
+}
+.login_form-fields label{
+	color: #000;
+	font-family: Inter;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px; /* 133.333% */
+	letter-spacing: 0.3px;
+}
+
+.login_form_login{
+	margin-bottom: 10px;
+}
+
+.login_form_bottom-text-block{
+	display: flex;
+	gap: 11px;
+}
+
+.login_form_bottom-text-block{
+	color: #000;
+	text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+	font-family: Inter;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.login_form-register-ref{
+	color: #0C0C0E;
+	text-align: center;
+	font-family: Inter;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	letter-spacing: 1px;
+	//text-decoration-line: underline;
+	//
+	cursor: pointer;
+}
+.login_form-register-ref:hover{
+	text-decoration-line: underline;
+}
+
+
+//------Close button
+.login_form-close_button{
+	position: absolute;
+	right: 13px;
+	top: 13px;
+}

@@ -96,7 +96,7 @@
 
 
 //register modal window
-.register_form-overlay, .login_form-overlay{
+.register_form-overlay{
 	position: fixed;
 	z-index: 100;
 	left: 0;
@@ -124,41 +124,17 @@
 	transition: all 0.4s ease-in-out;
 }
 
-.login_form-overlay-visible{
-	opacity: 1;
-	visibility: visible;
-	transition: all 0.4s ease-in-out;
-}
 
-
-
-.login_form{
-	// position: fixed;
-	// top: 10vw;
-	// left: 45vw;
-	background-color: $color-text-additional;
-	width: 250px;
-	height: 262px;	
-	
-
-}
 .register_form{
 	// position: fixed;
 	// top: 10vw;
 	// left: 45vw;
 	background-color: $color-text-additional;
 	width: 250px;
-	height: 382px;
-	
+	height: 382px;	
 	
 }
 .register_form_fields{
 	display: flex;
 	flex-direction: column;
 }
-
-.login_form-fields{
-	display: flex;
-	flex-direction: column;
-}
-
