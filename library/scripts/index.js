@@ -5,7 +5,7 @@ import { createCarousel } from "./about-carousel.js";
 import { createFavBooksSlider } from "./favouriteBookSlider.js";
 import { authorisationMenuInit } from "./authorisationMenu.js";
 import { registerMenuInit } from "./registerMenu.js";
-import { loginForm } from "./login.js";
+import { loginForm } from "./modalLogin.js";
 import { checkIfKeyExistInLocalStorage } from "./utils.js";
 import { modalProfileInit } from "./modalProfile.js";
 import { modalBuyCardInit } from "./modalBuyCard.js";

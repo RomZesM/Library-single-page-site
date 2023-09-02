@@ -1,3 +1,5 @@
+import { showModalLogin } from "./modalLogin.js";
+import { getSingleDomElementByClass } from "./utils.js";
 
 export function registerMenuInit(){
 
@@ -8,7 +10,7 @@ export function registerMenuInit(){
 const regForm = document.querySelector('.register_form');
 const regFormOverlay = document.querySelector('.register_form-overlay');
 const regFormCloseButton = document.querySelector('.register_form-close_button');
-
+const registerFormLoginRef = getSingleDomElementByClass('register_form-login-ref');
 
 regFormCloseButton.addEventListener('click', (event) =>{
 	regFormOverlay.classList.remove('register_form-overlay-visible');
@@ -49,6 +51,13 @@ regForm.addEventListener('submit', (event) =>{
 							}));
 
 });
+
+registerFormLoginRef.addEventListener('click', (event)=>{
+	hideModalRegister();
+	showModalLogin();
+});
+
+
 
 function getRandomInt(min, max) {
 	min = Math.ceil(min);

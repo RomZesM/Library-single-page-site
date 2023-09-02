@@ -35,8 +35,6 @@
 	transition: all 0.3s ease-out;
 }
 
-
-
 .auth_menu_title{
 	color: #000;
 	font-family: Inter;
@@ -95,46 +93,3 @@
 
 
 
-//register modal window
-.register_form-overlay{
-	position: fixed;
-	z-index: 100;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	background-color: rgba(0,0,0, 0.5);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	//
-	opacity: 0;
-	visibility: hidden;
-	transition: all 0.4 ease-out;
-
-}
-
-
-
-.register_form-overlay-visible{ // make visibility of overlay with opacity and visibility 
-								//todo
-								//!make the same for mini menu
-	opacity: 1;
-	visibility: visible;
-	transition: all 0.4s ease-in-out;
-}
-
-
-.register_form{
-	// position: fixed;
-	// top: 10vw;
-	// left: 45vw;
-	background-color: $color-text-additional;
-	width: 250px;
-	height: 382px;	
-	
-}
-.register_form_fields{
-	display: flex;
-	flex-direction: column;
-}
