@@ -401,7 +401,7 @@ ul {
   box-sizing: border-box;
 }
 
-.footer-link:hover, .info-dir-name:hover, .tel_href:hover, .carusel-button:hover, .navigation__link:hover, .button_bordered:hover {
+.footer-link:hover, .info-dir-name:hover, .tel_href:hover, .carusel-button-current, .carusel-button, .navigation__link:hover, .button_bordered:hover {
   transition: all 0.5s ease-out;
 }
 
@@ -796,27 +796,28 @@ a:link, a:visited, a:active {
     gap: 46px;
   }
 }
+.carusel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 39px;
+}
+
+@media (max-width: 768px) {
+  .carusel button {
+    background-color: #FFFFFF;
+    border: none;
+  }
+}
+
 .left_arrow_ico, .right_arrow_ico {
   display: none;
 }
 @media (max-width: 768px) {
   .left_arrow_ico, .right_arrow_ico {
     display: flex;
+    margin-top: 20px;
   }
-}
-
-@media (max-width: 768px) {
-  .left_arrow_ico {
-    padding-top: 21px;
-  }
-  .right_arrow_ico {
-    padding-top: 21px;
-    padding-right: 5px;
-  }
-}
-.carusel {
-  display: flex;
-  justify-content: space-around;
 }
 
 .about-images_container {
@@ -897,8 +898,8 @@ a:link, a:visited, a:active {
   outline: none;
 }
 
-.carusel-button:hover {
-  background-color: #8E8E8E;
+.carusel-button-current {
+  background-color: #BB945F;
 }
 
 .carusel-button:focus {

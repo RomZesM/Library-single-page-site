@@ -15,35 +15,38 @@
 }
 
 
+
+// 
+.carusel{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 39px;
+}
+
+
+.carusel button{
+	@include media-tablet{
+		background-color: $color-text-additional;
+		border: none;
+	}
+}
+
+
 .left_arrow_ico, .right_arrow_ico{
 	display: none;
 	@include media-tablet{
 		display: flex;
+		margin-top: 20px;
 	}
 }
 
-@include media-tablet{
-	.left_arrow_ico{
-		padding-top: 21px;		
-	}
-	.right_arrow_ico{
-		padding-top: 21px;
-		padding-right: 5px;
-	}
-
-}
-.carusel{
-	display: flex;
-	justify-content: space-around;
-}
 
 .about-images_container{
 	width: 1400px;
 	overflow: hidden; //cut images out of container
 	
 }
-
-
 .about__images{ //"track"
 	
 	transition: all 0.2s;
@@ -63,10 +66,6 @@
 		margin-bottom: 16px;
 	}
 }
-
-// .about__images > div:nth-child(1n + 4){ //!? why 1n + 4
-// 	display: none;
-// }
 
 
 @include media-laptop{
@@ -137,13 +136,19 @@
 	border-radius: 50%;
 	background-color: $color-headers;
 	border: $color-headers;
+	@extend %transition;
 	outline: none;
 }
-  
-.carusel-button:hover{
+ 
+.carusel-button-current{
 	@extend %transition;
-	background-color: $color-text-light-grey;
+	background-color: $color-main;
 }
+
+// .carusel-button:hover{
+// 	@extend %transition;
+// 	background-color: $color-text-light-grey;
+// }
 
 .carusel-button:focus{
 	background-color: $color-main;
