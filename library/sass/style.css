@@ -664,13 +664,39 @@ a:link, a:visited, a:active {
   z-index: 1000;
 }
 
-.header__icon-profile-burger a {
-  display: flex;
+.ico-profile {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
-  .header__icon-profile-burger a {
+  .ico-profile {
     margin-right: 40px;
   }
+}
+
+.icon_with_initials-hide {
+  display: none;
+}
+
+.icon_with_initials {
+  color: #BB945F;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 133.333% */
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon_with_initials-visible {
+  display: flex;
 }
 
 @media (max-width: 995px) {
