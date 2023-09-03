@@ -953,6 +953,11 @@ a:link, a:visited, a:active {
   margin-top: 40px;
   margin-bottom: 40px;
 }
+@media (max-width: 768px) {
+  .season-pick__form {
+    width: 91vw;
+  }
+}
 
 .book-card {
   border: solid black 1px;
@@ -967,7 +972,8 @@ a:link, a:visited, a:active {
 }
 @media (max-width: 768px) {
   .book-card {
-    margin-left: 89px;
+    margin-left: 11.6vw;
+    width: 71.5vw;
   }
 }
 
@@ -1065,8 +1071,15 @@ a:link, a:visited, a:active {
 
 .book_cover {
   position: absolute;
+  display: flex;
   left: 389px;
-  top: 254.2px;
+  bottom: -1px;
+}
+@media (max-width: 768px) {
+  .book_cover {
+    left: calc(71.5vw - 160px);
+    bottom: -1px;
+  }
 }
 
 .wrapper-coffeshop {
@@ -1159,7 +1172,7 @@ a:link, a:visited, a:active {
     margin-left: 20px;
   }
   .cafe-menu-right {
-    margin-left: 287px;
+    margin-left: 37.5vw;
   }
   .menu-page-title-right {
     padding-right: 3px;
@@ -1220,6 +1233,11 @@ a:link, a:visited, a:active {
   margin-top: 20px;
 }
 
+.map iframe {
+  width: 696px;
+  height: 414px;
+}
+
 @media (max-width: 1081px) {
   .contacts-wrapper {
     display: flex;
@@ -1240,12 +1258,16 @@ a:link, a:visited, a:active {
     margin-left: 21px;
   }
   .map {
-    margin-left: 36px;
+    margin-left: 45px;
+  }
+  .map iframe {
+    width: 89vw;
+    height: 54vw;
   }
 }
 .card-form-title {
   text-align: center;
-  margin-bottom: 29px;
+  margin-bottom: 27px;
 }
 
 .digital-library-cards-container {
@@ -1435,6 +1457,10 @@ a:link, a:visited, a:active {
   }
   .card-form-container {
     margin-bottom: 0px;
+    width: 78vw;
+  }
+  .fields-color-container {
+    width: 73vw;
   }
   .digital-library-cards-container {
     display: flex;

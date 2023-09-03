@@ -19,6 +19,10 @@
 	@media (max-width: $content-width){ @content;} 
 }
 
+@mixin media-smartPhone { 
+	@media (max-width: $smart-width){ @content;} 
+}
+
 @mixin media-resizer-breakpoint($width_point) { 
 	@media (max-width: $width_point){ @content;} 
 }

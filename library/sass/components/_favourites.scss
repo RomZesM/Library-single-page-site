@@ -27,9 +27,11 @@
 .season-pick__form{
 	display: flex;
 	width: 700px;
-	justify-content: space-between;
-	
+	@include media-tablet{
+		width: 91vw;
+	}
 
+	justify-content: space-between;
 	color: #000;
 	font-family: Inter;
 	font-size: 20px;
@@ -58,7 +60,8 @@
 
 	//	
 	@include media-tablet{
-		margin-left: 89px;
+		margin-left: 11.6vw;
+		width: 71.5vw;
 	}
 }
 
@@ -173,8 +176,15 @@
 
 .book_cover{
 	position: absolute; //для выравнивания img parent должен быть relative
+	display: flex;
 	left: 389px;
-	top: 254.2px;
+	bottom: -1px;
+
+	@include media-tablet{
+		left: calc(71.5vw - 160px);
+		bottom: -1px;
+	}
+	
 }
 
 
