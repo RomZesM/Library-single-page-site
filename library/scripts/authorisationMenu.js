@@ -1,5 +1,5 @@
 import { checkIfKeyExistInLocalStorage, getCurrentUserLogin, getOffset,
-		 getSimpleValueFromLocalStorage, getUserValueFromLocalStorage, isSomeoneLogIn } from "./utils.js";
+		 getSimpleValueFromLocalStorage, getSingleDomElementByClass, getUserFullName, getUserValueFromLocalStorage, isSomeoneLogIn } from "./utils.js";
 import { changeCSSproperty } from "./utils.js";
 import { hideModalBurgerMenu } from "./burgerMenu.js";
 import { showModalRegister } from "./registerMenu.js";
@@ -55,8 +55,6 @@ body.addEventListener('click', (event)=>{
 	}
 })
 
-
-
 //call Login windows from mini menu and from library card menu
 
 const loginRef = document.querySelectorAll('.login-ref');
@@ -106,6 +104,27 @@ modalLogoutButton.addEventListener('click', (event)=>{
 	location.reload();  //reload page after logout
 });
 }
+
+
+export function insertUserInitialintoIcon(){
+
+	if(isSomeoneLogIn()){
+		const iconWithInitials = getSingleDomElementByClass('icon_with_initials');
+		const iconWithoutInitials = getSingleDomElementByClass('icon_without_initials');
+		let nameLoggedInUser = getUserFullName(getCurrentUserLogin()).split(' ');
+		let initials = nameLoggedInUser[0].substring(0,1).concat(nameLoggedInUser[1].substring(0,1))
+		
+		iconWithInitials.innerHTML = initials;
+		iconWithoutInitials.classList.add('icon_without_initials-hide');
+		iconWithInitials.classList.add('icon_with_initials-visible');	}
+	
+ else{
+	iconWithoutInitials.classList.remove('icon_without_initials-hide');
+	iconWithInitials.classList.remove('icon_with_initials-visible');
+	}
+}
+
+
 
 export function showModalAuthLogged(){	
 	const user_in_menu = document.querySelector('.user_in_menu_small')

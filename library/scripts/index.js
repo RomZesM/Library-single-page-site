@@ -3,7 +3,7 @@
 import { sayHello } from "./1.js";
 import { createCarousel } from "./about-carousel.js";
 import { createFavBooksSlider } from "./favouriteBookSlider.js";
-import { authorisationMenuInit } from "./authorisationMenu.js";
+import { authorisationMenuInit, insertUserInitialintoIcon } from "./authorisationMenu.js";
 import { registerMenuInit } from "./registerMenu.js";
 import { loginForm } from "./modalLogin.js";
 import { checkIfKeyExistInLocalStorage } from "./utils.js";
@@ -64,3 +64,4 @@ digitalLibraryCardInit();
 
 
 //
+insertUserInitialintoIcon();

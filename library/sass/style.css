@@ -675,7 +675,7 @@ a:link, a:visited, a:active {
   }
 }
 
-.icon_with_initials-hide {
+.icon_without_initials-hide {
   display: none;
 }
 
