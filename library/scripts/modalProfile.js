@@ -80,6 +80,7 @@ export function clearModalProfile(){
 }
 
 export function showModalProfile(){
+
 	const modal_profile_overlay = document.querySelector(".modal_profile_overlay");
 	fillModalProfile();
 	modal_profile_overlay.classList.add('modal_profile_overlay-visible');

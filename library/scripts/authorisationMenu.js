@@ -7,12 +7,15 @@ import { showModalProfile } from "./modalProfile.js";
 import { showModalLogin } from "./modalLogin.js";
 
 
-export function authorisationMenuInit(){
-//Init mini menu while press user icon
 const ico_profile = document.querySelector('.ico-profile');
 const user_login_menu = document.querySelector('.user_login_menu_small');
-const user_in_menu = document.querySelector('.user_in_menu_small')
-const logInMenuTitle = document.querySelector('.card-number-in-profile')
+const user_in_menu = document.querySelector('.user_in_menu_small');
+const logInMenuTitle = document.querySelector('.card-number-in-profile');
+const iconWithInitials = getSingleDomElementByClass('icon_with_initials');
+const iconWithoutInitials = getSingleDomElementByClass('icon_without_initials');
+
+export function authorisationMenuInit(){
+//Init mini menu while press user icon
 	
 ico_profile.addEventListener('click', (event) =>{
 	if(isSomeoneLogIn()){ //choose what windows to show if someone is log in or not
@@ -109,8 +112,7 @@ modalLogoutButton.addEventListener('click', (event)=>{
 export function insertUserInitialintoIcon(){
 
 	if(isSomeoneLogIn()){
-		const iconWithInitials = getSingleDomElementByClass('icon_with_initials');
-		const iconWithoutInitials = getSingleDomElementByClass('icon_without_initials');
+		
 		let nameLoggedInUser = getUserFullName(getCurrentUserLogin()).split(' ');
 		let initials = nameLoggedInUser[0].substring(0,1).concat(nameLoggedInUser[1].substring(0,1))
 		

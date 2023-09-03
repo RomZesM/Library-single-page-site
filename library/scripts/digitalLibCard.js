@@ -1,3 +1,4 @@
+import { showModalProfile } from "./modalProfile.js";
 import { checkIfKeyExistInLocalStorage, checkIfUserWasRegistered, getSimpleValueFromLocalStorage, getSingleDomElementByClass, getUserKeyFromLocalStorage } from "./utils.js";
 import { isSomeoneLogIn } from "./utils.js";
 import { getCurrentUserLogin } from "./utils.js";
@@ -7,10 +8,14 @@ import { getUserValueFromLocalStorage } from "./utils.js";
 
 
 const buttonSubmit = document.getElementById('check_the_card_button'); 
+const buttonProfile = getSingleDomElementByClass('profile-ref-btn')
 const countersBlock = getSingleDomElementByClass('digital-card-counter-block'); 
 const libraryCardForm = getSingleDomElementByClass('check-card-form');
 const readerNameInput = document.getElementById('reader-name-id');
 const readerCardNumberInput = document.getElementById('card-number')
+const suggestToLogInContainer = getSingleDomElementByClass('suggest-to-log-in-container');
+const visitYourProfileContainer = getSingleDomElementByClass('visit-your-profile-container'); 
+
 
 export function digitalLibraryCardInit(){
 	console.log("init digital card");
@@ -39,16 +44,13 @@ export function digitalLibraryCardInit(){
 
 					}
 				}
-
-
-				console.log("user founded by number: " + userKey	);
-				console.log("get from local storage: " + userName +' ' + secondName);
-				console.log(splitedNameFromInput);
 			}
 			
-		}
-		
-	
+		}	
+	});
+
+	buttonProfile.addEventListener('click', (element) =>{
+			showModalProfile();
 	});
 
 }
@@ -71,6 +73,9 @@ function fillDigitalCard(){
 				
 		buttonSubmit.classList.add('form-button-hide');
 		countersBlock.classList.add('digital-card-counter-block-visible');
+		//change right part of digital cart section
+		suggestToLogInContainer.classList.add('suggest-to-log-in-container-hide')
+		visitYourProfileContainer.classList.add('visit-your-profile-container-visible')
 
 	}
 }
@@ -92,6 +97,7 @@ function fillDigitalCardUnloginned(userLogin){
 				
 		buttonSubmit.classList.add('form-button-hide');
 		countersBlock.classList.add('digital-card-counter-block-visible');
+	
 
 		setTimeout(function () {
 			buttonSubmit.classList.remove('form-button-hide');
@@ -99,6 +105,7 @@ function fillDigitalCardUnloginned(userLogin){
 			readerNameInput.value = '';
 			readerCardNumberInput.value = '';
 			
-		}, 1000);
+		}, 10000);
 	}
 }
+

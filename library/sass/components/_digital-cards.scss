@@ -114,10 +114,24 @@
 }
 
 .suggest-to-log-in-container{
-	padding-left: 320px;;
+	padding-left: 320px;	
 }
 
-.suggest-to-log-in-container-title{
+.suggest-to-log-in-container-hide{
+	display: none;
+}
+
+.visit-your-profile-container{
+	padding-left: 328px;
+	display: none;
+}
+
+.visit-your-profile-container-visible{
+	display: block;
+}
+
+.suggest-to-log-in-container-title,
+.visit-your-profile-container-title{
 	color: #000;
 	text-align: right;
 	font-family: Forum;
@@ -130,7 +144,8 @@
 	margin-bottom: 33px;
 }
 
-.suggest-to-log-in-container-txt{
+.suggest-to-log-in-container-txt,
+.visit-your-profile-container-txt{
 	color: #000;
 	text-align: right;
 	font-family: Inter;
@@ -144,13 +159,17 @@
 	
 }
 
-.register_buttons_container{
+.register_buttons_container,
+.profile_button_container{
 	display: flex;
 	justify-content: flex-end;
 
 }
 .register_buttons_container button{
 	 margin: 0 0 15px 20px;//not here
+}
+.profile_button_container button{
+	margin: 0 0 15px 20px;//not here
 }
 
 //move suggestion container more smooth
