@@ -63,18 +63,18 @@ export function createCarousel(){
 		
 	});
 
-		window.addEventListener('resize', () => { //thah for tablet version
-			if(screen.width < 770){
-				position = 950;
-				track.style.transform = `translateX(${position}px)`;
-			}
-			if(screen.width > 770){
-				position = 0;
-				track.style.transform = `translateX(${position}px)`;
-				
-			}
+	window.addEventListener('resize', () => { //thah for tablet version
+		if(screen.width < 770){
+			position = 950;
+			track.style.transform = `translateX(${position}px)`;
+		}
+		if(screen.width > 770){
+			position = 0;
+			track.style.transform = `translateX(${position}px)`;
 			
-		});
+		}
+		
+	});
 
 	
 }

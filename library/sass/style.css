@@ -1398,13 +1398,14 @@ a:link, a:visited, a:active {
 }
 
 @media (max-width: 1400px) {
-  .suggest-to-log-in-container {
+  .suggest-to-log-in-container,
+  .visit-your-profile-container {
     padding-left: 5vw;
   }
 }
 @media (max-width: 860px) {
-  .digital-library-cards-container {
-    display: flex;
+  .digital-library-cards-container,
+  .visit-your-profile-container {
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -1428,7 +1429,8 @@ a:link, a:visited, a:active {
   }
 }
 @media (max-width: 768px) {
-  .digital-library-cards-title {
+  .digital-library-cards-title,
+  .visit-your-profile-container-title {
     padding-left: 4px;
   }
   .card-form-container {
@@ -1439,19 +1441,19 @@ a:link, a:visited, a:active {
     flex-wrap: wrap;
     justify-content: center;
   }
-  .suggest-to-log-in-container {
+  .suggest-to-log-in-container, .visit-your-profile-container {
     padding-left: 0px;
   }
-  .suggest-to-log-in-container-title {
+  .suggest-to-log-in-container-title, .visit-your-profile-container-title {
     text-align: center;
     margin-top: 20px;
   }
-  .suggest-to-log-in-container-txt {
+  .suggest-to-log-in-container-txt, .visit-your-profile-container-txt {
     text-align: center;
     padding: 8px 82px;
     margin-bottom: 31px;
   }
-  .register_buttons_container {
+  .register_buttons_container, .profile_button_container {
     display: flex;
     justify-content: center;
     padding-right: 18px;
