@@ -1,9 +1,9 @@
 
+import { hideModalAuthUnlogged } from "./authorisationMenu.js";
 import { showModalRegister } from "./registerMenu.js";
 import { checkIfUserWasRegistered, getSingleDomElementByClass, getUserKeyFromLocalStorage, increaseCounterInLocalStorage} from "./utils.js";
 
 const loginFormRegisterRef = getSingleDomElementByClass('login_form-register-ref');
-
 
 export function loginForm(){
 	//close login menu
@@ -12,7 +12,8 @@ export function loginForm(){
 	
 		//close-button for login menu
 	loginFormCloseButton.addEventListener('click', (event) =>{
-		loginFormOverlay.classList.remove('login_form-overlay-visible');
+		hideModalLogin();	
+		//loginFormOverlay.classList.remove('login_form-overlay-visible');
 	});
 
 	//close while click on overlay
@@ -20,7 +21,8 @@ export function loginForm(){
 
 	function closeLogOverlay(event){
 		if(event.target === loginFormOverlay){
-				loginFormOverlay.classList.remove('login_form-overlay-visible');
+				hideModalLogin();	
+			//loginFormOverlay.classList.remove('login_form-overlay-visible');
 		}
 	}
 
@@ -55,7 +57,8 @@ export function loginForm(){
 
 export function hideModalLogin(){
 	getSingleDomElementByClass('login_form-overlay').classList.remove('login_form-overlay-visible');
-
+	
+	document.body.classList.remove('body-stop-scrolling')
 
 }
 
@@ -63,4 +66,8 @@ export function hideModalLogin(){
 export function showModalLogin(){
 	const loginFormOverlay = document.querySelector('.login_form-overlay');
 		loginFormOverlay.classList.add('login_form-overlay-visible');
+		//hide auth menu
+		hideModalAuthUnlogged();
+		//stop scrolling
+		document.body.classList.add('body-stop-scrolling')
 }

@@ -97,7 +97,7 @@ export function createCarousel(){
 		
 	});
 
-	window.addEventListener('resize', () => { //thah for tablet version
+	window.addEventListener('resize', () => { //that for tablet version
 		if(screen.width < 770){
 			position = 950;
 			track.style.transform = `translateX(${position}px)`;

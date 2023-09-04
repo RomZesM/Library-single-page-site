@@ -8,8 +8,8 @@ import { showModalLogin } from "./modalLogin.js";
 
 
 const ico_profile = document.querySelector('.ico-profile');
-const user_login_menu = document.querySelector('.user_login_menu_small');
-const user_in_menu = document.querySelector('.user_in_menu_small');
+const userLoginMenu = document.querySelector('.user_login_menu_small');
+const loggedUserMenuSmall = document.querySelector('.user_in_menu_small');
 const logInMenuTitle = document.querySelector('.card-number-in-profile');
 const iconWithInitials = getSingleDomElementByClass('icon_with_initials');
 const iconWithoutInitials = getSingleDomElementByClass('icon_without_initials');
@@ -41,8 +41,8 @@ ico_profile.addEventListener('click', (event) =>{
 
 //remove menu while scrolling
 addEventListener('scroll', (event) => {
-	user_login_menu.classList.remove('user_login_menu-visible');
-	user_in_menu.classList.remove('user_login_menu-visible');
+	userLoginMenu.classList.remove('user_login_menu-visible');
+	loggedUserMenuSmall.classList.remove('user_login_menu-visible');
 });
 
 //remove menu if unfocused
@@ -129,25 +129,21 @@ export function insertUserInitialintoIcon(){
 
 
 export function showModalAuthLogged(){	
-	const user_in_menu = document.querySelector('.user_in_menu_small')
-	user_in_menu.classList.toggle('user_login_menu-visible'); 
+	loggedUserMenuSmall.classList.toggle('user_login_menu-visible'); 
 
 }
 
-export function hideModalAuthLogged(){	
-	const user_in_menu = document.querySelector('.user_in_menu_small')
-	user_in_menu.classList.remove('user_login_menu-visible'); 
+export function hideModalAuthLogged(){		
+	loggedUserMenuSmall.classList.remove('user_login_menu-visible'); 
 
 }
 
 export function showModalAuthUnlogged(){
-	const user_login_menu = document.querySelector('.user_login_menu_small');
-	user_login_menu.classList.toggle('user_login_menu-visible');
+	userLoginMenu.classList.toggle('user_login_menu-visible');
 }
 
 export function hideModalAuthUnlogged(){
-	const user_login_menu = document.querySelector('.user_login_menu_small');
-	user_login_menu.classList.remove('user_login_menu-visible');
+	userLoginMenu.classList.remove('user_login_menu-visible');
 }
 
 

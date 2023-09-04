@@ -11,6 +11,10 @@ body {
 	overflow-x: hidden;
 }	
 
+.body-stop-scrolling{
+	overflow: hidden;
+}
+
 main{
 	background-color: $color-text-additional;
 
