@@ -4,20 +4,19 @@ import { getCurrentUserLogin,
 	   getUserValueFromLocalStorage,
 	    isSomeoneLogIn } from "./utils.js";
 
-export function modalProfileInit(){
-
-	//close-button for reg menu 
 const modalProfileOverlay = document.querySelector('.modal_profile_overlay');
 const modalProfileCloseButton = document.querySelector('.modal_profile-close_button');
 
+export function modalProfileInit(){
 
+	//close-button for reg menu 
 modalProfileCloseButton.addEventListener('click', (event) =>{
-	modalProfileOverlay.classList.remove('modal_profile_overlay-visible');
+		hideModalProfile()
 });
 //close while clock on overlay
 modalProfileOverlay.addEventListener('click', (event)=>{
 	if(event.target === modalProfileOverlay){ //event include children of overlay (windows) so check if it overlay exactly
-		modalProfileOverlay.classList.remove('modal_profile_overlay-visible');
+		hideModalProfile()
 	}
 
 });
@@ -81,13 +80,17 @@ export function clearModalProfile(){
 
 export function showModalProfile(){
 
-	const modal_profile_overlay = document.querySelector(".modal_profile_overlay");
+	//const modal_profile_overlay = document.querySelector(".modal_profile_overlay");
 	fillModalProfile();
-	modal_profile_overlay.classList.add('modal_profile_overlay-visible');
+	modalProfileOverlay.classList.add('modal_profile_overlay-visible');
+	//stop scrolling
+	document.body.classList.add('body-stop-scrolling')
 }
 
 export function hideModalProfile(){
-	const modal_profile_overlay = document.querySelector(".modal_profile_overlay");
+	//const modal_profile_overlay = document.querySelector(".modal_profile_overlay");
 	
-	modal_profile_overlay.classList.remove('modal_profile_overlay-visible');
+	modalProfileOverlay.classList.remove('modal_profile_overlay-visible');
+	//restart scrolling
+	document.body.classList.remove('body-stop-scrolling')
 }

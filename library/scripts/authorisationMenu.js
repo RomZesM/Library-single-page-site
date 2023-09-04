@@ -1,10 +1,13 @@
-import { checkIfKeyExistInLocalStorage, getCurrentUserLogin, getOffset,
-		 getSimpleValueFromLocalStorage, getSingleDomElementByClass, getUserFullName, getUserValueFromLocalStorage, isSomeoneLogIn } from "./utils.js";
-import { changeCSSproperty } from "./utils.js";
+import { getCurrentUserLogin, 
+		 getSimpleValueFromLocalStorage, 
+		 getSingleDomElementByClass,
+		 getUserFullName, 
+		 getUserValueFromLocalStorage,
+		 isSomeoneLogIn } from "./utils.js";
 import { hideModalBurgerMenu } from "./burgerMenu.js";
-import { showModalRegister } from "./registerMenu.js";
-import { showModalProfile } from "./modalProfile.js";
-import { showModalLogin } from "./modalLogin.js";
+import { hideModalRegister, showModalRegister } from "./registerMenu.js";
+import { hideModalProfile, showModalProfile } from "./modalProfile.js";
+import { hideModalLogin, showModalLogin } from "./modalLogin.js";
 
 
 const ico_profile = document.querySelector('.ico-profile');
@@ -29,11 +32,16 @@ ico_profile.addEventListener('click', (event) =>{
 
 		showModalAuthLogged();
 		hideModalBurgerMenu();
+		hideModalLogin();
+		hideModalRegister();
+		hideModalProfile();
 		}
 	else{
 
 		showModalAuthUnlogged();
 		hideModalBurgerMenu();
+		hideModalLogin();
+		hideModalRegister();
 	}
 		
 
@@ -47,9 +55,7 @@ addEventListener('scroll', (event) => {
 
 //remove menu if unfocused
 //click outside
-const body = document.querySelector('body');
-
-body.addEventListener('click', (event)=>{
+document.body.addEventListener('click', (event)=>{
 	if(!event.target.closest('.header__icon-profile-burger')){ 
 		//		console.log('not a menu');
 		 hideModalAuthLogged();
@@ -65,10 +71,9 @@ const loginRef = document.querySelectorAll('.login-ref');
 for (let index = 0; index < loginRef.length; index++) {
 	loginRef[index].addEventListener('click', (event) =>{
 		showModalLogin();		
-
+		hideModalAuthUnlogged();
 	});	
 }
-
 
 //call reg windows from mini menu and from library card menu
 
@@ -77,6 +82,7 @@ const registerRef = document.querySelectorAll('.register-ref');//button
 for (let index = 0; index < registerRef.length; index++) {
 	registerRef[index].addEventListener('click', (event) =>{
 		showModalRegister();
+		hideModalAuthUnlogged();
 	});
 	
 }
@@ -97,7 +103,10 @@ ico_profile.addEventListener('mouseover', (event) =>{
 //init profile modal open button
 
 const profile_button = document.querySelector(".profile-ref"); 
-profile_button.addEventListener('click', showModalProfile)
+profile_button.addEventListener('click', (e)=>{
+		showModalProfile();
+		hideModalAuthLogged();
+});
 
 //logout button
 const modalLogoutButton = document.querySelector('.logout-ref'); 

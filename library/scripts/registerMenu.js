@@ -1,16 +1,15 @@
 import { showModalLogin } from "./modalLogin.js";
 import { getSingleDomElementByClass } from "./utils.js";
 
-export function registerMenuInit(){
-
-	//
-//----Register Menu 
-
-//close-button for reg menu 
 const regForm = document.querySelector('.register_form');
 const regFormOverlay = document.querySelector('.register_form-overlay');
 const regFormCloseButton = document.querySelector('.register_form-close_button');
 const registerFormLoginRef = getSingleDomElementByClass('register_form-login-ref');
+
+export function registerMenuInit(){
+
+	//----Register Menu 
+//close-button for reg menu 
 
 regFormCloseButton.addEventListener('click', (event) =>{
 	regFormOverlay.classList.remove('register_form-overlay-visible');
@@ -68,11 +67,15 @@ function getRandomInt(min, max) {
 }
 
 export function showModalRegister(){
-	const regFormOverlay = document.querySelector('.register_form-overlay');
+	
 	regFormOverlay.classList.add('register_form-overlay-visible');
+	//stop scrolling
+	document.body.classList.add('body-stop-scrolling')
 }
 
 export function hideModalRegister(){
-	const regFormOverlay = document.querySelector('.register_form-overlay');
+	
 	regFormOverlay.classList.remove('register_form-overlay-visible');
+	//restart scrolling
+	document.body.classList.remove('body-stop-scrolling')
 }

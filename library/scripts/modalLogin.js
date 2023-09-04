@@ -1,7 +1,7 @@
 
 import { hideModalAuthUnlogged } from "./authorisationMenu.js";
 import { showModalRegister } from "./registerMenu.js";
-import { checkIfUserWasRegistered, getSingleDomElementByClass, getUserKeyFromLocalStorage, increaseCounterInLocalStorage} from "./utils.js";
+import { checkIfUserWasRegistered, getSingleDomElementByClass, getUserKeyFromLocalStorage, getUserValueFromLocalStorage, increaseCounterInLocalStorage} from "./utils.js";
 
 const loginFormRegisterRef = getSingleDomElementByClass('login_form-register-ref');
 
@@ -38,15 +38,27 @@ export function loginForm(){
 				
 		if(checkIfUserWasRegistered(login.value.toLowerCase())){
 			let currentUser = getUserKeyFromLocalStorage(login.value.toLowerCase());
-			localStorage.setItem('loggedInUser', `${currentUser}`) //make user login if it exist
+			if(getUserValueFromLocalStorage(currentUser, 'password') === pass.value){
+				localStorage.setItem('loggedInUser', `${currentUser}`) //make user login if it exist
 			increaseCounterInLocalStorage(`${login.value}`, 'authCounter', 1);
 			hideModalLogin();
 			//reload after login, work only if wrap into setTimeOut()
-			setTimeout(function(){
-				window.location.reload();
-			},100); 
+			// setTimeout(function(){
+			// 	window.location.reload();
+			// },100); 
 			
-		}	
+			}
+			else{
+				console.log('password incorrect');
+				event.preventDefault();//prevent submition of the form	
+			}
+			
+		}
+		else{
+			console.log('No such registered user or password incorrect');
+			event.preventDefault();//prevent submition of the form	
+		}
+			
 	});
 
 	loginFormRegisterRef.addEventListener('click', (event)=>{
@@ -57,7 +69,7 @@ export function loginForm(){
 
 export function hideModalLogin(){
 	getSingleDomElementByClass('login_form-overlay').classList.remove('login_form-overlay-visible');
-	
+	//restart scrolling
 	document.body.classList.remove('body-stop-scrolling')
 
 }
@@ -71,3 +83,7 @@ export function showModalLogin(){
 		//stop scrolling
 		document.body.classList.add('body-stop-scrolling')
 }
+
+function testF(){
+	console.log("debug");
+};
