@@ -49,13 +49,13 @@ export function loginForm(){
 			
 			}
 			else{
-				console.log('password incorrect');
+				console.log('password incorrect');//!del
 				event.preventDefault();//prevent submition of the form	
 			}
 			
 		}
 		else{
-			console.log('No such registered user or password incorrect');
+			console.log('No such registered user or password incorrect');//!del
 			event.preventDefault();//prevent submition of the form	
 		}
 			
