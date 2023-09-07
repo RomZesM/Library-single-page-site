@@ -13,12 +13,12 @@ export function registerMenuInit(){
 //close-button for reg menu 
 
 regFormCloseButton.addEventListener('click', (event) =>{
-	regFormOverlay.classList.remove('register_form-overlay-visible');
+	hideModalRegister()
 });
 //close while clock on overlay
 regFormOverlay.addEventListener('click', (event)=>{
 	if(event.target === regFormOverlay){ //event include children of overlay (windows) so check if it overlay exactly
-		regFormOverlay.classList.remove('register_form-overlay-visible');
+		hideModalRegister();
 	}
 
 });

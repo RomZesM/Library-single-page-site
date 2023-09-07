@@ -1973,6 +1973,7 @@ footer {
   position: absolute;
   right: 24px;
   top: 20px;
+  cursor: pointer;
 }
 
 .modal_buy_card-overlay {
@@ -2261,6 +2262,7 @@ footer {
   position: absolute;
   right: 13px;
   top: 13px;
+  cursor: pointer;
 }
 
 .register_form-overlay {
@@ -2415,6 +2417,7 @@ footer {
   position: absolute;
   right: 13px;
   top: 13px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
