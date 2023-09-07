@@ -5,6 +5,7 @@ const regForm = document.querySelector('.register_form');
 const regFormOverlay = document.querySelector('.register_form-overlay');
 const regFormCloseButton = document.querySelector('.register_form-close_button');
 const registerFormLoginRef = getSingleDomElementByClass('register_form-login-ref');
+const registerErrorMessage = getSingleDomElementByClass('register-error-message'); 
 
 export function registerMenuInit(){
 
@@ -52,7 +53,7 @@ regForm.addEventListener('submit', (event) =>{
 	
 	}
 	else{
-		console.log('user exist');//!del
+		errorMessage();
 		event.preventDefault(); //stop submit function
 	}
 	
@@ -85,4 +86,11 @@ export function hideModalRegister(){
 	regFormOverlay.classList.remove('register_form-overlay-visible');
 	//restart scrolling
 	document.body.classList.remove('body-stop-scrolling')
+}
+
+function errorMessage(){
+	registerErrorMessage.classList.add('register-error-message-visible');
+				setTimeout(function(){
+					registerErrorMessage.classList.remove('register-error-message-visible');
+				}, 3000);
 }

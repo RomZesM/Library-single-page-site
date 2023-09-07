@@ -103,12 +103,20 @@
 										<input type="text" name="register_form-first_name" id="register_form-first_name-id" required>
 										<label for="register_form-second_name-id">Last name</label>
 										<input type="text" name="register_form-second_name" id="register_form-second_name-id" required>
-										<label for="register_form-email-id">E-mail</label>
+										<div class="label-and-error-message-block">
+											<label for="register_form-email-id">E-mail</label>
+											<div class="register-error-message">This e-mail is already in use</div>
+										</div>
+										
 										<input type="email" name="register_form-email" id="register_form-email-id" required>
 										<label for="register_form-password-id">Password</label>
+											
+													
 										<input type="password" name="register_form-password" id="register_form-password-id" required minlength="8">
 									</div>							
-								<button class="buttons button_bordered button_small register_form_sign_up" type="submit">Sign Up</button>	
+								
+									<button class="buttons button_bordered button_small register_form_sign_up" type="submit">Sign Up</button>	
+																
 							</form>	
 							<div class="register_form_bottom-text-block">
 								<span>Already have an account?</span>

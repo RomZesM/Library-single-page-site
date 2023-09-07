@@ -2206,10 +2206,11 @@ footer {
   text-align: center;
   position: relative;
   background-color: #BB945F;
+  transition: all 0.3s linear;
+  opacity: 0;
   border-radius: 2px;
   width: 94px;
   height: 21px;
-  display: none;
 }
 
 .login-error-message::after {
@@ -2222,7 +2223,7 @@ footer {
 }
 
 .login-error-message-visible {
-  display: block;
+  opacity: 1;
 }
 
 .login_form_bottom-text-block {
@@ -2335,6 +2336,44 @@ footer {
   font-weight: 400;
   line-height: 20px; /* 133.333% */
   letter-spacing: 0.3px;
+}
+
+.label-and-error-message-block {
+  display: flex;
+  gap: 21px;
+}
+
+.register-error-message {
+  color: #000;
+  font-family: Inter;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #BB945F;
+  transition: all 0.3s linear;
+  opacity: 0;
+  border-radius: 2px;
+  width: 123px;
+  height: 21px;
+}
+
+.register-error-message::after {
+  content: "";
+  border: 10px solid transparent;
+  position: absolute;
+  border-top-color: #BB945F;
+  border-bottom: 0;
+  bottom: -10px;
+  left: 20px;
+}
+
+.register-error-message-visible {
+  opacity: 1;
 }
 
 .register_form_sign_up {
