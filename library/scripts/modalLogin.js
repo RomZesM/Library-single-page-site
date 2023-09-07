@@ -50,15 +50,13 @@ export function loginForm(){
 			
 			}
 			else{
-				console.log('password incorrect');//!del
-			
 				showError();
 				event.preventDefault();//prevent submition of the form	
 			}
 			
 		}
 		else{
-			console.log('No such registered user or password incorrect');//!del
+			showError();
 			event.preventDefault();//prevent submition of the form	
 		}
 			
