@@ -4,6 +4,7 @@ import { showModalRegister } from "./registerMenu.js";
 import { checkIfUserWasRegistered, getSingleDomElementByClass, getUserKeyFromLocalStorage, getUserValueFromLocalStorage, increaseCounterInLocalStorage} from "./utils.js";
 
 const loginFormRegisterRef = getSingleDomElementByClass('login_form-register-ref');
+const loginErrorMessage = getSingleDomElementByClass('login-error-message')
 
 export function loginForm(){
 	//close login menu
@@ -50,6 +51,8 @@ export function loginForm(){
 			}
 			else{
 				console.log('password incorrect');//!del
+			
+				showError();
 				event.preventDefault();//prevent submition of the form	
 			}
 			
@@ -84,6 +87,9 @@ export function showModalLogin(){
 		document.body.classList.add('body-stop-scrolling')
 }
 
-function testF(){
-	console.log("debug");
-};
+function showError(){
+	loginErrorMessage.classList.add('login-error-message-visible');
+				setTimeout(function(){
+					loginErrorMessage.classList.remove('login-error-message-visible');
+				}, 3000);
+}

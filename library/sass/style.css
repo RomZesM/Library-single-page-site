@@ -2186,6 +2186,43 @@ footer {
 
 .login_form_login {
   margin-bottom: 10px;
+  width: 100px;
+  height: 21px;
+}
+
+.button-and-error-message-block {
+  display: flex;
+  gap: 7px;
+}
+
+.login-error-message {
+  color: #000;
+  text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+  font-family: Inter;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  position: relative;
+  background-color: #BB945F;
+  border-radius: 2px;
+  width: 94px;
+  height: 21px;
+  display: none;
+}
+
+.login-error-message::after {
+  content: "";
+  border: 10px solid transparent;
+  position: absolute;
+  border-bottom-color: #BB945F;
+  bottom: 20px;
+  left: 3px;
+}
+
+.login-error-message-visible {
+  display: block;
 }
 
 .login_form_bottom-text-block {
