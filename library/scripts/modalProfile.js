@@ -39,7 +39,10 @@ export function fillModalProfile(){
 		const visitsCounter = getUserValueFromLocalStorage(userLogin, 'authCounter');
 		const bookCounter = getUserValueFromLocalStorage(userLogin, 'bookCounter');
 		const cardNumber = getUserValueFromLocalStorage(userLogin, 'cardNumber');
-		
+		//insert initials
+		const modalProfileLogo = getSingleDomElementByClass("modal_profile__logo");
+		let initials = userName.split(' ')[0].substring(0,1).concat(userName.split(' ')[1].substring(0,1))
+
 		//make smaller font for long name
 		if(userName.length >= 15){
 			getSingleDomElementByClass('modal_profile__username').classList.add('modal_profile__username-small-font')
@@ -51,6 +54,7 @@ export function fillModalProfile(){
 		getSingleDomElementByClass('counter_visit-counter').innerHTML = visitsCounter;
 		getSingleDomElementByClass('counter_books-counter').innerHTML = bookCounter;
 		getSingleDomElementByClass('modal_profile-card-number').innerHTML = cardNumber.toUpperCase();
+		modalProfileLogo.innerHTML = initials.toUpperCase();
 		insertBooksIntoProfile();
 	}
 }
