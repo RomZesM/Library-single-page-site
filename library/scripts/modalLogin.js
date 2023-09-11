@@ -41,7 +41,8 @@ export function loginForm(){
 			let currentUser = getUserKeyFromLocalStorage(login.value.toLowerCase());
 			if(getUserValueFromLocalStorage(currentUser, 'password') === pass.value){
 				localStorage.setItem('loggedInUser', `${currentUser}`) //make user login if it exist
-			increaseCounterInLocalStorage(`${login.value}`, 'authCounter', 1);
+				increaseCounterInLocalStorage(`${currentUser}`, 'authCounter', 1); //can bee email, or card number
+				
 			hideModalLogin();
 			//reload after login, work only if wrap into setTimeOut()
 			// setTimeout(function(){

@@ -84,6 +84,8 @@ export function fillDigitalCard(){
 		suggestToLogInContainer.classList.add('suggest-to-log-in-container-hide')
 		visitYourProfileContainer.classList.add('visit-your-profile-container-visible')
 
+		getSingleDomElementByClass('card-form-title').innerHTML = "Your Library card";
+
 	}
 }
 

@@ -55,6 +55,7 @@ export function fillModalProfile(){
 		getSingleDomElementByClass('counter_books-counter').innerHTML = bookCounter;
 		getSingleDomElementByClass('modal_profile-card-number').innerHTML = cardNumber.toUpperCase();
 		modalProfileLogo.innerHTML = initials.toUpperCase();
+		
 		insertBooksIntoProfile();
 	}
 }

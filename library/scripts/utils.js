@@ -69,13 +69,9 @@ export function checkIfKeyExistInLocalStorage(key){
   }
 
   export function getUserValueFromLocalStorage(login, value){
-    // console.log('[['+login+']]');//!del
-    // console.log('[['+value+']]');
-    
     const user = JSON.parse(localStorage.getItem(`${login}`))
       let ret = user[`${value}`];
-    //  console.log('['+ret+']');
-    return ret;
+       return ret;
  }
 
  export function isSomeoneLogIn(){
