@@ -402,7 +402,7 @@ ul {
 }
 
 .footer-link:hover, .info-dir-name:hover, .tel_href:hover, .carusel-button-current, .carusel-button, .navigation__link:hover, .button_bordered:hover {
-  transition: all 0.5s ease-out;
+  transition: all 0.4s ease-out;
 }
 
 .menu-page-list-item-name, .coffeshop__description, .about__text {
@@ -423,17 +423,6 @@ ul {
   font-weight: 400;
   line-height: normal;
   letter-spacing: 0.6px;
-}
-
-#reader-name-id, #card-number {
-  color: #8E8E8E;
-  font-family: Forum;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 50px; /* 166.667% */
-  letter-spacing: 0.6px;
-  text-transform: capitalize;
 }
 
 .menu-page-title-right, .menu-page-title-left {
@@ -1311,6 +1300,21 @@ a:link, a:visited, a:active {
   justify-content: center;
   flex-wrap: wrap;
   gap: 26px;
+}
+
+.form-fields-name, .form-fields-cnumber {
+  color: #8E8E8E;
+  font-family: Forum;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 166.667% */
+  letter-spacing: 0.6px;
+  text-transform: capitalize;
+}
+
+.fields-after-login {
+  color: #BB945F;
 }
 
 .form-fields > input {

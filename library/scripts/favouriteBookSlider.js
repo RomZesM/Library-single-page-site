@@ -1,3 +1,4 @@
+import { fillDigitalCard } from "./digitalLibCard.js";
 import { showModalBuyCardOverlay } from "./modalBuyCard.js";
 import { showModalLogin } from "./modalLogin.js";
 import { addBookIntoUserAccount, getCurrentUserLogin, getSingleDomElementByClass, getUserValueFromLocalStorage, increaseCounterInLocalStorage, isBookInUserBookList, isSomeoneLogIn } from "./utils.js";
@@ -118,6 +119,8 @@ export function createFavBooksSlider(){
 					//change button
 					currentButton.innerHTML = ownBtn;
 					buyBook(bookCards[i]);
+					//change counter in digital block section
+					fillDigitalCard();
 				}
 				else{
 					showModalBuyCardOverlay();

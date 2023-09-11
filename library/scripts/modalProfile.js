@@ -50,7 +50,7 @@ export function fillModalProfile(){
 		getSingleDomElementByClass('modal_profile__username').innerHTML = userName;
 		getSingleDomElementByClass('counter_visit-counter').innerHTML = visitsCounter;
 		getSingleDomElementByClass('counter_books-counter').innerHTML = bookCounter;
-		getSingleDomElementByClass('modal_profile-card-number').innerHTML = cardNumber;
+		getSingleDomElementByClass('modal_profile-card-number').innerHTML = cardNumber.toUpperCase();
 		insertBooksIntoProfile();
 	}
 }

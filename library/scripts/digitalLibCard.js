@@ -56,7 +56,7 @@ export function digitalLibraryCardInit(){
 }
 
 
-function fillDigitalCard(){
+export function fillDigitalCard(){
 	if(isSomeoneLogIn()){
 		//fill name field
 		const userLogin = getCurrentUserLogin();
@@ -67,7 +67,9 @@ function fillDigitalCard(){
 		
 
 		readerNameInput.value = userName;
-		readerCardNumberInput.value = cardNumber;
+		readerCardNumberInput.value = cardNumber.toUpperCase();
+		readerNameInput.classList.add('fields-after-login')
+		readerCardNumberInput.classList.add('fields-after-login')
 		document.getElementById('dc-visitCounter-id').innerHTML = visitsCounter;
 		document.getElementById('dc-bookCounter-id').innerHTML = bookCounter;
 				
@@ -91,7 +93,9 @@ function fillDigitalCardUnloginned(userLogin){
 		
 
 		readerNameInput.value = userName;
-		readerCardNumberInput.value = cardNumber;
+		readerCardNumberInput.value = cardNumber.toUpperCase();
+		readerNameInput.classList.add('fields-after-login')
+		readerCardNumberInput.classList.add('fields-after-login')
 		document.getElementById('dc-visitCounter-id').innerHTML = visitsCounter;
 		document.getElementById('dc-bookCounter-id').innerHTML = bookCounter;
 				

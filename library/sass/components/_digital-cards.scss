@@ -50,8 +50,20 @@
 
 }
 
-#reader-name-id, #card-number{
-	@extend %font-Forum-30-text-color-light-grey;
+
+.form-fields-name, .form-fields-cnumber{
+	color: $color-text-light-grey;
+	font-family: Forum;
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 50px; /* 166.667% */
+	letter-spacing: 0.6px;
+	text-transform: capitalize;
+}
+
+.fields-after-login{ //change fonr color in input fields after login
+	color: $color-main;
 }
 
 .form-fields > input{
