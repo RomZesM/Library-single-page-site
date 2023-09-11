@@ -65,7 +65,7 @@ export function createCarousel(){
 			position = position + 475;
 			track.style.transform = `translateX(${position}px)`;
 			disableRoundButton();
-			console.log("position: " + position);//!del
+			
 		}
 		if(position === 950){
 			disableLeftEdgeButtons();
@@ -83,34 +83,32 @@ export function createCarousel(){
 			position = position - 475
 			track.style.transform = `translateX(${position}px)`;
 			disableRoundButton();
-			console.log("position: " + position);//!del
+		
 		}
 		//disable/enable edge buttons
 		if(position === -950){
 			disableRightEdgeButtons();
 		}
-		// else{
-		// 	enableAllButtonsExceptitself(null);
-		// }
-
-		
+			
 		
 	});
 
 	window.addEventListener('resize', () => { //that for tablet version
 		if(screen.width < 770){
 			position = 950;
-			track.style.transform = `translateX(${position}px)`;
+			allButtons.namedItem("carousel-b1-id").click();
+			//track.style.transform = `translateX(${position}px)`;
 		}
 		if(screen.width > 770){
 			position = 0;
-			track.style.transform = `translateX(${position}px)`;
+			allButtons.namedItem("carousel-b3-id").click();
+			//track.style.transform = `translateX(${position}px)`;
 			
 		}
 		
 	});
-
-	
+	//click first button in page start
+	allButtons.namedItem("carousel-b3-id").click();
 }
 
 function enableAllButtonsExceptitself(itself){
@@ -131,7 +129,7 @@ function enableAllButtonsExceptitself(itself){
 function moveTrack(multiplier, sign){
 	position = sign * ((itemWidth * multiplier) + gapBetweenPic * multiplier);
 	track.style.transform = `translateX(${position}px)`;
-	console.log("position: " + position);//!del
+	
 }
 
 function disableRightEdgeButtons(){
@@ -146,23 +144,23 @@ function disableLeftEdgeButtons(){
 function disableRoundButton(){
 	switch (position) {
 		case 950:
-			console.log('----------------- 1 -------------');
+			
 			enableAllButtonsExceptitself(allButtons.namedItem("carousel-b1-id"));
 			break;
 		case 475:
-			console.log('----------------- 2 -------------');
+			
 			enableAllButtonsExceptitself(allButtons.namedItem("carousel-b2-id"));
 			break;
 		case 0:
-			console.log('----------------- 3 -------------');
+			
 			enableAllButtonsExceptitself(allButtons.namedItem("carousel-b3-id"));
 			break;
 		case -475:
-			console.log('----------------- 4 -------------');
+			
 			enableAllButtonsExceptitself(allButtons.namedItem("carousel-b4-id"));
 			break;
 		case -950:
-			console.log('----------------- 5 -------------');
+			
 			enableAllButtonsExceptitself(allButtons.namedItem("carousel-b5-id"));
 			break;	
 	}
