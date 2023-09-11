@@ -43,7 +43,8 @@ export function checkIfKeyExistInLocalStorage(key){
    
     for (let i = 0; i < localStorage.length; i++) {
        
-      if(localStorage.key(i).split(',')[1] === key){
+      if(localStorage.key(i).split(',')[1] === key
+      || localStorage.key(i).split(',')[0] === key){
            
         return true;
       } 
