@@ -50,6 +50,8 @@ regForm.addEventListener('submit', (event) =>{
 								authCounter: 1,
 								bookCounter: 0
 								}));
+		//autologin after registration						
+		localStorage.setItem('loggedInUser', `${email.value.toLowerCase()},${cardNumber}`);							
 	
 	}
 	else{
