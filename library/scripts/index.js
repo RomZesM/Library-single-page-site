@@ -13,9 +13,6 @@ import { modalBurgerMenuInit } from "./burgerMenu.js";
 import { digitalLibraryCardInit } from "./digitalLibCard.js";
 
 
- console.log("HHHHHH");
- sayHello('bub');
-
 //--------------Start Init-------------//
 
 //start global variable inition //todo move into single file

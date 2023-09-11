@@ -40,10 +40,12 @@ export function checkIfKeyExistInLocalStorage(key){
   }
 
   export function checkIfUserWasRegistered(key){
-    
+   
     for (let i = 0; i < localStorage.length; i++) {
-       if(localStorage.key(i).split(',')[0] === key){
-          return true;
+       
+      if(localStorage.key(i).split(',')[1] === key){
+           
+        return true;
       } 
       
     }

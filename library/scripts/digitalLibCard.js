@@ -18,7 +18,7 @@ const visitYourProfileContainer = getSingleDomElementByClass('visit-your-profile
 
 
 export function digitalLibraryCardInit(){
-	console.log("init digital card");
+	
 	fillDigitalCard();
 
 
@@ -26,7 +26,12 @@ export function digitalLibraryCardInit(){
 	buttonSubmit.addEventListener('click', (event)=>{
 		
 		if(readerNameInput.value != '' && readerCardNumberInput.value != ''){
+
+			
 			if(checkIfUserWasRegistered(readerCardNumberInput.value.toLowerCase())){
+
+				console.log("gg");
+
 				let userKey = getUserKeyFromLocalStorage(readerCardNumberInput.value.toLowerCase())
 				let userName = getUserValueFromLocalStorage(userKey, 'firstName')
 				let secondName = getUserValueFromLocalStorage(userKey, 'secondName')
