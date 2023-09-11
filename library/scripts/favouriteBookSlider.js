@@ -5,36 +5,25 @@ import { addBookIntoUserAccount, getCurrentUserLogin, getSingleDomElementByClass
 
 const bookCards = document.querySelectorAll('.book-card');
 const ownBtn = '<button class="button_small button_own" disabled>Own</button>';
+let currentSeason = 'winter';
 
 export function createFavBooksSlider(){
 	const seasons = document.getElementsByName('seasons-fav'); //get all radio button form
 	//const bookCards = document.querySelectorAll('.book-card')
-	let currentSeason = 'winter';
+
 	let previousSeason = '';
-	let counterHiddenCostyl = 0;
+	
 
 	makeAllCardsInvisible()//make all card invisible in firstload
 	makeFirstCardsVisible()//make first card visible
-	//makeCardsVisible(); //make first card visible
+	
 	
 	for(let i = 0; i < seasons.length; i++){ //add click event for every button
 		seasons[i].addEventListener('click', (event) =>{
 			getRadioButtonResult();
-			makeCardsVisible();			
+			makeNotCurrenSeasonCardHide()
+			setTimeout(makeCurrenSeasonCardVisible, 300)		
 		})
-	}
-
-	function chekVisibillity(){
-		counterHiddenCostyl = 0;
-		for(let i = 0; i < bookCards.length; i++){
-			if(bookCards[i].classList.contains('hidden-book-card')){
-				counterHiddenCostyl++;
-			}			
-		}
-		if(counterHiddenCostyl != 12 && counterHiddenCostyl != 0){
-			console.log("alarm");//!del
-			makeCardsVisible();
-		}
 	}
 
 
@@ -49,55 +38,7 @@ export function createFavBooksSlider(){
 	}
 	}
 	
-	function makeCardsVisible(){
-		let aa = 0;//!del
-		let bb = 0;//!del
-
-		setTimeout(chekVisibillity, 1300);
-
-		for(let i = 0; i < bookCards.length; i++){
-			if(bookCards[i].classList.contains(`${currentSeason}-card`)){
-				bookCards[i].classList.remove('hidden-book-card')
-			//	console.log("remove hidden: " + i);
-				//
-				//bookCards[i].classList.add('visible-book-card')
-				
-			aa = setTimeout(function () {
-					bookCards[i].classList.remove('visuallyhidden');
-				}, 1000);
-				//  console.log("remove visualhidden: " + i);
-				
-			}
-		else{
-				//if(bookCards[i].classList.contains)	
-				//bookCards[i].classList.remove('visible-book-card')
-							
-				bookCards[i].classList.add('visuallyhidden'); //make opasity 0 with transient
-				///console.log("add visualhidden: " + i);
-			bb	= setTimeout(function () {
-					bookCards[i].classList.add('hidden-book-card');
-				}, 1000);
-				//  console.log("add hidden: " + i);
-			}
-		}
-		console.log(aa + " " + bb);
-	}
-
-	function makeAllCardsInvisible(){
-		for(let i = 0; i < bookCards.length; i++){
-			bookCards[i].classList.add('hidden-book-card');
-			bookCards[i].classList.add('visuallyhidden');
-		}
-	}
-	function makeFirstCardsVisible(){
-		for(let i = 0; i < bookCards.length; i++){
-			if(bookCards[i].classList.contains(`${currentSeason}-card`)){
-				bookCards[i].classList.remove('hidden-book-card');	
-				bookCards[i].classList.remove('visuallyhidden');
-			}
-			
-		}
-	}
+	
 
 	//make buttons buy functional
 		
@@ -168,5 +109,46 @@ function createButtonInBookCard(bookCard){
 		currentButton.innerHTML = buyBtn;
 
 }
-	
-	
+		
+
+ function makeCurrenSeasonCardVisible(){
+	for(let i = 0; i < bookCards.length; i++){
+		if(bookCards[i].classList.contains(`${currentSeason}-card`)){
+			bookCards[i].classList.remove('hidden-book-card')
+					
+		setTimeout(function () {
+				bookCards[i].classList.remove('visuallyhidden');
+			}, 300);	
+
+		}
+	}
+ }
+ function makeNotCurrenSeasonCardHide(){
+	for(let i = 0; i < bookCards.length; i++){
+		if(!(bookCards[i].classList.contains(`${currentSeason}-card`))){
+			bookCards[i].classList.add('visuallyhidden'); //make opasity 0 with transient
+			
+			setTimeout(function () {
+					bookCards[i].classList.add('hidden-book-card');
+				}, 300);
+				
+			}
+	}
+ }
+
+
+function makeAllCardsInvisible(){
+	for(let i = 0; i < bookCards.length; i++){
+		bookCards[i].classList.add('hidden-book-card');
+		bookCards[i].classList.add('visuallyhidden');
+	}
+}
+function makeFirstCardsVisible(){
+	for(let i = 0; i < bookCards.length; i++){
+		if(bookCards[i].classList.contains(`${currentSeason}-card`)){
+			bookCards[i].classList.remove('hidden-book-card');	
+			bookCards[i].classList.remove('visuallyhidden');
+		}
+		
+	}
+}
