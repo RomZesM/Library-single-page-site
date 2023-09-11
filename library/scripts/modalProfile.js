@@ -37,7 +37,7 @@ export function fillModalProfile(){
 		const userLogin = getCurrentUserLogin();
 		const userName = getUserFullName(userLogin);
 		const visitsCounter = getUserValueFromLocalStorage(userLogin, 'authCounter');
-		const bookCounter = getUserValueFromLocalStorage(userLogin, 'bookCounter');
+		const bookCounter = getUserValueFromLocalStorage(userLogin, 'booksList').length;//!
 		const cardNumber = getUserValueFromLocalStorage(userLogin, 'cardNumber');
 		//insert initials
 		const modalProfileLogo = getSingleDomElementByClass("modal_profile__logo");

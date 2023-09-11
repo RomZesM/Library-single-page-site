@@ -67,7 +67,7 @@ export function fillDigitalCard(){
 		const userLogin = getCurrentUserLogin();
 		const userName = getUserFullName(userLogin);
 		const visitsCounter = getUserValueFromLocalStorage(userLogin, 'authCounter');
-		const bookCounter = getUserValueFromLocalStorage(userLogin, 'bookCounter');
+		const bookCounter = getUserValueFromLocalStorage(userLogin, 'booksList').length
 		const cardNumber = getUserValueFromLocalStorage(userLogin, 'cardNumber');
 		
 
@@ -95,7 +95,7 @@ function fillDigitalCardUnloginned(userLogin){
 		
 		const userName = getUserFullName(userLogin);
 		const visitsCounter = getUserValueFromLocalStorage(userLogin, 'authCounter');
-		const bookCounter = getUserValueFromLocalStorage(userLogin, 'bookCounter');
+		const bookCounter = getUserValueFromLocalStorage(userLogin, 'booksList').length
 		const cardNumber = getUserValueFromLocalStorage(userLogin, 'cardNumber');
 		
 
