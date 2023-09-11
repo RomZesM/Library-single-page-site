@@ -125,7 +125,7 @@ export function insertUserInitialintoIcon(){
 		let nameLoggedInUser = getUserFullName(getCurrentUserLogin()).split(' ');
 		let initials = nameLoggedInUser[0].substring(0,1).concat(nameLoggedInUser[1].substring(0,1))
 		
-		iconWithInitials.innerHTML = initials;
+		iconWithInitials.innerHTML = initials.toUpperCase();
 		iconWithoutInitials.classList.add('icon_without_initials-hide');
 		iconWithInitials.classList.add('icon_with_initials-visible');	}
 	
